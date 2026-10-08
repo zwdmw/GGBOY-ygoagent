@@ -1,0 +1,37 @@
+{
+  "schema": "ygo-sky-model/v1",
+  "name": "initial-259m",
+  "global_step": 259000320,
+  "observation_revision": "sky-selfplay-own-deck-candidates-v2",
+  "network_observation_revision": "structured-observable-v4-phase-history",
+  "artifacts": {
+    "checkpoint": {
+      "path": "resources/models/initial-259000320.flax_model",
+      "sha256": "3b31b70460bf4c871322a901a290929b3a36da98e0fc30e0bbb05aaceba834c0"
+    },
+    "sidecar": {
+      "path": "resources/models/initial-259000320.flax_model.json",
+      "sha256": "fb419a4feef44607a4a7dc236ef19e498bd27dc0a5bf0138359df4acd64f7a10"
+    },
+    "semantics": {
+      "path": "resources/game/assets/structured/frozen_semantics_v1.npz",
+      "sha256": "646b164ddff4169e3379aca3d59fb36f41c4aa7b031c86068f46d00a68657aec"
+    },
+    "code_list": {
+      "path": "resources/game/scripts/code_list.txt",
+      "sha256": "04cb9134b5370b9841f8ee4d969dc519ecb11021f5df3655d0faf9d3c94695aa"
+    },
+    "cards": {
+      "path": "resources/game/assets/locale/en/cards.cdb",
+      "sha256": "2bfa5e1392c9dcbd64587c167823de522138d67e4eeb4c66e635c19a4e7f6841"
+    },
+    "deck": {
+      "path": "resources/decks/sky-striker.ydk",
+      "sha256": "7ecc5bf6a9eba9e04da316317d76bcc570c5613ef5b307b9a71df1e17d4207a3"
+    },
+    "native_reference": {
+      "path": "resources/runtime/linux-cpython311/training/ygopro_ygoenv.so",
+      "sha256": "65628475e6373f506fb59abc02627ab88ab8e5ee85ba959cc3503279eba4aee5"
+    }
+  }
+}

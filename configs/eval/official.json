@@ -1,0 +1,19 @@
+{
+  "schema": "ygo-sky-evaluation/v1",
+  "mode": "official",
+  "model": "base-463m",
+  "pairs": 32,
+  "seed": 2026100804,
+  "deck": "resources/decks/sky-striker.ydk",
+  "max_steps": 1000,
+  "opponent_artifacts": {
+    "checkpoint": {
+      "path": "resources/models/official-opponent.flax_model",
+      "sha256": "48e4d3bde222839685696fa087f808c5549d23fd3c99df8222b5aeaee43edfd6"
+    },
+    "code_list": {
+      "path": "resources/game/scripts/official_code_list_864.txt",
+      "sha256": "f3795910ac7a2eac06db0badb2db1288a93f5c237c6f92883a2d922aa2d3f339"
+    }
+  }
+}

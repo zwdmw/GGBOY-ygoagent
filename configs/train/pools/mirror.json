@@ -1,0 +1,40 @@
+{
+  "schema": "ygo-sky-opponent-pool/v1",
+  "members": [
+    {
+      "step": 340000768,
+      "sha256": "1e6859c50b7766afb970781d4e427e34f070294cf697830a1ccd0946bff95777",
+      "path": "resources/models/opponent-pool/step-000340000768.flax_model"
+    },
+    {
+      "step": 421001216,
+      "sha256": "d6edb46d71aa7b41f2ca1458c5eec0509a2af29daf6e57dee0143892b62fe6e8",
+      "path": "resources/models/opponent-pool/step-000421001216.flax_model"
+    },
+    {
+      "step": 461524992,
+      "sha256": "323cc408245b0b20be991822a2ea9fc9a3f953b3d7d2327582074fbb90dc16f7",
+      "path": "resources/models/opponent-pool/step-000461524992.flax_model"
+    },
+    {
+      "step": 462002176,
+      "sha256": "c3961c7c90f84b46cc2541ebd14db8566fb3a558d69bb6e7a88d8ececd0ac362",
+      "path": "resources/models/opponent-pool/step-000462002176.flax_model"
+    },
+    {
+      "step": 463001600,
+      "sha256": "20ddfd6cc92a6d960e617bce2a94ec8ccb50acd785445879b57e1bbe342f1558",
+      "path": "resources/models/opponent-pool/step-000463001600.flax_model"
+    },
+    {
+      "step": 465000448,
+      "sha256": "61a791333ce4c8d4c71f62bc25220437047248db0fc5b3653c33a412579570fa",
+      "path": "resources/models/opponent-pool/step-000465000448.flax_model"
+    },
+    {
+      "step": 468000768,
+      "sha256": "6a663660d26442d79d6200b5155d4e04e4afb98a473535a21106200a612a19b0",
+      "path": "resources/models/opponent-pool/step-000468000768.flax_model"
+    }
+  ]
+}

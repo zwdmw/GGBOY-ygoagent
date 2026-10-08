@@ -1,0 +1,19 @@
+{
+  "schema": "ygo-sky-duel/v1",
+  "host": "duel.example.org",
+  "port": 6009,
+  "version": 4962,
+  "nickname": "SkyStrikerBot",
+  "model": "base-463m",
+  "deck": "resources/decks/sky-striker-233.ydk",
+  "room_env": "YGO_ROOM",
+  "account_password_env": "YGO_ACCOUNT_PASSWORD",
+  "preference": "auto",
+  "seed": 2026100801,
+  "timeout": 120,
+  "connect_window": 30,
+  "reconnect_window": 30,
+  "transition_idle": 120,
+  "deck_source": "local",
+  "auth_mode": "none"
+}

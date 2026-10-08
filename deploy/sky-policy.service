@@ -1,0 +1,20 @@
+[Unit]
+Description=Sky Striker policy service
+After=network.target
+
+[Service]
+Type=simple
+User=sky
+WorkingDirectory=/opt/sky
+Environment=YGO_SKY_HOME=/opt/sky
+EnvironmentFile=/etc/sky-policy.env
+ExecStart=/opt/sky/.venv/bin/ygo-sky serve --host 127.0.0.1 --port 8765
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

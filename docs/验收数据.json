@@ -1,0 +1,523 @@
+{
+  "schema": "ygo-sky-acceptance/v1",
+  "date": "2026-10-08",
+  "environment": {
+    "platform": "Linux x86_64 CPython 3.11",
+    "cpu_dependency_install": "clean venv passed",
+    "gpu": "compatible existing CUDA environment",
+    "clean_cuda_install": "not completed"
+  },
+  "training": {
+    "passed": true,
+    "changed_tensors": 286,
+    "total_tensors": 293,
+    "all_finite": true,
+    "base_sha256": "20ddfd6cc92a6d960e617bce2a94ec8ccb50acd785445879b57e1bbe342f1558",
+    "checkpoint_sha256": "d38b05d36e64a06228daded7aea489dc153e35aee3c4d96619928aa35a2ce5e0",
+    "global_step": 463001632,
+    "additional_learner_steps": 32,
+    "registration": {
+      "model": "smoke-463m",
+      "step": 463001632,
+      "sha256": "d38b05d36e64a06228daded7aea489dc153e35aee3c4d96619928aa35a2ce5e0"
+    }
+  },
+  "training_exit": {
+    "exit_code": 0
+  },
+  "http": {
+    "passed": true,
+    "health": {
+      "ready": true,
+      "model_sha256": "20ddfd6cc92a6d960e617bce2a94ec8ccb50acd785445879b57e1bbe342f1558",
+      "global_step": 463001600
+    },
+    "isolated_session_actions": [
+      1,
+      1
+    ],
+    "reset_action": 1,
+    "invalid_request_codes": [
+      400,
+      400
+    ],
+    "inference_ms": [
+      39317.58431399976,
+      4.172518998529995
+    ]
+  },
+  "native_evaluation": {
+    "paired-v2": {
+      "models": {
+        "official": {
+          "sha256": "20ddfd6cc92a6d960e617bce2a94ec8ccb50acd785445879b57e1bbe342f1558",
+          "global_step": 463001600,
+          "architecture": "decision-v1"
+        },
+        "structured": {
+          "sha256": "20ddfd6cc92a6d960e617bce2a94ec8ccb50acd785445879b57e1bbe342f1558"
+        }
+      },
+      "paired": {
+        "completed_pairs": 1,
+        "outcomes_first_then_second": {
+          "WL": 1
+        },
+        "paired_difference_normal_95": null,
+        "paired_score_difference": 0.0,
+        "structured_points_across_two_games": {
+          "1.0": 1
+        }
+      },
+      "results": {
+        "going_first_player_0": {
+          "completed": 1,
+          "decisive_win_rate": 1.0,
+          "draws": 0,
+          "games": 1,
+          "incomplete": 0,
+          "losses": 0,
+          "mean_length": 284.0,
+          "median_length": 284.0,
+          "p95_length": 284.0,
+          "score_rate_draw_half": 1.0,
+          "strict_win_rate": 1.0,
+          "strict_win_rate_wilson_95": [
+            0.20654931437723745,
+            1.0
+          ],
+          "win_reasons": {
+            "1": 1
+          },
+          "wins": 1
+        },
+        "going_second_player_1": {
+          "completed": 1,
+          "decisive_win_rate": 0.0,
+          "draws": 0,
+          "games": 1,
+          "incomplete": 0,
+          "losses": 1,
+          "mean_length": 284.0,
+          "median_length": 284.0,
+          "p95_length": 284.0,
+          "score_rate_draw_half": 0.0,
+          "strict_win_rate": 0.0,
+          "strict_win_rate_wilson_95": [
+            0.0,
+            0.7934506856227626
+          ],
+          "win_reasons": {
+            "1": 1
+          },
+          "wins": 0
+        },
+        "overall": {
+          "completed": 2,
+          "decisive_win_rate": 0.5,
+          "draws": 0,
+          "games": 2,
+          "incomplete": 0,
+          "losses": 1,
+          "mean_length": 284.0,
+          "median_length": 284.0,
+          "p95_length": 284.0,
+          "score_rate_draw_half": 0.5,
+          "strict_win_rate": 0.5,
+          "strict_win_rate_wilson_95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ],
+          "win_reasons": {
+            "1": 2
+          },
+          "wins": 1
+        }
+      },
+      "lengths": [
+        284,
+        284
+      ]
+    },
+    "specialist-paired": {
+      "models": {
+        "official": {
+          "sha256": "20ddfd6cc92a6d960e617bce2a94ec8ccb50acd785445879b57e1bbe342f1558",
+          "global_step": 463001600,
+          "architecture": "decision-v1"
+        },
+        "structured": {
+          "sha256": "3b2c045054900730c8e6c2522d06e9c72a14bc840392f47a2b858979150a8b03"
+        }
+      },
+      "paired": {
+        "completed_pairs": 1,
+        "outcomes_first_then_second": {
+          "WL": 1
+        },
+        "paired_difference_normal_95": null,
+        "paired_score_difference": 0.0,
+        "structured_points_across_two_games": {
+          "1.0": 1
+        }
+      },
+      "results": {
+        "going_first_player_0": {
+          "completed": 1,
+          "decisive_win_rate": 1.0,
+          "draws": 0,
+          "games": 1,
+          "incomplete": 0,
+          "losses": 0,
+          "mean_length": 357.0,
+          "median_length": 357.0,
+          "p95_length": 357.0,
+          "score_rate_draw_half": 1.0,
+          "strict_win_rate": 1.0,
+          "strict_win_rate_wilson_95": [
+            0.20654931437723745,
+            1.0
+          ],
+          "win_reasons": {
+            "1": 1
+          },
+          "wins": 1
+        },
+        "going_second_player_1": {
+          "completed": 1,
+          "decisive_win_rate": 0.0,
+          "draws": 0,
+          "games": 1,
+          "incomplete": 0,
+          "losses": 1,
+          "mean_length": 325.0,
+          "median_length": 325.0,
+          "p95_length": 325.0,
+          "score_rate_draw_half": 0.0,
+          "strict_win_rate": 0.0,
+          "strict_win_rate_wilson_95": [
+            0.0,
+            0.7934506856227626
+          ],
+          "win_reasons": {
+            "1": 1
+          },
+          "wins": 0
+        },
+        "overall": {
+          "completed": 2,
+          "decisive_win_rate": 0.5,
+          "draws": 0,
+          "games": 2,
+          "incomplete": 0,
+          "losses": 1,
+          "mean_length": 341.0,
+          "median_length": 341.0,
+          "p95_length": 355.4,
+          "score_rate_draw_half": 0.5,
+          "strict_win_rate": 0.5,
+          "strict_win_rate_wilson_95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ],
+          "win_reasons": {
+            "1": 2
+          },
+          "wins": 1
+        }
+      },
+      "lengths": [
+        357,
+        325
+      ]
+    },
+    "official-v2": {
+      "models": {
+        "official": {
+          "sha256": "48e4d3bde222839685696fa087f808c5549d23fd3c99df8222b5aeaee43edfd6"
+        },
+        "structured": {
+          "sha256": "20ddfd6cc92a6d960e617bce2a94ec8ccb50acd785445879b57e1bbe342f1558"
+        }
+      },
+      "paired": {
+        "completed_pairs": 1,
+        "outcomes_first_then_second": {
+          "LW": 1
+        },
+        "paired_difference_normal_95": null,
+        "paired_score_difference": 0.0,
+        "structured_points_across_two_games": {
+          "1.0": 1
+        }
+      },
+      "results": {
+        "going_first_player_0": {
+          "completed": 1,
+          "decisive_win_rate": 0.0,
+          "draws": 0,
+          "games": 1,
+          "incomplete": 0,
+          "losses": 1,
+          "mean_length": 317.0,
+          "median_length": 317.0,
+          "p95_length": 317.0,
+          "score_rate_draw_half": 0.0,
+          "strict_win_rate": 0.0,
+          "strict_win_rate_wilson_95": [
+            0.0,
+            0.7934506856227626
+          ],
+          "win_reasons": {
+            "1": 1
+          },
+          "wins": 0
+        },
+        "going_second_player_1": {
+          "completed": 1,
+          "decisive_win_rate": 1.0,
+          "draws": 0,
+          "games": 1,
+          "incomplete": 0,
+          "losses": 0,
+          "mean_length": 237.0,
+          "median_length": 237.0,
+          "p95_length": 237.0,
+          "score_rate_draw_half": 1.0,
+          "strict_win_rate": 1.0,
+          "strict_win_rate_wilson_95": [
+            0.20654931437723745,
+            1.0
+          ],
+          "win_reasons": {
+            "1": 1
+          },
+          "wins": 1
+        },
+        "overall": {
+          "completed": 2,
+          "decisive_win_rate": 0.5,
+          "draws": 0,
+          "games": 2,
+          "incomplete": 0,
+          "losses": 1,
+          "mean_length": 277.0,
+          "median_length": 277.0,
+          "p95_length": 313.0,
+          "score_rate_draw_half": 0.5,
+          "strict_win_rate": 0.5,
+          "strict_win_rate_wilson_95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ],
+          "win_reasons": {
+            "1": 2
+          },
+          "wins": 1
+        }
+      },
+      "lengths": [
+        317,
+        237
+      ],
+      "unknown_remapping": {
+        "structured_going_first": {
+          "valid_unmapped_official_ids": {
+            "actions_": 9,
+            "cards_": 498,
+            "h_actions_": 68
+          },
+          "unknown_codes_seen": [
+            25955749,
+            50588353,
+            67441435,
+            97616504
+          ]
+        },
+        "structured_going_second": {
+          "valid_unmapped_official_ids": {
+            "actions_": 7,
+            "cards_": 516,
+            "h_actions_": 46
+          },
+          "unknown_codes_seen": [
+            25955749,
+            50588353,
+            67441435,
+            97616504
+          ]
+        }
+      }
+    }
+  },
+  "training_native_regression": {
+    "record": {
+      "passed": true,
+      "steps": 330,
+      "tensor_sha256": "6350c3c5d9e99e77308959220de8dcbb149d689a24f003cf2ad32be202a97d23",
+      "reward": 1.0,
+      "seed": 2026100803,
+      "binary_sha256": "65628475e6373f506fb59abc02627ab88ab8e5ee85ba959cc3503279eba4aee5",
+      "mode": "record"
+    },
+    "replay": {
+      "passed": true,
+      "steps": 330,
+      "tensor_sha256": "6350c3c5d9e99e77308959220de8dcbb149d689a24f003cf2ad32be202a97d23",
+      "reward": 1.0,
+      "seed": 2026100803,
+      "binary_sha256": "ebec40a09bf9213fd97b47268072bb3ce016e4d13f1c522357389809a2dd9dc4",
+      "mode": "replay"
+    }
+  },
+  "semantics": {
+    "cdb_exact": {
+      "shape": [
+        14950,
+        78
+      ],
+      "equal": true,
+      "different_elements": 0
+    },
+    "lua_effects": {
+      "shape": [
+        14950,
+        16,
+        64
+      ],
+      "equal": true,
+      "different_elements": 0
+    },
+    "lua_mask": {
+      "shape": [
+        14950,
+        16
+      ],
+      "equal": true,
+      "different_elements": 0
+    }
+  },
+  "duel_233": {
+    "host": "s1.ygo233.com",
+    "port": 233,
+    "games": 1,
+    "total_model_decisions": 387,
+    "deck_sha256": "a41627d622fc21d66cc3f391359b6d9f01c451b46de6b534ecaa61914e830165",
+    "seats": [
+      {
+        "seat": 0,
+        "outcome": "win",
+        "games": [
+          {
+            "our_player": 0,
+            "winner": 0,
+            "won": true,
+            "win_reason": 1,
+            "lp": [
+              9000,
+              0
+            ],
+            "turns": 13,
+            "decisions": 251,
+            "auto_responses": 52,
+            "forced_actions": 10,
+            "seconds": 0.0,
+            "went_first": true,
+            "error": "",
+            "game": 1,
+            "initial_deck_counts": [
+              [
+                40,
+                14
+              ],
+              [
+                40,
+                14
+              ]
+            ],
+            "deck_sync": {
+              "state": "local"
+            }
+          }
+        ],
+        "replays": [
+          {
+            "file": "server-001.yrp",
+            "sha256": "768283550f1187f2db2ee693a4ed973bc96bc74d2436fde8a62fdf1e1dd9e5c9",
+            "bytes": 650,
+            "container": "yrp2"
+          }
+        ],
+        "replay_errors": [],
+        "error": "",
+        "model_sha256": "20ddfd6cc92a6d960e617bce2a94ec8ccb50acd785445879b57e1bbe342f1558",
+        "wall_seconds": 46.087935036001
+      },
+      {
+        "seat": 1,
+        "outcome": "loss",
+        "games": [
+          {
+            "our_player": 1,
+            "winner": 0,
+            "won": false,
+            "win_reason": 1,
+            "lp": [
+              9000,
+              0
+            ],
+            "turns": 13,
+            "decisions": 136,
+            "auto_responses": 74,
+            "forced_actions": 2,
+            "seconds": 0.0,
+            "went_first": false,
+            "error": "",
+            "game": 1,
+            "initial_deck_counts": [
+              [
+                40,
+                14
+              ],
+              [
+                40,
+                14
+              ]
+            ],
+            "deck_sync": {
+              "state": "local"
+            }
+          }
+        ],
+        "replays": [
+          {
+            "file": "server-001.yrp",
+            "sha256": "768283550f1187f2db2ee693a4ed973bc96bc74d2436fde8a62fdf1e1dd9e5c9",
+            "bytes": 650,
+            "container": "yrp2"
+          }
+        ],
+        "replay_errors": [],
+        "error": "",
+        "model_sha256": "20ddfd6cc92a6d960e617bce2a94ec8ccb50acd785445879b57e1bbe342f1558",
+        "wall_seconds": 46.0862275569998
+      }
+    ]
+  },
+  "bridge_control": {
+    "status": "failed",
+    "error": "ValueError: Replay tensor mismatch: 0-0-0-0018.npz/public_events_",
+    "native_sha256": "92452a6a6524d197d72e86bb709c66abb6cd2006e736026ac29696cb36c8615d",
+    "parity_proof": null
+  },
+  "not_validated": [
+    "full training convergence",
+    "pre-259M complete lineage",
+    "held-out generalization",
+    "Docker image",
+    "systemd installation",
+    "clean CUDA installation",
+    "full online native dependency build",
+    "isolated bridge network-input evaluation"
+  ]
+}

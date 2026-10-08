@@ -1,0 +1,1142 @@
+[
+  {
+    "path": ".env.example",
+    "bytes": 105,
+    "sha256": "798b8d2d5129658178e64bbe1f7d7b732d00247716e73275a621362162e909be"
+  },
+  {
+    "path": ".gitignore",
+    "bytes": 474,
+    "sha256": "91aa529f89ed07223fa4d2e5c68a7e2f480ac2c00aa7385e60ef0c1de66fef32"
+  },
+  {
+    "path": "configs/duel/233.json",
+    "bytes": 476,
+    "sha256": "780902cf5a2de8a22656e7e6207654fa9fec51cb0738d088e270c5b598942d44"
+  },
+  {
+    "path": "configs/duel.example.json",
+    "bytes": 468,
+    "sha256": "879fbd86898a793430447ec07d56dea1d1e284932d10a0414186b164f05a57ca"
+  },
+  {
+    "path": "configs/eval/native-mirror.json",
+    "bytes": 209,
+    "sha256": "dd5dc5da372e12a61b79a1119f0832fb9376185f157d660b24dda0fb37103e8f"
+  },
+  {
+    "path": "configs/eval/official.json",
+    "bytes": 587,
+    "sha256": "822150bf22cdec0cfb67998bbe07509b30a48d8904acdbab1bec5c940dfb4681"
+  },
+  {
+    "path": "configs/model/base-463m.json",
+    "bytes": 1484,
+    "sha256": "6ac10ef87dcab8c9133021b2c9338d37617e615b37740241ed62a8f9469b933e"
+  },
+  {
+    "path": "configs/model/initial-259m.json",
+    "bytes": 1493,
+    "sha256": "d6087253001f6a5910c29a257433c566cb305f44a237ff094b073bdf3930a1b0"
+  },
+  {
+    "path": "configs/model/specialist-464m.json",
+    "bytes": 1502,
+    "sha256": "6e419e17852a8e167a2eaa5269dce601b92335f31f49a67a108e69a090dacb96"
+  },
+  {
+    "path": "configs/train/corrected-selfplay.json",
+    "bytes": 1086,
+    "sha256": "d23736baff7e479d5933d139ab8ac5e6219d8a0daa25bd5cf6df0feb0cc8aa52"
+  },
+  {
+    "path": "configs/train/mirror-specialist.json",
+    "bytes": 1311,
+    "sha256": "ed6560c306a6cfbd17dca0b9e8af51e510b957b8d2efb5ca163926411bbdb405"
+  },
+  {
+    "path": "configs/train/mixed-50-30-20.json",
+    "bytes": 1088,
+    "sha256": "a452e124134e5608781ac5e2cb622c6d7f41ed7c5ebf8c09fe426aa9f64adf32"
+  },
+  {
+    "path": "configs/train/pools/mirror.json",
+    "bytes": 1488,
+    "sha256": "e59b8c599f7240f67af4c6968325f072fdda5d61698adea7de83d0e1daed986d"
+  },
+  {
+    "path": "configs/train/pools/ppo.json",
+    "bytes": 473,
+    "sha256": "f5542354c659a25a02f3185fa50cf2403cb8d45068215d998be0fd48658ae3cd"
+  },
+  {
+    "path": "configs/train/ppo-continue.json",
+    "bytes": 1306,
+    "sha256": "ee5440544ffc8277c7105e500e903e0bcd2afc66eac1b7799fb2b99261aa1e16"
+  },
+  {
+    "path": "configs/train/smoke.json",
+    "bytes": 1127,
+    "sha256": "a90ed0327f45a3a2d3e340ff1c8766e0bf0817caf4cd1d8a363bbbc3aeb5df2a"
+  },
+  {
+    "path": "deploy/Dockerfile",
+    "bytes": 274,
+    "sha256": "d5f066bf6a34dbe8b2f653ea6f92f9112edb6f18415023b90cb3987449dbd151"
+  },
+  {
+    "path": "deploy/sky-policy.service",
+    "bytes": 412,
+    "sha256": "74d5cd4315efa45adf8774ac11eec6cb4d0674d5d01bc8e7cf098377ee57b21e"
+  },
+  {
+    "path": "docs/CPU依赖快照.txt",
+    "bytes": 904,
+    "sha256": "0dd19cb960091639549c00ec409f6b8a2b754e4dc850d672a70365e830ceaa9a"
+  },
+  {
+    "path": "docs/安装与部署.md",
+    "bytes": 2888,
+    "sha256": "040e772836ce4106da02ee173a0a2c1c3239b778173eebac67e0078aeddfe2ad"
+  },
+  {
+    "path": "docs/对战与推理.md",
+    "bytes": 2986,
+    "sha256": "99c26976a25f39b91df29ab0947f9639a604316873f05354ccf2d9332bc00a53"
+  },
+  {
+    "path": "docs/整理计划.md",
+    "bytes": 1457,
+    "sha256": "a54f6ec24a99e2f7a3ed453eec136b7e6613a099c5c3412734dd5ea9924475d2"
+  },
+  {
+    "path": "docs/模型与资源契约.md",
+    "bytes": 2946,
+    "sha256": "f85641a1af46c01fde9e1fb1b4f730ba5a65f1251d1b293c47ddcbe421dd21b9"
+  },
+  {
+    "path": "docs/第三方资源说明.md",
+    "bytes": 2456,
+    "sha256": "ad46579247d51b5590223052720b2e401a3a21b1cece0cb53e6a5e5094be97ed"
+  },
+  {
+    "path": "docs/训练与验证.md",
+    "bytes": 4363,
+    "sha256": "ff63971583a80d7603d7c9d7db4bd551c2478a71f87bce04eba1d39ff72f2689"
+  },
+  {
+    "path": "docs/验收报告.md",
+    "bytes": 5128,
+    "sha256": "23ff6a7ec30a1daef95514dd110fd2181d15ae9bc6366714f16d235292ec7d15"
+  },
+  {
+    "path": "docs/验收数据.json",
+    "bytes": 13922,
+    "sha256": "b7df37e95034c138de6bad73466f10c15e43b71600d6d70ad767aab5b0064a96"
+  },
+  {
+    "path": "examples/http_infer.py",
+    "bytes": 1353,
+    "sha256": "ffabb5cad9fb6d07c4737fe5664b7afc3f99d1c39d37bc4883e9350c18ebc72e"
+  },
+  {
+    "path": "LICENSE",
+    "bytes": 1062,
+    "sha256": "4233c8bfc52bf1c705bea06c3b307ed146c652ccd84708337fb79aa6023e04ea"
+  },
+  {
+    "path": "native/bridge/ygoenv/MANIFEST.in",
+    "bytes": 21,
+    "sha256": "4b0fff539b09170dbc969417dd899eddc25a8775548618379c925d1ebde64e1a"
+  },
+  {
+    "path": "native/bridge/ygoenv/setup.py",
+    "bytes": 445,
+    "sha256": "86394ba26f80555e2898ed7bd02aeee421f1ac2c99a7f80aaf108485e9120184"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/__init__.py",
+    "bytes": 961,
+    "sha256": "e3e7182b3209d89c5e8d6246a9adca6ec305f63559ee06a9dc955a5832c9847b"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/core/action_buffer_queue.h",
+    "bytes": 2310,
+    "sha256": "f07775993bd76a2d1920aa1349309270bbd48a914b5be1bb88b82dd2194cfbde"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/core/array.h",
+    "bytes": 9273,
+    "sha256": "bd10716b170f2fb4ba95e2f828ed9edb4ddcb1175865230b9100c4011681456e"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/core/async_envpool.h",
+    "bytes": 6627,
+    "sha256": "9df396abc6e3b3c9eac9c00f4d5c95667b35d0c205bc37ead79bf58c43ef2546"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/core/BS_thread_pool.h",
+    "bytes": 53963,
+    "sha256": "a105dc772ee80510894c200ec0284fac1845cb24bca31041d8702934c349e0e9"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/core/circular_buffer.h",
+    "bytes": 1843,
+    "sha256": "280bae8bb925b0e35bbea78baf5686f22cb3e518a961ceffd9258243debdffe3"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/core/dict.h",
+    "bytes": 10135,
+    "sha256": "2577bb2672e43c829cb5aa2f03006b171a01c9c3512ba8d5b38c6be125200682"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/core/env.h",
+    "bytes": 6774,
+    "sha256": "9ffc5cfa747bedde7eef622e04d73ac013c5e5fa25db67bfe3b0f26d0436fd34"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/core/env_spec.h",
+    "bytes": 3405,
+    "sha256": "99baf723245e4a89c1d7008e20161547878fd41ee066c027aa97819956536214"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/core/envpool.h",
+    "bytes": 1647,
+    "sha256": "c244fba3617451039b8188ed6311a05d2b030c54f3f93d32d724ba9257ada1de"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/core/py_envpool.h",
+    "bytes": 9991,
+    "sha256": "db54a925eeae9496040a7ab0de189cb6d2116f11377a23b2da3c449c80f697ba"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/core/spec.h",
+    "bytes": 3834,
+    "sha256": "f4f37b544e79e3edd37242115d0a026e18d69f2889c164eebba9bcb7c091c0a3"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/core/state_buffer.h",
+    "bytes": 5500,
+    "sha256": "d8d42f77ea5a05c87d1d7125c7dec89ec2c72c338e285de15973979adb594af2"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/core/state_buffer_queue.h",
+    "bytes": 5599,
+    "sha256": "a9c6fe07b70526b27c670f4d4009062f669a5f13ea51ecefec1332b068d4af97"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/core/ThreadPool.h",
+    "bytes": 2611,
+    "sha256": "5b7183e85aab6b78082510ccc8e9cb3dc739a43d284c53aed29bad825566cb97"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/core/tuple_utils.h",
+    "bytes": 2369,
+    "sha256": "3ae5d62f8ab117b2e4935894c485921e92079626229bce470b2028f6093e5a5a"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/core/type_utils.h",
+    "bytes": 1768,
+    "sha256": "502c15aac292c4f083bbd810484cff928c9d79ee81032e214f6dcd14a69f0f76"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/dummy/__init__.py",
+    "bytes": 954,
+    "sha256": "5b3e920889d9587415e30effe7bdb47cfb9ec68919c143977a86532200afbe41"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/dummy/dummy_envpool.cpp",
+    "bytes": 1064,
+    "sha256": "7d3dbb970f20e936d2ab233cc40adc1e7a2e602a7db3e4ebc7cef07301f1efe1"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/dummy/dummy_envpool.h",
+    "bytes": 7745,
+    "sha256": "07532628653ffd9ff00b4f8c970efcf9db3f9ad7db58f51bf70e4413579c97b6"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/dummy/registration.py",
+    "bytes": 865,
+    "sha256": "e279e03bbd1c47efaee51e88f15fd71e1389bffda151df842e3b20be0f458c11"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/edopro/__init__.py",
+    "bytes": 354,
+    "sha256": "328cd51c24449d9c58820b4404d76ca171306a1cf00fbf886ed05b5f540ed7d9"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/edopro/edopro.cpp",
+    "bytes": 313,
+    "sha256": "7d11c0db5d0705e5192c3033c9ecdbc31a5f1b886e29e7bcbac66cd29f798d81"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/edopro/edopro.h",
+    "bytes": 152829,
+    "sha256": "12a0e25ac89f65b94d3b1c256402c2f662e91278f7756e5d33127e23a434ed5c"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/edopro/registration.py",
+    "bytes": 236,
+    "sha256": "c1419cb5ddd4d0a57f0a07efda90490e3b9f2630323cb9397da3e8c40df39d6b"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/entry.py",
+    "bytes": 972,
+    "sha256": "be6b09b9d60b9ef1306b968dd09db7e3c38104c4b0a735e0022b55c1f6e618b3"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/python/__init__.py",
+    "bytes": 630,
+    "sha256": "b21b2033b9cb327ce2813d74583b0bfd0c7f0d140fd73f9cb0c3beb206420490"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/python/api.py",
+    "bytes": 1529,
+    "sha256": "2613ecca81983a3c1bb7699a81b1a25aa17674089063964b35ababf4177aac27"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/python/data.py",
+    "bytes": 4999,
+    "sha256": "7dc59d91e20b0508ea4382dc40d86cb586b15d1ca783c31e813dd04e77f119a1"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/python/dm_envpool.py",
+    "bytes": 3054,
+    "sha256": "50cfda09344c468c8195159f47aa2f3d95758f5986255b992c1cfb33d3789e7b"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/python/env_spec.py",
+    "bytes": 7910,
+    "sha256": "94d73c5c0132035664f0da21595b775211e92b8ce1922bc0af93b2887b2b66b4"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/python/envpool.py",
+    "bytes": 5873,
+    "sha256": "f8453033bbbc16b3da518e725faa3af1d3038e6fbcae1307b9a5736d6395058a"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/python/gym_envpool.py",
+    "bytes": 3618,
+    "sha256": "46692b6c9967648980d7182030fb069b58b99df37f0e339bf0633f98236e6b6a"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/python/gymnasium_envpool.py",
+    "bytes": 3398,
+    "sha256": "db0b73e0d43cc7502de4ae20ecb940cbbb5fd0f041d252920e58722e4bc12e62"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/python/protocol.py",
+    "bytes": 5891,
+    "sha256": "ce43534a40f84382c9764a4b25f5702bad63a5f706a0166b57c839b84334d2ad"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/python/utils.py",
+    "bytes": 1091,
+    "sha256": "8b7b10d0ed87ff1b3050873aac07d7c5daa855702b38a25ecbdf426f70717a0a"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/registration.py",
+    "bytes": 4086,
+    "sha256": "0a2c7c099f9c7390d22ac95d87d45fbb40aff13ed39618e6a428bccc668d8990"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/ygopro/__init__.py",
+    "bytes": 354,
+    "sha256": "c9a29789f52443fc44f2c505f9b9d199c229416b7d1d4ce64b17aa52c6f528de"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/ygopro/bridge_events.inc",
+    "bytes": 7584,
+    "sha256": "c7dbda29eba056803ae3d13d47aadd1f2015d64b62cdeb53a1779ae898a210ff"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/ygopro/registration.py",
+    "bytes": 236,
+    "sha256": "6270754776ea432a525eef054187827c1d697eacf1216745359adb4472ccae2a"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/ygopro/replay_response_writer.h",
+    "bytes": 1240,
+    "sha256": "1bfd5417c13a221a67a6246bdd2184cbfd14ee747dc126a0a5b1be9f596480af"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/ygopro/windbot_bridge.h",
+    "bytes": 26397,
+    "sha256": "ad604946ee5b075932f6ad9f29b1fe6036f195a52088e43958fd5f86ce91e0a6"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/ygopro/ygopro.cpp",
+    "bytes": 313,
+    "sha256": "1c68cb46dcc854e490e843d57a9643583f8cdbbd471f450b39f04680875ff754"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/ygopro/ygopro.h",
+    "bytes": 228367,
+    "sha256": "8e9a85209059673b34b06798500f8d4c82f34198dd36abee7b2629009d148ab3"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/ygopro0/__init__.py",
+    "bytes": 367,
+    "sha256": "bc393ca8f8aacabbb591dd903ebeb8bde867e60346607792c26385ae3d798fb0"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/ygopro0/registration.py",
+    "bytes": 241,
+    "sha256": "5d021781c693a649fe6aaf0f3e9d35bdf92b9885158fc953ca9b5631a0ea6eb5"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/ygopro0/ygopro.cpp",
+    "bytes": 322,
+    "sha256": "d9602e0624f052222f73ca390380879ae944077fd7a1003c1e79ed14af55487d"
+  },
+  {
+    "path": "native/bridge/ygoenv/ygoenv/ygopro0/ygopro.h",
+    "bytes": 148888,
+    "sha256": "c3b2dda003015345f5c914c3b6a0bf2bfa3d9488dfe17fe4346c831efb001bc8"
+  },
+  {
+    "path": "native/build.sh",
+    "bytes": 228,
+    "sha256": "6bca8970989fc99d9325bd35fcbc1e1d0fec2cf42b61ecfd505d827de7d23973"
+  },
+  {
+    "path": "native/build_cached.py",
+    "bytes": 2958,
+    "sha256": "b87d8e9e81c159631229b37f809a5ac94dc030c01c3e631eb305a1da0afba7e1"
+  },
+  {
+    "path": "native/record_runtime.py",
+    "bytes": 731,
+    "sha256": "9ce3eb0db843e4d15c39fa0c319e01081ef39626281c35d5d0871dbb77b7eefe"
+  },
+  {
+    "path": "native/repo/packages/e/edopro-core/xmake.lua",
+    "bytes": 1580,
+    "sha256": "4a78cedd382e1384934aebc8e7403bf991095f229f73403b2ee4d4ce1daf7238"
+  },
+  {
+    "path": "native/repo/packages/y/ygopro-core/xmake.lua",
+    "bytes": 1412,
+    "sha256": "a311804e58b2ffefc4f48132424b17707b53bf78705589c5943e3e50e0921a01"
+  },
+  {
+    "path": "native/xmake.lua",
+    "bytes": 840,
+    "sha256": "e239e43c830df5d621c9e81ef6f6f1097f53f14586c08637b4340b1fc74fdccd"
+  },
+  {
+    "path": "native/ygoenv/MANIFEST.in",
+    "bytes": 21,
+    "sha256": "4b0fff539b09170dbc969417dd899eddc25a8775548618379c925d1ebde64e1a"
+  },
+  {
+    "path": "native/ygoenv/setup.py",
+    "bytes": 445,
+    "sha256": "86394ba26f80555e2898ed7bd02aeee421f1ac2c99a7f80aaf108485e9120184"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/__init__.py",
+    "bytes": 961,
+    "sha256": "e3e7182b3209d89c5e8d6246a9adca6ec305f63559ee06a9dc955a5832c9847b"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/core/action_buffer_queue.h",
+    "bytes": 2310,
+    "sha256": "f07775993bd76a2d1920aa1349309270bbd48a914b5be1bb88b82dd2194cfbde"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/core/array.h",
+    "bytes": 9273,
+    "sha256": "bd10716b170f2fb4ba95e2f828ed9edb4ddcb1175865230b9100c4011681456e"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/core/async_envpool.h",
+    "bytes": 6627,
+    "sha256": "9df396abc6e3b3c9eac9c00f4d5c95667b35d0c205bc37ead79bf58c43ef2546"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/core/BS_thread_pool.h",
+    "bytes": 53963,
+    "sha256": "a105dc772ee80510894c200ec0284fac1845cb24bca31041d8702934c349e0e9"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/core/circular_buffer.h",
+    "bytes": 1843,
+    "sha256": "280bae8bb925b0e35bbea78baf5686f22cb3e518a961ceffd9258243debdffe3"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/core/dict.h",
+    "bytes": 10135,
+    "sha256": "2577bb2672e43c829cb5aa2f03006b171a01c9c3512ba8d5b38c6be125200682"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/core/env.h",
+    "bytes": 6774,
+    "sha256": "9ffc5cfa747bedde7eef622e04d73ac013c5e5fa25db67bfe3b0f26d0436fd34"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/core/env_spec.h",
+    "bytes": 3405,
+    "sha256": "99baf723245e4a89c1d7008e20161547878fd41ee066c027aa97819956536214"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/core/envpool.h",
+    "bytes": 1647,
+    "sha256": "c244fba3617451039b8188ed6311a05d2b030c54f3f93d32d724ba9257ada1de"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/core/py_envpool.h",
+    "bytes": 9991,
+    "sha256": "db54a925eeae9496040a7ab0de189cb6d2116f11377a23b2da3c449c80f697ba"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/core/spec.h",
+    "bytes": 3834,
+    "sha256": "f4f37b544e79e3edd37242115d0a026e18d69f2889c164eebba9bcb7c091c0a3"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/core/state_buffer.h",
+    "bytes": 5500,
+    "sha256": "d8d42f77ea5a05c87d1d7125c7dec89ec2c72c338e285de15973979adb594af2"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/core/state_buffer_queue.h",
+    "bytes": 5599,
+    "sha256": "a9c6fe07b70526b27c670f4d4009062f669a5f13ea51ecefec1332b068d4af97"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/core/ThreadPool.h",
+    "bytes": 2611,
+    "sha256": "5b7183e85aab6b78082510ccc8e9cb3dc739a43d284c53aed29bad825566cb97"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/core/tuple_utils.h",
+    "bytes": 2369,
+    "sha256": "3ae5d62f8ab117b2e4935894c485921e92079626229bce470b2028f6093e5a5a"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/core/type_utils.h",
+    "bytes": 1768,
+    "sha256": "502c15aac292c4f083bbd810484cff928c9d79ee81032e214f6dcd14a69f0f76"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/dummy/__init__.py",
+    "bytes": 954,
+    "sha256": "5b3e920889d9587415e30effe7bdb47cfb9ec68919c143977a86532200afbe41"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/dummy/dummy_envpool.cpp",
+    "bytes": 1064,
+    "sha256": "7d3dbb970f20e936d2ab233cc40adc1e7a2e602a7db3e4ebc7cef07301f1efe1"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/dummy/dummy_envpool.h",
+    "bytes": 7745,
+    "sha256": "07532628653ffd9ff00b4f8c970efcf9db3f9ad7db58f51bf70e4413579c97b6"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/dummy/registration.py",
+    "bytes": 865,
+    "sha256": "e279e03bbd1c47efaee51e88f15fd71e1389bffda151df842e3b20be0f458c11"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/edopro/__init__.py",
+    "bytes": 354,
+    "sha256": "328cd51c24449d9c58820b4404d76ca171306a1cf00fbf886ed05b5f540ed7d9"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/edopro/edopro.cpp",
+    "bytes": 313,
+    "sha256": "7d11c0db5d0705e5192c3033c9ecdbc31a5f1b886e29e7bcbac66cd29f798d81"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/edopro/edopro.h",
+    "bytes": 152829,
+    "sha256": "12a0e25ac89f65b94d3b1c256402c2f662e91278f7756e5d33127e23a434ed5c"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/edopro/registration.py",
+    "bytes": 236,
+    "sha256": "c1419cb5ddd4d0a57f0a07efda90490e3b9f2630323cb9397da3e8c40df39d6b"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/entry.py",
+    "bytes": 972,
+    "sha256": "be6b09b9d60b9ef1306b968dd09db7e3c38104c4b0a735e0022b55c1f6e618b3"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/python/__init__.py",
+    "bytes": 630,
+    "sha256": "b21b2033b9cb327ce2813d74583b0bfd0c7f0d140fd73f9cb0c3beb206420490"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/python/api.py",
+    "bytes": 1529,
+    "sha256": "2613ecca81983a3c1bb7699a81b1a25aa17674089063964b35ababf4177aac27"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/python/data.py",
+    "bytes": 4999,
+    "sha256": "7dc59d91e20b0508ea4382dc40d86cb586b15d1ca783c31e813dd04e77f119a1"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/python/dm_envpool.py",
+    "bytes": 3054,
+    "sha256": "50cfda09344c468c8195159f47aa2f3d95758f5986255b992c1cfb33d3789e7b"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/python/env_spec.py",
+    "bytes": 7910,
+    "sha256": "94d73c5c0132035664f0da21595b775211e92b8ce1922bc0af93b2887b2b66b4"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/python/envpool.py",
+    "bytes": 5873,
+    "sha256": "f8453033bbbc16b3da518e725faa3af1d3038e6fbcae1307b9a5736d6395058a"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/python/gym_envpool.py",
+    "bytes": 3618,
+    "sha256": "46692b6c9967648980d7182030fb069b58b99df37f0e339bf0633f98236e6b6a"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/python/gymnasium_envpool.py",
+    "bytes": 3398,
+    "sha256": "db0b73e0d43cc7502de4ae20ecb940cbbb5fd0f041d252920e58722e4bc12e62"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/python/protocol.py",
+    "bytes": 5891,
+    "sha256": "ce43534a40f84382c9764a4b25f5702bad63a5f706a0166b57c839b84334d2ad"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/python/utils.py",
+    "bytes": 1091,
+    "sha256": "8b7b10d0ed87ff1b3050873aac07d7c5daa855702b38a25ecbdf426f70717a0a"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/registration.py",
+    "bytes": 4086,
+    "sha256": "0a2c7c099f9c7390d22ac95d87d45fbb40aff13ed39618e6a428bccc668d8990"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/ygopro/__init__.py",
+    "bytes": 354,
+    "sha256": "c9a29789f52443fc44f2c505f9b9d199c229416b7d1d4ce64b17aa52c6f528de"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/ygopro/registration.py",
+    "bytes": 236,
+    "sha256": "6270754776ea432a525eef054187827c1d697eacf1216745359adb4472ccae2a"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/ygopro/ygopro.cpp",
+    "bytes": 313,
+    "sha256": "1c68cb46dcc854e490e843d57a9643583f8cdbbd471f450b39f04680875ff754"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/ygopro/ygopro.h",
+    "bytes": 208896,
+    "sha256": "3202bcbf331045a7eb4465b9b7b2ff1f2f5a32197033afa6e23208138c68dedf"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/ygopro0/__init__.py",
+    "bytes": 367,
+    "sha256": "bc393ca8f8aacabbb591dd903ebeb8bde867e60346607792c26385ae3d798fb0"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/ygopro0/registration.py",
+    "bytes": 241,
+    "sha256": "5d021781c693a649fe6aaf0f3e9d35bdf92b9885158fc953ca9b5631a0ea6eb5"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/ygopro0/ygopro.cpp",
+    "bytes": 322,
+    "sha256": "d9602e0624f052222f73ca390380879ae944077fd7a1003c1e79ed14af55487d"
+  },
+  {
+    "path": "native/ygoenv/ygoenv/ygopro0/ygopro.h",
+    "bytes": 148888,
+    "sha256": "c3b2dda003015345f5c914c3b6a0bf2bfa3d9488dfe17fe4346c831efb001bc8"
+  },
+  {
+    "path": "NOTICE.md",
+    "bytes": 1778,
+    "sha256": "154c5743aa3c42fe0e339a5b1da837c0723f1445c881d6597638c6146b479f6d"
+  },
+  {
+    "path": "pyproject.toml",
+    "bytes": 1632,
+    "sha256": "1050c8162f5491c52758065acc5b4f8326381e69a22504d1d667541d7dbc40e4"
+  },
+  {
+    "path": "README.md",
+    "bytes": 5517,
+    "sha256": "d296e8bf4ff0f5df54ffb441a9a5aab6ff1534acc02b6f66af36a9c47d45f7de"
+  },
+  {
+    "path": "release-info/resource-files.json",
+    "bytes": 3954378,
+    "sha256": "2cac94e4ce37644a07adb8f99b3de4f1b3c089fceb0a8aa6711305b1128d156b"
+  },
+  {
+    "path": "scripts/audit_decks.py",
+    "bytes": 2204,
+    "sha256": "8136bb32fcbb1c2c8885605d5c5fbf290253c6d8f5fadd85eb22b93e2302a286"
+  },
+  {
+    "path": "scripts/build_large_pool_split.py",
+    "bytes": 15999,
+    "sha256": "8da09a2b73cee6918b292289bf40aa9050a5ae975e23c3585b61e73b1c0d5a9e"
+  },
+  {
+    "path": "scripts/build_uniform_cluster_split.py",
+    "bytes": 47880,
+    "sha256": "174c29cd9389ef047ee901ac587a866623db0a9f35fe3c1660904c5005798b06"
+  },
+  {
+    "path": "scripts/card/build_structured_semantics.py",
+    "bytes": 15406,
+    "sha256": "d02e3572176c9bd5fa5186702e03d534ec77225596c90575119ed06224d65bab"
+  },
+  {
+    "path": "scripts/evaluate_network_inputs.py",
+    "bytes": 29994,
+    "sha256": "6d2cc3084f2858a298389962abf3a169f3400e51eebc128fe1f9332608201eab"
+  },
+  {
+    "path": "scripts/make_example.py",
+    "bytes": 1229,
+    "sha256": "576100964ad80f3c822492ff1fc11c0ee53d55240d093cac780e4d816a401f5e"
+  },
+  {
+    "path": "scripts/native_regression.py",
+    "bytes": 4441,
+    "sha256": "9f46da5ccd0e2234210b586cff50e8aae80c0785f1936ca831906d1f6a18f2e3"
+  },
+  {
+    "path": "scripts/package_release.py",
+    "bytes": 9875,
+    "sha256": "50722cba0200f1253937e19a10164902140ea5446c30d1268dfd9e321a1b1506"
+  },
+  {
+    "path": "scripts/paired_233.py",
+    "bytes": 1597,
+    "sha256": "2dd3c7bdf01be2e3361161812d7a06e6c9eb8d7717dca39d8e40cbc3f734505d"
+  },
+  {
+    "path": "scripts/prepare_opponent_pool.py",
+    "bytes": 1429,
+    "sha256": "115d0398ace4ee7b04654dcf764fde0e6436f9f872a095a090512584cd59cf42"
+  },
+  {
+    "path": "scripts/verify_control_parity.py",
+    "bytes": 2869,
+    "sha256": "2c38156dae7cecf61a55fb76e31910060e9086e759617730dd9bbe58c543d2d2"
+  },
+  {
+    "path": "src/ygo_sky/__init__.py",
+    "bytes": 64,
+    "sha256": "51489a143044139bb08de7efe80340025177250ca1b6552163e8d3c4dc538264"
+  },
+  {
+    "path": "src/ygo_sky/__main__.py",
+    "bytes": 30,
+    "sha256": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279"
+  },
+  {
+    "path": "src/ygo_sky/cli.py",
+    "bytes": 4700,
+    "sha256": "6fceb83465dbfeb88e5e489175df301e6e939597ec31c664ab6f8c83f68bb8d8"
+  },
+  {
+    "path": "src/ygo_sky/duel/__init__.py",
+    "bytes": 35,
+    "sha256": "de48649edd27aed3762059bc9b290b7f3ec30181a3f6f458ed9d671804fbc7e9"
+  },
+  {
+    "path": "src/ygo_sky/duel/network/__init__.py",
+    "bytes": 76,
+    "sha256": "2417d683ca8fb4343d5fa7ae3b36b715e5506bb35d0b6247b4dd34a4d0dd3d5e"
+  },
+  {
+    "path": "src/ygo_sky/duel/network/cards.py",
+    "bytes": 1190,
+    "sha256": "31d305566701b6761d269bb61b49f0ed78cfad0d9b713260e2b0b3a816e95976"
+  },
+  {
+    "path": "src/ygo_sky/duel/network/client.py",
+    "bytes": 28219,
+    "sha256": "47c3abb4cb51653646ae25f8516acb9000e24b68dc61e5635dfd09727c55b7b0"
+  },
+  {
+    "path": "src/ygo_sky/duel/network/deck_sync.py",
+    "bytes": 3524,
+    "sha256": "14a24b494c9acded2bc9159ebcdb5bac1d9fc2bdc4f0990d5a7a68d0375f9ba1"
+  },
+  {
+    "path": "src/ygo_sky/duel/network/native_contract.json",
+    "bytes": 3757,
+    "sha256": "f7e4cfd0f4cbd36db652683ef8a094d32db9d1a2a7f090f78630d3e277bac265"
+  },
+  {
+    "path": "src/ygo_sky/duel/network/preference.py",
+    "bytes": 585,
+    "sha256": "ed1b4fca3a29b499ca702ee42affd2288b8d6447d1fa18c6cba328d7fcb10915"
+  },
+  {
+    "path": "src/ygo_sky/duel/network/server_deck.py",
+    "bytes": 7011,
+    "sha256": "bfb69a9f0e7bad2e166c945bd06ee9a89ef77ac4f4e74e450376ad3928e5f7f3"
+  },
+  {
+    "path": "src/ygo_sky/duel/network/structured.py",
+    "bytes": 19912,
+    "sha256": "554348c60340c17c1df42009c432b5e22de536b289237f0396e1f75d97ec948b"
+  },
+  {
+    "path": "src/ygo_sky/duel/network/vendor/__init__.py",
+    "bytes": 56,
+    "sha256": "bf072f7c1c0781ac50ed488cb2354b98efe56ba009ba9620a60179da77638d62"
+  },
+  {
+    "path": "src/ygo_sky/duel/network/vendor/netduel/__init__.py",
+    "bytes": 88,
+    "sha256": "6e68730a7200f1b42d4596d0c35638d322c264ac8d4e3eb3fd25b2a9aaa4b953"
+  },
+  {
+    "path": "src/ygo_sky/duel/network/vendor/netduel/actions.py",
+    "bytes": 42431,
+    "sha256": "684345cd6368a288293b523a0319511e4980d153681ef6eb84c439edf78e8e70"
+  },
+  {
+    "path": "src/ygo_sky/duel/network/vendor/netduel/board.py",
+    "bytes": 49684,
+    "sha256": "6aaab1682753869d01f5f3f1507eff108facfa091c1f5782214eb436f02f2588"
+  },
+  {
+    "path": "src/ygo_sky/duel/network/vendor/netduel/cards.py",
+    "bytes": 7238,
+    "sha256": "da3a074ca32cedd352161ca856a594823b3304b7b73a46b14d5941b07a015051"
+  },
+  {
+    "path": "src/ygo_sky/duel/network/vendor/netduel/client.py",
+    "bytes": 19698,
+    "sha256": "7c036d38b0fea3a5946ebf880e8f94f230f69d70a56d340f7635e060972071a3"
+  },
+  {
+    "path": "src/ygo_sky/duel/network/vendor/netduel/constants.py",
+    "bytes": 7503,
+    "sha256": "80d78e6b885aa6e9943cb20c83c864cb7df1bd3e7cbde81d2c3713584015fe6f"
+  },
+  {
+    "path": "src/ygo_sky/duel/network/vendor/netduel/disclosure.py",
+    "bytes": 8583,
+    "sha256": "2ff8fa6666c2d646fba88452f459d80586b4fcbf1c698b845b4f6447db9c3ce8"
+  },
+  {
+    "path": "src/ygo_sky/duel/network/vendor/netduel/encode.py",
+    "bytes": 25191,
+    "sha256": "98dcc5ccd9fd919f73b7f0d5f85ef1553a38d0a92390f7bab229e39715c107b6"
+  },
+  {
+    "path": "src/ygo_sky/duel/network/vendor/netduel/obsconst.py",
+    "bytes": 6418,
+    "sha256": "753b633c2b3249454417f3faa40367a2c3a1ab8a779d0adeff89d738096eceef"
+  },
+  {
+    "path": "src/ygo_sky/duel/network/vendor/netduel/policy.py",
+    "bytes": 3585,
+    "sha256": "da9ccf5728e98ca5f86116ac9245334a7c7e088a5af4c905973d7f11691ba2a2"
+  },
+  {
+    "path": "src/ygo_sky/duel/network/vendor/netduel/protocol.py",
+    "bytes": 7482,
+    "sha256": "695224d88c620d4084f6eab984e1dce4330b2b252a31fb75a7400ef7b3a2d71e"
+  },
+  {
+    "path": "src/ygo_sky/duel/network/vendor/README.md",
+    "bytes": 1181,
+    "sha256": "dbdfd094039cfe439cf44801634c9b7339ebe9cc4e0db8e97301bd364407dc7f"
+  },
+  {
+    "path": "src/ygo_sky/duel/network/vendor/replay/__init__.py",
+    "bytes": 78,
+    "sha256": "93d701b5b9cdc949a5cf2bf6061ba5ebe4ca5da48a7e20282783e7fa87dbd0e6"
+  },
+  {
+    "path": "src/ygo_sky/duel/network/vendor/replay/actions.py",
+    "bytes": 12020,
+    "sha256": "92c6636802361a1c54bde5099a3f40a2c4a3865f30ec03d7f227427668f4d9b2"
+  },
+  {
+    "path": "src/ygo_sky/duel/network/vendor/sources.json",
+    "bytes": 2706,
+    "sha256": "3d653e4c7383606c86f20992102080d66a7f97f22419f0b2b336ae66a5a6f8ec"
+  },
+  {
+    "path": "src/ygo_sky/duel/run.py",
+    "bytes": 5956,
+    "sha256": "9b62eb88019f76e4f5519b3b12d9c8bb8b26720f15725761864963bda2fab874"
+  },
+  {
+    "path": "src/ygo_sky/evaluation/__init__.py",
+    "bytes": 54,
+    "sha256": "c94a5b31c2349385a352372cdc7a04a1bc7ef4b9ee98f5d8fe9e9369f970fa5e"
+  },
+  {
+    "path": "src/ygo_sky/evaluation/ipc.py",
+    "bytes": 2573,
+    "sha256": "38e61d3e9c28687a7fd3fdaa9bc42ad68ed82905ea1e5f89b438020699602a22"
+  },
+  {
+    "path": "src/ygo_sky/evaluation/official.py",
+    "bytes": 38757,
+    "sha256": "463a84ec956473a757b2448f6fb91b3bbbf0dd9d69482cb3eecede55b6b41ab7"
+  },
+  {
+    "path": "src/ygo_sky/evaluation/paired.py",
+    "bytes": 27456,
+    "sha256": "133cb7f6c8969aa2b3e86a993ce42ee5ba085e1a35c0f25fb0d7401d4452458b"
+  },
+  {
+    "path": "src/ygo_sky/model.py",
+    "bytes": 4022,
+    "sha256": "8c7e73f2f6d3123d8dae9eec1670b556d921238df53fb3c86035a25367f9ac20"
+  },
+  {
+    "path": "src/ygo_sky/observation.py",
+    "bytes": 1178,
+    "sha256": "f6da353821162ccef5cfe6335bb9f84cba713ee8adf340a2785a56d1f406c86c"
+  },
+  {
+    "path": "src/ygo_sky/paths.py",
+    "bytes": 1205,
+    "sha256": "3f176f8ea75f4d4d477f94d3613edef9fc21c51d2fc77e81f6005c83befda2d9"
+  },
+  {
+    "path": "src/ygo_sky/resources.py",
+    "bytes": 6180,
+    "sha256": "7532dcf7994426daccfadfe73680d915ab35c3660eada280e903a7e8ac95d0cd"
+  },
+  {
+    "path": "src/ygo_sky/runner.py",
+    "bytes": 6258,
+    "sha256": "4afab386a68f890aa33b736d074c8e161d2dfee95fcf6ab3129daf3e62ee0abf"
+  },
+  {
+    "path": "src/ygo_sky/semantics.py",
+    "bytes": 3030,
+    "sha256": "ba57214b021da7cab4ce6f609497f236a72d945b66f55d020c8f59c11b3d7252"
+  },
+  {
+    "path": "src/ygo_sky/service.py",
+    "bytes": 3344,
+    "sha256": "6346e5b7544fd4345e559548d08d99ea4728c62d0ab3472a56b56b7e9147c059"
+  },
+  {
+    "path": "src/ygo_sky/training/__init__.py",
+    "bytes": 72,
+    "sha256": "37897ed9340b394ba6901027cab918b73e2e665339225a57451e9cd6f4c395bd"
+  },
+  {
+    "path": "src/ygo_sky/training/checkpoint_metadata.py",
+    "bytes": 2001,
+    "sha256": "da78174d0751f9500aa3c98ad8a130838227029f479d4676a3bfa71cb219fe9f"
+  },
+  {
+    "path": "src/ygo_sky/training/cleanba.py",
+    "bytes": 70773,
+    "sha256": "46effece97aada8f291519eceb1231a7ac65272a1ce82868d18c543188d53aba"
+  },
+  {
+    "path": "src/ygo_sky/training/cleanba_mirror_pool.py",
+    "bytes": 94643,
+    "sha256": "22048ada99cc0a8780e73e60ffc43f9339526d3b0906fb9dc154ffaedf92a417"
+  },
+  {
+    "path": "src/ygo_sky/training/cleanba_pool.py",
+    "bytes": 80490,
+    "sha256": "6cc136d58f84bd35d413b9f62b12d30f0022940accabbc1c69e9325acf12fb0d"
+  },
+  {
+    "path": "src/ygo_sky/training/cluster_stats.py",
+    "bytes": 11524,
+    "sha256": "b102d19501999ec56ce84a329c69346da38246807b5a6091d9c3e63a239f1f51"
+  },
+  {
+    "path": "src/ygoai/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "src/ygoai/_version.py",
+    "bytes": 21,
+    "sha256": "ba0cae165884aad0304261f8b1395cd7a6172986c558399fca4f3b7c4ac1f3ef"
+  },
+  {
+    "path": "src/ygoai/constants.py",
+    "bytes": 6634,
+    "sha256": "23dacd470af1d4b4f126b8a886619a095fab187742e7ebe8dc29bbed774810e8"
+  },
+  {
+    "path": "src/ygoai/embed.py",
+    "bytes": 4060,
+    "sha256": "c3d80dae7be53b41b5cc0f85200e974213388822e63d97119461969cfece7f3a"
+  },
+  {
+    "path": "src/ygoai/rl/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "src/ygoai/rl/agent.py",
+    "bytes": 16990,
+    "sha256": "616074c72d8084d123cc27700bb2ac794900381660ec288ae49f8c8271946738"
+  },
+  {
+    "path": "src/ygoai/rl/agent2.py",
+    "bytes": 16934,
+    "sha256": "030106b3e79570b1a2b23960dc6802a27df39be4fd875fe5ebb51859ab80ca08"
+  },
+  {
+    "path": "src/ygoai/rl/buffer.py",
+    "bytes": 28642,
+    "sha256": "2051535c680aceba4d166d6693aed2c9a36bb260b1f33beaa75b2de15ab76149"
+  },
+  {
+    "path": "src/ygoai/rl/ckpt.py",
+    "bytes": 2967,
+    "sha256": "fa0db30733663a97572dcf75c8c0e2a393399e7db0354b8107b36268a83422d7"
+  },
+  {
+    "path": "src/ygoai/rl/dist.py",
+    "bytes": 1882,
+    "sha256": "2c49931606d2027f55006464c318b772d4cf539dcd4e196882842f3990435e7c"
+  },
+  {
+    "path": "src/ygoai/rl/env.py",
+    "bytes": 3253,
+    "sha256": "09d3bce1fb269c680c69b364419b0ade91ee267f14ac25a1070c1c5d4471e940"
+  },
+  {
+    "path": "src/ygoai/rl/eval.py",
+    "bytes": 1297,
+    "sha256": "8a45cbfe796ef99130bab893a58ff8eed6e8f31f3b2f0e2d582dc4c0b53443b0"
+  },
+  {
+    "path": "src/ygoai/rl/jax/__init__.py",
+    "bytes": 20617,
+    "sha256": "ca2b469fb2f0770938dcc19444633b2e81cf2510f93a99bf3bb2ab680edb376c"
+  },
+  {
+    "path": "src/ygoai/rl/jax/agent.py",
+    "bytes": 33142,
+    "sha256": "8dd69a6456f137cd3af33e6381e537f348fb73e6c9758a0ca4c1218d45d68205"
+  },
+  {
+    "path": "src/ygoai/rl/jax/agent2.py",
+    "bytes": 25755,
+    "sha256": "76c4eae260b102a8c4a2f88725068f736f43b3964662456d6e68da31c0fb541e"
+  },
+  {
+    "path": "src/ygoai/rl/jax/decision.py",
+    "bytes": 6859,
+    "sha256": "f22df926c12a2bc44fb6e1a5043c986f15de51286b553123b73bfdc17dbf0050"
+  },
+  {
+    "path": "src/ygoai/rl/jax/decision_checkpoint.py",
+    "bytes": 2445,
+    "sha256": "5c654c99f802da89223b79867b1a2cdddb889efa5e5cd9378c552a642ecad733"
+  },
+  {
+    "path": "src/ygoai/rl/jax/eval.py",
+    "bytes": 2736,
+    "sha256": "a4c097a3668ca0301f07d68bf7818c468af4e63757ff826cc317be33f4f00e18"
+  },
+  {
+    "path": "src/ygoai/rl/jax/modules.py",
+    "bytes": 9586,
+    "sha256": "63358e3566e046180dc3e2f51fd283d2a060e789ba201551faa04fca8c9327de"
+  },
+  {
+    "path": "src/ygoai/rl/jax/rwkv.py",
+    "bytes": 10570,
+    "sha256": "1ddb0f5e6ec0ac5acca7f5ddd104a9c1a314635b2a0000c23f7247dd2110f713"
+  },
+  {
+    "path": "src/ygoai/rl/jax/structured_agent.py",
+    "bytes": 23475,
+    "sha256": "d1ed1eedd1d2d253c9aba75dedee43bef4a7b6006956f138bd5cec16e62ad66a"
+  },
+  {
+    "path": "src/ygoai/rl/jax/switch.py",
+    "bytes": 1530,
+    "sha256": "542e3745644e0bb69207457ad3d9ba060bcbc0ab433345f6bc6d4e0c6601867e"
+  },
+  {
+    "path": "src/ygoai/rl/jax/transformer.py",
+    "bytes": 30237,
+    "sha256": "699448a92679ad7bf8fc1d771ab648bb208a0bf21decf22ff140612926d617a7"
+  },
+  {
+    "path": "src/ygoai/rl/jax/utils.py",
+    "bytes": 5233,
+    "sha256": "8bc15284924a96b4d65d07ef34015b76af079876b7d4d98033430014897ad5cf"
+  },
+  {
+    "path": "src/ygoai/rl/ppo.py",
+    "bytes": 16232,
+    "sha256": "7014d28e649157e87852f6e8d38a760bd9e8843c2972056bcc108adfcbbbdc64"
+  },
+  {
+    "path": "src/ygoai/rl/utils.py",
+    "bytes": 1362,
+    "sha256": "0a37541f7bbd9817b75ff8eafc37684b38aef455f1a99ef1b08d5cc88ef3abd6"
+  },
+  {
+    "path": "src/ygoai/utils.py",
+    "bytes": 2406,
+    "sha256": "868612504200aea0653c999984e21bb82f9bfb39ed436fb619bdc428eaa96fa4"
+  },
+  {
+    "path": "tests/test_contracts.py",
+    "bytes": 2120,
+    "sha256": "c521ff72310ae02a2ad3e727bfc319edf8eab8cd1d8877e510bb040aa8fc8f22"
+  },
+  {
+    "path": "tests/test_wire.py",
+    "bytes": 1295,
+    "sha256": "167ceda19baf11e31f9a15ce766f2e9c604f8b231a3441a0c53ed1b46e853289"
+  },
+  {
+    "path": "third_party/SOURCES.json",
+    "bytes": 2846,
+    "sha256": "afddc0f471062116febcbb01a3c742ff364707f8436662c53255b9036fa9c406"
+  },
+  {
+    "path": "third_party/ygo-agent/APACHE-2.0.txt",
+    "bytes": 11525,
+    "sha256": "313605fbac6945e9324d4825470796b5b7dbc012f523fdc181f6e6fd234eb88f"
+  },
+  {
+    "path": "third_party/ygo-agent/LICENSE",
+    "bytes": 1804,
+    "sha256": "a2ba8ba8b163bd6269fb6af6c7d94102dc80abafb5ef089de60fbe9219c51125"
+  },
+  {
+    "path": "third_party/ygo-agent/YGO-AGENT-LICENSE.txt",
+    "bytes": 1804,
+    "sha256": "a2ba8ba8b163bd6269fb6af6c7d94102dc80abafb5ef089de60fbe9219c51125"
+  },
+  {
+    "path": "third_party/ygopro-core/LICENSE",
+    "bytes": 1081,
+    "sha256": "a22c820abc793a3a6133a9436051bd39d9b06f88c4f170e5612fbdde09c70276"
+  },
+  {
+    "path": "third_party/ygopro-scripts/LICENSE",
+    "bytes": 18092,
+    "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+  }
+]

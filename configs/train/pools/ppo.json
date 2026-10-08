@@ -1,0 +1,15 @@
+{
+  "schema": "ygo-sky-opponent-pool/v1",
+  "members": [
+    {
+      "step": 463001600,
+      "sha256": "20ddfd6cc92a6d960e617bce2a94ec8ccb50acd785445879b57e1bbe342f1558",
+      "path": "resources/models/opponent-pool/step-000463001600.flax_model"
+    },
+    {
+      "step": 468000768,
+      "sha256": "6a663660d26442d79d6200b5155d4e04e4afb98a473535a21106200a612a19b0",
+      "path": "resources/models/opponent-pool/step-000468000768.flax_model"
+    }
+  ]
+}

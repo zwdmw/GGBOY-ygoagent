@@ -1,0 +1,68 @@
+{
+  "schema": "ygo-sky-third-party/v1",
+  "components": [
+    {
+      "component": "ygo-agent and modified ygoenv",
+      "origin": "https://github.com/sbl1996/ygo-agent",
+      "snapshot": "user-provided training source; exact upstream commit not recovered",
+      "licenses": [
+        "ygo-agent/LICENSE",
+        "ygo-agent/YGO-AGENT-LICENSE.txt",
+        "ygo-agent/APACHE-2.0.txt"
+      ],
+      "note": "MIT Hastur 2024 and Apache-2.0 Garena 2021 notices retained from the collected source.",
+      "wheel_notice_sha256": "a2ba8ba8b163bd6269fb6af6c7d94102dc80abafb5ef089de60fbe9219c51125"
+    },
+    {
+      "component": "YGOPro core",
+      "origin": "https://github.com/Fluorohydride/ygopro-core",
+      "commit": "f96929650ff8685b82fd48670126eae406366734",
+      "licenses": [
+        "ygopro-core/LICENSE"
+      ],
+      "license_download": "https://raw.githubusercontent.com/Fluorohydride/ygopro-core/f96929650ff8685b82fd48670126eae406366734/LICENSE",
+      "license_sha256": "a22c820abc793a3a6133a9436051bd39d9b06f88c4f170e5612fbdde09c70276"
+    },
+    {
+      "component": "YGOPro card scripts",
+      "origin": "user-provided frozen game script tree",
+      "upstream_commit": null,
+      "licenses": [
+        "ygopro-scripts/LICENSE"
+      ],
+      "license": "GPL-2.0",
+      "note": "Copied license retained; precise upstream snapshot and modification provenance remain to be established."
+    },
+    {
+      "component": "Mirrorforce network protocol and replay utilities",
+      "origin": "user-provided local source snapshot",
+      "file_manifest": "src/ygo_sky/duel/network/vendor/sources.json",
+      "license_status": "unresolved"
+    },
+    {
+      "component": "checkpoint, semantics, card data and deck data",
+      "origin": "user-provided experiment resources",
+      "file_manifest": "release-info/resource-files.json",
+      "license_status": "redistribution terms unresolved"
+    },
+    {
+      "component": "native linked dependencies",
+      "origin": "versioned xmake packages in native/xmake.lua",
+      "license_status": "dependency license bundle pending; source build recipe provided"
+    },
+    {
+      "component": "new integration code",
+      "license_status": "MIT for original integration code and documentation only",
+      "licenses": [
+        "../LICENSE"
+      ],
+      "copyright": "2026 zwdmw"
+    }
+  ],
+  "supplemental_apache_text": {
+    "official_reference": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+    "obtained_from": "aiohttp-3.14.3 distribution license, complete standard Apache-2.0 terms and appendix",
+    "modification": "Appendix example copyright reset to standard placeholders; no aiohttp attribution implied.",
+    "sha256": "313605fbac6945e9324d4825470796b5b7dbc012f523fdc181f6e6fd234eb88f"
+  }
+}

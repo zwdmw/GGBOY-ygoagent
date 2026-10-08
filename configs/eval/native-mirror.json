@@ -1,0 +1,9 @@
+{
+  "schema": "ygo-sky-evaluation/v1",
+  "model": "specialist-464m",
+  "opponent": "base-463m",
+  "pairs": 32,
+  "seed": 2026100802,
+  "deck": "resources/decks/sky-striker.ydk",
+  "max_steps": 1000
+}

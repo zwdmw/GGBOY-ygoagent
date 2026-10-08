@@ -1,0 +1,57 @@
+[
+    {
+        "file":  "netduel/actions.py",
+        "source_sha256":  "684345cd6368a288293b523a0319511e4980d153681ef6eb84c439edf78e8e70",
+        "vendored_sha256":  "684345cd6368a288293b523a0319511e4980d153681ef6eb84c439edf78e8e70"
+    },
+    {
+        "file":  "netduel/board.py",
+        "source_sha256":  "6aaab1682753869d01f5f3f1507eff108facfa091c1f5782214eb436f02f2588",
+        "vendored_sha256":  "6aaab1682753869d01f5f3f1507eff108facfa091c1f5782214eb436f02f2588"
+    },
+    {
+        "file":  "netduel/cards.py",
+        "source_sha256":  "da3a074ca32cedd352161ca856a594823b3304b7b73a46b14d5941b07a015051",
+        "vendored_sha256":  "da3a074ca32cedd352161ca856a594823b3304b7b73a46b14d5941b07a015051"
+    },
+    {
+        "file":  "netduel/client.py",
+        "source_sha256":  "7c036d38b0fea3a5946ebf880e8f94f230f69d70a56d340f7635e060972071a3",
+        "vendored_sha256":  "7c036d38b0fea3a5946ebf880e8f94f230f69d70a56d340f7635e060972071a3"
+    },
+    {
+        "file":  "netduel/constants.py",
+        "source_sha256":  "80d78e6b885aa6e9943cb20c83c864cb7df1bd3e7cbde81d2c3713584015fe6f",
+        "vendored_sha256":  "80d78e6b885aa6e9943cb20c83c864cb7df1bd3e7cbde81d2c3713584015fe6f"
+    },
+    {
+        "file":  "netduel/disclosure.py",
+        "source_sha256":  "2ff8fa6666c2d646fba88452f459d80586b4fcbf1c698b845b4f6447db9c3ce8",
+        "vendored_sha256":  "2ff8fa6666c2d646fba88452f459d80586b4fcbf1c698b845b4f6447db9c3ce8"
+    },
+    {
+        "file":  "netduel/encode.py",
+        "source_sha256":  "04084a1cd4ffe3ecf4c8014eab2a9e3e437a4d2594cd461ae2a4e02559e6c413",
+        "vendored_sha256":  "98dcc5ccd9fd919f73b7f0d5f85ef1553a38d0a92390f7bab229e39715c107b6"
+    },
+    {
+        "file":  "netduel/obsconst.py",
+        "source_sha256":  "753b633c2b3249454417f3faa40367a2c3a1ab8a779d0adeff89d738096eceef",
+        "vendored_sha256":  "753b633c2b3249454417f3faa40367a2c3a1ab8a779d0adeff89d738096eceef"
+    },
+    {
+        "file":  "netduel/policy.py",
+        "source_sha256":  "da9ccf5728e98ca5f86116ac9245334a7c7e088a5af4c905973d7f11691ba2a2",
+        "vendored_sha256":  "da9ccf5728e98ca5f86116ac9245334a7c7e088a5af4c905973d7f11691ba2a2"
+    },
+    {
+        "file":  "netduel/protocol.py",
+        "source_sha256":  "695224d88c620d4084f6eab984e1dce4330b2b252a31fb75a7400ef7b3a2d71e",
+        "vendored_sha256":  "695224d88c620d4084f6eab984e1dce4330b2b252a31fb75a7400ef7b3a2d71e"
+    },
+    {
+        "file":  "replay/actions.py",
+        "source_sha256":  "92c6636802361a1c54bde5099a3f40a2c4a3865f30ec03d7f227427668f4d9b2",
+        "vendored_sha256":  "92c6636802361a1c54bde5099a3f40a2c4a3865f30ec03d7f227427668f4d9b2"
+    }
+]
