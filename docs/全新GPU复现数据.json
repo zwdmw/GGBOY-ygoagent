@@ -1,0 +1,1463 @@
+{
+  "schema": "ygo-sky-clean-gpu-reproduction/v1",
+  "date": "2026-10-08",
+  "environment": {
+    "platform": "Linux-5.15.0-25-generic-x86_64-with-glibc2.35",
+    "python": "3.11.11",
+    "venv_isolated": true,
+    "include_system_site_packages": false,
+    "jax": "0.4.28",
+    "devices": [
+      "cuda:0"
+    ],
+    "gpu": "NVIDIA GeForce RTX 4080 SUPER, 32760 MiB, 595.71.05",
+    "pip_check": "No broken requirements found.",
+    "source_commit": "d5d9d5daa943f6f6739e4cdd04eb15002bc2cb4b",
+    "resource_install": "SHA256-verified local copy of public v0.1.0 release archive",
+    "resource_sha256": "a718650043db90e3a51e5f8cd94d81351daacdfec263466aa670de1a70611ffd",
+    "patches": [
+      "native/ygoenv/setup.py",
+      "configs/train/ppo-continue.json"
+    ],
+    "native_runtime": {
+      "schema": "ygo-sky-runtime/v1",
+      "kind": "reference",
+      "module": "native/ygoenv/ygoenv/ygopro/ygopro_ygoenv.cpython-311-x86_64-linux-gnu.so",
+      "sha256": "65628475e6373f506fb59abc02627ab88ab8e5ee85ba959cc3503279eba4aee5",
+      "observation_revision": "sky-selfplay-own-deck-candidates-v2"
+    },
+    "fix_commit": "23f2f09f80c100ea32a819e610221277e1bf90fa",
+    "patched_source_sha256": {
+      "native/ygoenv/setup.py": "d802f253f4a695bc50ef430e36243b45789d7fa2465f95f82963a6aed9e5a700",
+      "configs/train/ppo-continue.json": "4447eadba54114bf93c5f05ad017a86a766bb688bbbfc30901c0a8bee2013c74"
+    }
+  },
+  "dependencies_file": "GPU依赖快照.txt",
+  "dependencies_sha256": "935deec313121ba096e38bb759233f048f1a80b0ab2f904f995c434b6356ae6a",
+  "smoke": {
+    "name": "smoke",
+    "config": {
+      "schema": "ygo-sky-training/v1",
+      "trainer": "cleanba",
+      "model": "base-463m",
+      "optimizer_restored": false,
+      "deck": "resources/game/assets/deck/expert-sky-20260919/train",
+      "opponent_pool": null,
+      "args": {
+        "max_options": 128,
+        "num_steps": 8,
+        "num_minibatches": 1,
+        "local_num_envs": 2,
+        "local_env_threads": 2,
+        "num_actor_threads": 1,
+        "actor_device_ids": [
+          0
+        ],
+        "learner_device_ids": [
+          0
+        ],
+        "learning_rate": 3e-05,
+        "decision_aux_coef": 0.05,
+        "lp_shaping_coef": 0.01,
+        "lp_shaping_scale": 500.0,
+        "gamma": 1.0,
+        "gae_lambda": 0.95,
+        "value": "gae",
+        "ppo_clip": true,
+        "deck_schedule": "expert",
+        "anchor_deck": "cluster_90019__expert_target",
+        "anchor_probability_percent": 0,
+        "pool_deck_uniform": 1,
+        "mirror_probability_percent": 50,
+        "matched_probability_percent": 30,
+        "total_timesteps": 32,
+        "save_interval": 1,
+        "local_eval_episodes": 4,
+        "eval_interval": 0,
+        "timeout": 120,
+        "seed": 92020001,
+        "log_frequency": 1,
+        "concurrency": false
+      }
+    },
+    "checkpoint": "runs/smoke/checkpoints/1791470918_463001632_steps.flax_model",
+    "global_step": 463001632,
+    "sha256": "a505d27a33cd5dd19758ba34ef4d1df1c44e43ebafd33b05ef6cb25df1a784df",
+    "tensor_count": 293,
+    "changed_tensors": 286,
+    "all_finite": true,
+    "exit_code": 0,
+    "optimizer_restored": false
+  },
+  "registration": {
+    "model": "repro-smoke",
+    "step": 463001632,
+    "sha256": "a505d27a33cd5dd19758ba34ef4d1df1c44e43ebafd33b05ef6cb25df1a784df"
+  },
+  "inference": {
+    "action": 1,
+    "legal_count": 2,
+    "inference_ms": 42517.57838599951,
+    "model_sha256": "a505d27a33cd5dd19758ba34ef4d1df1c44e43ebafd33b05ef6cb25df1a784df",
+    "global_step": 463001632
+  },
+  "recipes": [
+    {
+      "name": "corrected-selfplay",
+      "config": {
+        "schema": "ygo-sky-training/v1",
+        "trainer": "cleanba",
+        "model": "initial-259m",
+        "optimizer_restored": false,
+        "deck": "resources/game/assets/deck/expert-sky-20260919/train",
+        "opponent_pool": null,
+        "args": {
+          "max_options": 128,
+          "num_steps": 8,
+          "num_minibatches": 1,
+          "local_num_envs": 2,
+          "local_env_threads": 2,
+          "num_actor_threads": 2,
+          "actor_device_ids": [
+            0
+          ],
+          "learner_device_ids": [
+            0
+          ],
+          "learning_rate": 3e-05,
+          "decision_aux_coef": 0.05,
+          "lp_shaping_coef": 0.01,
+          "lp_shaping_scale": 500.0,
+          "gamma": 1.0,
+          "gae_lambda": 0.95,
+          "value": "gae",
+          "ppo_clip": true,
+          "deck_schedule": "expert",
+          "anchor_deck": "cluster_90019__expert_target",
+          "anchor_probability_percent": 0,
+          "pool_deck_uniform": 1,
+          "mirror_probability_percent": 0,
+          "matched_probability_percent": 0,
+          "total_timesteps": 64,
+          "save_interval": 1,
+          "local_eval_episodes": 4,
+          "eval_interval": 0,
+          "timeout": 120,
+          "seed": 92020001,
+          "log_frequency": 1
+        }
+      },
+      "checkpoint": "runs/check-corrected-selfplay/checkpoints/1791471431_259000384_steps.flax_model",
+      "global_step": 259000384,
+      "sha256": "d4c1a3734a4f5c6ce3a0d42efa5329fa7cd75b4d52e07fe09ea2bd7b1933b6b9",
+      "tensor_count": 293,
+      "changed_tensors": 286,
+      "all_finite": true,
+      "exit_code": 0,
+      "optimizer_restored": false,
+      "source_recipe": "configs/train/corrected-selfplay.json",
+      "original_command_dry_run_passed": true
+    },
+    {
+      "name": "mixed-50-30-20",
+      "config": {
+        "schema": "ygo-sky-training/v1",
+        "trainer": "cleanba",
+        "model": "initial-259m",
+        "optimizer_restored": false,
+        "deck": "resources/game/assets/deck/expert-sky-20260919/train",
+        "opponent_pool": null,
+        "args": {
+          "max_options": 128,
+          "num_steps": 8,
+          "num_minibatches": 1,
+          "local_num_envs": 2,
+          "local_env_threads": 2,
+          "num_actor_threads": 2,
+          "actor_device_ids": [
+            0
+          ],
+          "learner_device_ids": [
+            0
+          ],
+          "learning_rate": 3e-05,
+          "decision_aux_coef": 0.05,
+          "lp_shaping_coef": 0.01,
+          "lp_shaping_scale": 500.0,
+          "gamma": 1.0,
+          "gae_lambda": 0.95,
+          "value": "gae",
+          "ppo_clip": true,
+          "deck_schedule": "expert",
+          "anchor_deck": "cluster_90019__expert_target",
+          "anchor_probability_percent": 0,
+          "pool_deck_uniform": 1,
+          "mirror_probability_percent": 50,
+          "matched_probability_percent": 30,
+          "total_timesteps": 64,
+          "save_interval": 1,
+          "local_eval_episodes": 4,
+          "eval_interval": 0,
+          "timeout": 120,
+          "seed": 92020001,
+          "log_frequency": 1
+        }
+      },
+      "checkpoint": "runs/check-mixed-50-30-20/checkpoints/1791471825_259000384_steps.flax_model",
+      "global_step": 259000384,
+      "sha256": "011c266802f486ac21493bffe2a388ebca115d263ac566aecbde2fde20e3cdc4",
+      "tensor_count": 293,
+      "changed_tensors": 286,
+      "all_finite": true,
+      "exit_code": 0,
+      "optimizer_restored": false,
+      "source_recipe": "configs/train/mixed-50-30-20.json",
+      "original_command_dry_run_passed": true
+    },
+    {
+      "name": "ppo-continue",
+      "config": {
+        "schema": "ygo-sky-training/v1",
+        "trainer": "cleanba_pool",
+        "model": "base-463m",
+        "optimizer_restored": false,
+        "deck": "resources/game/assets/deck/expert-sky-20260919/train",
+        "opponent_pool": null,
+        "args": {
+          "max_options": 128,
+          "num_steps": 8,
+          "num_minibatches": 2,
+          "local_num_envs": 8,
+          "local_env_threads": 4,
+          "num_actor_threads": 2,
+          "actor_device_ids": [
+            0
+          ],
+          "learner_device_ids": [
+            0
+          ],
+          "learning_rate": 3e-05,
+          "decision_aux_coef": 0.05,
+          "lp_shaping_coef": 0.01,
+          "lp_shaping_scale": 500.0,
+          "gamma": 1.0,
+          "gae_lambda": 0.95,
+          "value": "gae",
+          "ppo_clip": true,
+          "deck_schedule": "expert",
+          "anchor_deck": "cluster_90019__expert_target",
+          "anchor_probability_percent": 0,
+          "pool_deck_uniform": 1,
+          "mirror_probability_percent": 50,
+          "matched_probability_percent": 30,
+          "total_timesteps": 256,
+          "save_interval": 1,
+          "local_eval_episodes": 4,
+          "eval_interval": 0,
+          "timeout": 120,
+          "seed": 92020001,
+          "opponent_pool_percent": 20,
+          "opponent_pool_stride": 1,
+          "log_frequency": 1
+        }
+      },
+      "checkpoint": "runs/check-ppo-continue/checkpoints/1791472029_463001856_steps.flax_model",
+      "global_step": 463001856,
+      "sha256": "966da2d4ee7963650d042864ab128062a749598dce233455c8524142cb2752cc",
+      "tensor_count": 293,
+      "changed_tensors": 286,
+      "all_finite": true,
+      "exit_code": 0,
+      "optimizer_restored": false,
+      "source_recipe": "configs/train/ppo-continue.json",
+      "original_command_dry_run_passed": true
+    },
+    {
+      "name": "mirror-specialist",
+      "config": {
+        "schema": "ygo-sky-training/v1",
+        "trainer": "cleanba_mirror_pool",
+        "model": "base-463m",
+        "optimizer_restored": false,
+        "deck": "resources/game/assets/deck/expert-sky-20260919/train",
+        "opponent_pool": null,
+        "args": {
+          "max_options": 128,
+          "num_steps": 8,
+          "num_minibatches": 1,
+          "local_num_envs": 2,
+          "local_env_threads": 2,
+          "num_actor_threads": 8,
+          "actor_device_ids": [
+            0
+          ],
+          "learner_device_ids": [
+            0
+          ],
+          "learning_rate": 1e-05,
+          "decision_aux_coef": 0.05,
+          "lp_shaping_coef": 0.01,
+          "lp_shaping_scale": 500.0,
+          "gamma": 1.0,
+          "gae_lambda": 0.95,
+          "value": "gae",
+          "ppo_clip": true,
+          "deck_schedule": "expert",
+          "anchor_deck": "cluster_90019__expert_target",
+          "anchor_probability_percent": 0,
+          "pool_deck_uniform": 1,
+          "mirror_probability_percent": 80,
+          "matched_probability_percent": 15,
+          "total_timesteps": 256,
+          "save_interval": 1,
+          "local_eval_episodes": 4,
+          "eval_interval": 0,
+          "timeout": 120,
+          "seed": 2026100401,
+          "opponent_pool_percent": 40,
+          "opponent_anchor_percent": 20,
+          "opponent_anchor_step": 463001600,
+          "opponent_anchor_threads": 2,
+          "opponent_pool_stride": 1,
+          "opponent_pool_policy": "sample",
+          "log_frequency": 1
+        }
+      },
+      "checkpoint": "runs/check-mirror-specialist/checkpoints/1791472466_463001856_steps.flax_model",
+      "global_step": 463001856,
+      "sha256": "a6a5af65584a0050618003836066da9583574e89fca0c03292323cd24f2216a4",
+      "tensor_count": 293,
+      "changed_tensors": 286,
+      "all_finite": true,
+      "exit_code": 0,
+      "optimizer_restored": false,
+      "source_recipe": "configs/train/mirror-specialist.json",
+      "original_command_dry_run_passed": true
+    }
+  ],
+  "recipe_argument_parse_passed": [
+    "corrected-selfplay",
+    "mixed-50-30-20",
+    "ppo-continue",
+    "mirror-specialist",
+    "smoke"
+  ],
+  "opponent_pools": {
+    "ppo": {
+      "schema": "ygo-sky-opponent-pool/v1",
+      "members": [
+        {
+          "step": 463001600,
+          "sha256": "20ddfd6cc92a6d960e617bce2a94ec8ccb50acd785445879b57e1bbe342f1558",
+          "path": "resources/models/opponent-pool/step-000463001600.flax_model"
+        },
+        {
+          "step": 468000768,
+          "sha256": "6a663660d26442d79d6200b5155d4e04e4afb98a473535a21106200a612a19b0",
+          "path": "resources/models/opponent-pool/step-000468000768.flax_model"
+        }
+      ]
+    },
+    "mirror": {
+      "schema": "ygo-sky-opponent-pool/v1",
+      "members": [
+        {
+          "step": 340000768,
+          "sha256": "1e6859c50b7766afb970781d4e427e34f070294cf697830a1ccd0946bff95777",
+          "path": "resources/models/opponent-pool/step-000340000768.flax_model"
+        },
+        {
+          "step": 421001216,
+          "sha256": "d6edb46d71aa7b41f2ca1458c5eec0509a2af29daf6e57dee0143892b62fe6e8",
+          "path": "resources/models/opponent-pool/step-000421001216.flax_model"
+        },
+        {
+          "step": 461524992,
+          "sha256": "323cc408245b0b20be991822a2ea9fc9a3f953b3d7d2327582074fbb90dc16f7",
+          "path": "resources/models/opponent-pool/step-000461524992.flax_model"
+        },
+        {
+          "step": 462002176,
+          "sha256": "c3961c7c90f84b46cc2541ebd14db8566fb3a558d69bb6e7a88d8ececd0ac362",
+          "path": "resources/models/opponent-pool/step-000462002176.flax_model"
+        },
+        {
+          "step": 463001600,
+          "sha256": "20ddfd6cc92a6d960e617bce2a94ec8ccb50acd785445879b57e1bbe342f1558",
+          "path": "resources/models/opponent-pool/step-000463001600.flax_model"
+        },
+        {
+          "step": 465000448,
+          "sha256": "61a791333ce4c8d4c71f62bc25220437047248db0fc5b3653c33a412579570fa",
+          "path": "resources/models/opponent-pool/step-000465000448.flax_model"
+        },
+        {
+          "step": 468000768,
+          "sha256": "6a663660d26442d79d6200b5155d4e04e4afb98a473535a21106200a612a19b0",
+          "path": "resources/models/opponent-pool/step-000468000768.flax_model"
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "configuration": {
+      "code_list": "resources/game/scripts/code_list.txt",
+      "code_list_sha256": "04cb9134b5370b9841f8ee4d969dc519ecb11021f5df3655d0faf9d3c94695aa",
+      "deck_for_both_players": "resources/decks/sky-striker.ydk",
+      "deck_sha256": "7ecc5bf6a9eba9e04da316317d76bcc570c5613ef5b307b9a71df1e17d4207a3",
+      "expert_checkpoint_metadata": {
+        "architecture": "decision-v1",
+        "bfloat16": false,
+        "decision_aux_coef": 0.05,
+        "global_step": 463001632,
+        "initial_checkpoint": "resources/models/base-463001600.flax_model",
+        "lp_shaping_coef": 0.01,
+        "lp_shaping_scale": 500.0,
+        "model_args": {
+          "action_feats": true,
+          "batch_norm": false,
+          "card_mask": false,
+          "critic_depth": 3,
+          "critic_width": 128,
+          "decision_layers": 2,
+          "film": true,
+          "noam": true,
+          "num_channels": 128,
+          "num_layers": 2,
+          "oppo_info": false,
+          "rnn_channels": 512,
+          "rnn_shortcut": false,
+          "rnn_type": "lstm",
+          "rwkv_head_size": 32,
+          "structured": true,
+          "structured_action_cross_layers": 1,
+          "structured_action_set_layers": 1,
+          "structured_heads": 4,
+          "structured_scene_layers": 2,
+          "use_history": true,
+          "version": 2
+        },
+        "native_module_sha256": "65628475e6373f506fb59abc02627ab88ab8e5ee85ba959cc3503279eba4aee5",
+        "observation_revision": "sky-selfplay-own-deck-candidates-v2",
+        "optimizer_restored": false,
+        "outcome_boundary": "next_decision_public_delta_v1",
+        "schema": "ygo-training-checkpoint/v2",
+        "semantic_shape": [
+          14950,
+          78,
+          16,
+          64
+        ],
+        "sha256": "a505d27a33cd5dd19758ba34ef4d1df1c44e43ebafd33b05ef6cb25df1a784df",
+        "switch": false
+      },
+      "max_options": 128,
+      "max_steps": 1000,
+      "mirrored_initial_observations_equal": true,
+      "n_history_actions": 32,
+      "official_code_list": "resources/game/scripts/code_list.txt",
+      "official_code_list_sha256": "04cb9134b5370b9841f8ee4d969dc519ecb11021f5df3655d0faf9d3c94695aa",
+      "official_policy": "argmax",
+      "opponent_kind": "frozen-structured-baseline",
+      "opponent_note": "Both sides are decision-v1; no official ID remapping.",
+      "paired_seeds": 32,
+      "recording_enabled": false,
+      "seed": 2026100802,
+      "semantic_cache": "resources/game/assets/structured/frozen_semantics_v1.npz",
+      "shared_identical_model_inference": false,
+      "structured_policy": "argmax",
+      "structured_semantic_shape": [
+        14950,
+        78,
+        16,
+        64
+      ],
+      "temperature": 1.0,
+      "total_games": 64
+    },
+    "created_at_utc": "2026-10-08T14:57:08.799499+00:00",
+    "deck_index_stats": {
+      "copies": 55,
+      "max_current_id": 13420,
+      "max_official_id": 13420,
+      "min_current_id": 403,
+      "min_official_id": 403,
+      "missing_current_codes": [],
+      "missing_official_codes": [],
+      "missing_official_copies": 0,
+      "unique_cards": 32
+    },
+    "games": {
+      "structured_going_first": [
+        {
+          "environment_index": 0,
+          "environment_return": 1.0,
+          "length": 336,
+          "outcome": "win",
+          "structured_return": 1.0,
+          "structured_seat": 0,
+          "terminal_to_play": 0,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 1,
+          "environment_return": 1.0,
+          "length": 169,
+          "outcome": "loss",
+          "structured_return": -1.0,
+          "structured_seat": 0,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 2,
+          "environment_return": 1.0,
+          "length": 203,
+          "outcome": "loss",
+          "structured_return": -1.0,
+          "structured_seat": 0,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 3,
+          "environment_return": 1.0,
+          "length": 350,
+          "outcome": "loss",
+          "structured_return": -1.0,
+          "structured_seat": 0,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 4,
+          "environment_return": 1.0,
+          "length": 374,
+          "outcome": "win",
+          "structured_return": 1.0,
+          "structured_seat": 0,
+          "terminal_to_play": 0,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 5,
+          "environment_return": 1.0,
+          "length": 436,
+          "outcome": "loss",
+          "structured_return": -1.0,
+          "structured_seat": 0,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 6,
+          "environment_return": 1.0,
+          "length": 300,
+          "outcome": "win",
+          "structured_return": 1.0,
+          "structured_seat": 0,
+          "terminal_to_play": 0,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 7,
+          "environment_return": 1.0,
+          "length": 310,
+          "outcome": "loss",
+          "structured_return": -1.0,
+          "structured_seat": 0,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 8,
+          "environment_return": 1.0,
+          "length": 165,
+          "outcome": "loss",
+          "structured_return": -1.0,
+          "structured_seat": 0,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 9,
+          "environment_return": 1.0,
+          "length": 647,
+          "outcome": "loss",
+          "structured_return": -1.0,
+          "structured_seat": 0,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 10,
+          "environment_return": 1.0,
+          "length": 229,
+          "outcome": "win",
+          "structured_return": 1.0,
+          "structured_seat": 0,
+          "terminal_to_play": 0,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 11,
+          "environment_return": 1.0,
+          "length": 265,
+          "outcome": "loss",
+          "structured_return": -1.0,
+          "structured_seat": 0,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 12,
+          "environment_return": -1.0,
+          "length": 360,
+          "outcome": "loss",
+          "structured_return": -1.0,
+          "structured_seat": 0,
+          "terminal_to_play": 0,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 13,
+          "environment_return": 1.0,
+          "length": 219,
+          "outcome": "loss",
+          "structured_return": -1.0,
+          "structured_seat": 0,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 14,
+          "environment_return": 1.0,
+          "length": 393,
+          "outcome": "win",
+          "structured_return": 1.0,
+          "structured_seat": 0,
+          "terminal_to_play": 0,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 15,
+          "environment_return": 1.0,
+          "length": 276,
+          "outcome": "win",
+          "structured_return": 1.0,
+          "structured_seat": 0,
+          "terminal_to_play": 0,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 16,
+          "environment_return": 1.0,
+          "length": 193,
+          "outcome": "loss",
+          "structured_return": -1.0,
+          "structured_seat": 0,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 17,
+          "environment_return": 1.0,
+          "length": 249,
+          "outcome": "loss",
+          "structured_return": -1.0,
+          "structured_seat": 0,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 18,
+          "environment_return": 1.0,
+          "length": 395,
+          "outcome": "win",
+          "structured_return": 1.0,
+          "structured_seat": 0,
+          "terminal_to_play": 0,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 19,
+          "environment_return": -1.0,
+          "length": 227,
+          "outcome": "loss",
+          "structured_return": -1.0,
+          "structured_seat": 0,
+          "terminal_to_play": 0,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 20,
+          "environment_return": 1.0,
+          "length": 106,
+          "outcome": "loss",
+          "structured_return": -1.0,
+          "structured_seat": 0,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 21,
+          "environment_return": 1.0,
+          "length": 244,
+          "outcome": "win",
+          "structured_return": 1.0,
+          "structured_seat": 0,
+          "terminal_to_play": 0,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 22,
+          "environment_return": 1.0,
+          "length": 255,
+          "outcome": "loss",
+          "structured_return": -1.0,
+          "structured_seat": 0,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 23,
+          "environment_return": 1.0,
+          "length": 421,
+          "outcome": "loss",
+          "structured_return": -1.0,
+          "structured_seat": 0,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 24,
+          "environment_return": 1.0,
+          "length": 248,
+          "outcome": "win",
+          "structured_return": 1.0,
+          "structured_seat": 0,
+          "terminal_to_play": 0,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 25,
+          "environment_return": 1.0,
+          "length": 318,
+          "outcome": "loss",
+          "structured_return": -1.0,
+          "structured_seat": 0,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 26,
+          "environment_return": 1.0,
+          "length": 373,
+          "outcome": "loss",
+          "structured_return": -1.0,
+          "structured_seat": 0,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 27,
+          "environment_return": 1.0,
+          "length": 444,
+          "outcome": "loss",
+          "structured_return": -1.0,
+          "structured_seat": 0,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 28,
+          "environment_return": -1.0,
+          "length": 433,
+          "outcome": "win",
+          "structured_return": 1.0,
+          "structured_seat": 0,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 29,
+          "environment_return": 1.0,
+          "length": 230,
+          "outcome": "win",
+          "structured_return": 1.0,
+          "structured_seat": 0,
+          "terminal_to_play": 0,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 30,
+          "environment_return": 1.0,
+          "length": 602,
+          "outcome": "win",
+          "structured_return": 1.0,
+          "structured_seat": 0,
+          "terminal_to_play": 0,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 31,
+          "environment_return": 1.0,
+          "length": 301,
+          "outcome": "loss",
+          "structured_return": -1.0,
+          "structured_seat": 0,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        }
+      ],
+      "structured_going_second": [
+        {
+          "environment_index": 0,
+          "environment_return": 1.0,
+          "length": 312,
+          "outcome": "loss",
+          "structured_return": -1.0,
+          "structured_seat": 1,
+          "terminal_to_play": 0,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 1,
+          "environment_return": 1.0,
+          "length": 169,
+          "outcome": "win",
+          "structured_return": 1.0,
+          "structured_seat": 1,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 2,
+          "environment_return": 1.0,
+          "length": 203,
+          "outcome": "win",
+          "structured_return": 1.0,
+          "structured_seat": 1,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 3,
+          "environment_return": 1.0,
+          "length": 350,
+          "outcome": "win",
+          "structured_return": 1.0,
+          "structured_seat": 1,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 4,
+          "environment_return": 1.0,
+          "length": 374,
+          "outcome": "loss",
+          "structured_return": -1.0,
+          "structured_seat": 1,
+          "terminal_to_play": 0,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 5,
+          "environment_return": 1.0,
+          "length": 576,
+          "outcome": "win",
+          "structured_return": 1.0,
+          "structured_seat": 1,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 6,
+          "environment_return": 1.0,
+          "length": 300,
+          "outcome": "loss",
+          "structured_return": -1.0,
+          "structured_seat": 1,
+          "terminal_to_play": 0,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 7,
+          "environment_return": 1.0,
+          "length": 310,
+          "outcome": "win",
+          "structured_return": 1.0,
+          "structured_seat": 1,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 8,
+          "environment_return": 1.0,
+          "length": 165,
+          "outcome": "win",
+          "structured_return": 1.0,
+          "structured_seat": 1,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 9,
+          "environment_return": 1.0,
+          "length": 460,
+          "outcome": "win",
+          "structured_return": 1.0,
+          "structured_seat": 1,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 10,
+          "environment_return": 1.0,
+          "length": 229,
+          "outcome": "loss",
+          "structured_return": -1.0,
+          "structured_seat": 1,
+          "terminal_to_play": 0,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 11,
+          "environment_return": 1.0,
+          "length": 265,
+          "outcome": "win",
+          "structured_return": 1.0,
+          "structured_seat": 1,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 12,
+          "environment_return": 1.0,
+          "length": 305,
+          "outcome": "win",
+          "structured_return": 1.0,
+          "structured_seat": 1,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 13,
+          "environment_return": 1.0,
+          "length": 215,
+          "outcome": "win",
+          "structured_return": 1.0,
+          "structured_seat": 1,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 14,
+          "environment_return": 1.0,
+          "length": 486,
+          "outcome": "win",
+          "structured_return": 1.0,
+          "structured_seat": 1,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 15,
+          "environment_return": 1.0,
+          "length": 341,
+          "outcome": "loss",
+          "structured_return": -1.0,
+          "structured_seat": 1,
+          "terminal_to_play": 0,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 16,
+          "environment_return": 1.0,
+          "length": 193,
+          "outcome": "win",
+          "structured_return": 1.0,
+          "structured_seat": 1,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 17,
+          "environment_return": 1.0,
+          "length": 252,
+          "outcome": "win",
+          "structured_return": 1.0,
+          "structured_seat": 1,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 18,
+          "environment_return": 1.0,
+          "length": 311,
+          "outcome": "loss",
+          "structured_return": -1.0,
+          "structured_seat": 1,
+          "terminal_to_play": 0,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 19,
+          "environment_return": 1.0,
+          "length": 295,
+          "outcome": "win",
+          "structured_return": 1.0,
+          "structured_seat": 1,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 20,
+          "environment_return": 1.0,
+          "length": 106,
+          "outcome": "win",
+          "structured_return": 1.0,
+          "structured_seat": 1,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 21,
+          "environment_return": 1.0,
+          "length": 325,
+          "outcome": "loss",
+          "structured_return": -1.0,
+          "structured_seat": 1,
+          "terminal_to_play": 0,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 22,
+          "environment_return": 1.0,
+          "length": 304,
+          "outcome": "win",
+          "structured_return": 1.0,
+          "structured_seat": 1,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 23,
+          "environment_return": 1.0,
+          "length": 430,
+          "outcome": "win",
+          "structured_return": 1.0,
+          "structured_seat": 1,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 24,
+          "environment_return": 1.0,
+          "length": 216,
+          "outcome": "win",
+          "structured_return": 1.0,
+          "structured_seat": 1,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 25,
+          "environment_return": 1.0,
+          "length": 305,
+          "outcome": "win",
+          "structured_return": 1.0,
+          "structured_seat": 1,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 26,
+          "environment_return": 1.0,
+          "length": 368,
+          "outcome": "win",
+          "structured_return": 1.0,
+          "structured_seat": 1,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 27,
+          "environment_return": 1.0,
+          "length": 355,
+          "outcome": "win",
+          "structured_return": 1.0,
+          "structured_seat": 1,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 28,
+          "environment_return": 1.0,
+          "length": 356,
+          "outcome": "win",
+          "structured_return": 1.0,
+          "structured_seat": 1,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 29,
+          "environment_return": 1.0,
+          "length": 230,
+          "outcome": "loss",
+          "structured_return": -1.0,
+          "structured_seat": 1,
+          "terminal_to_play": 0,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 30,
+          "environment_return": 1.0,
+          "length": 429,
+          "outcome": "loss",
+          "structured_return": -1.0,
+          "structured_seat": 1,
+          "terminal_to_play": 0,
+          "truncated": false,
+          "win_reason": 1
+        },
+        {
+          "environment_index": 31,
+          "environment_return": 1.0,
+          "length": 483,
+          "outcome": "win",
+          "structured_return": 1.0,
+          "structured_seat": 1,
+          "terminal_to_play": 1,
+          "truncated": false,
+          "win_reason": 1
+        }
+      ]
+    },
+    "models": {
+      "official": {
+        "architecture": "decision-v1",
+        "global_step": 463001600,
+        "path": "resources/models/base-463001600.flax_model",
+        "sha256": "20ddfd6cc92a6d960e617bce2a94ec8ccb50acd785445879b57e1bbe342f1558"
+      },
+      "structured": {
+        "path": "resources/models/repro-smoke.flax_model",
+        "sha256": "a505d27a33cd5dd19758ba34ef4d1df1c44e43ebafd33b05ef6cb25df1a784df"
+      }
+    },
+    "paired": {
+      "completed_pairs": 32,
+      "outcomes_first_then_second": {
+        "LW": 20,
+        "WL": 9,
+        "WW": 3
+      },
+      "paired_difference_normal_95": [
+        -0.008858862331829115,
+        0.19635886233182911
+      ],
+      "paired_score_difference": 0.09375,
+      "structured_points_across_two_games": {
+        "1.0": 29,
+        "2.0": 3
+      }
+    },
+    "structured_model": {
+      "going_first_player_0": {
+        "completed": 32,
+        "decisive_win_rate": 0.375,
+        "draws": 0,
+        "games": 32,
+        "incomplete": 0,
+        "losses": 20,
+        "mean_length": 314.71875,
+        "median_length": 300.5,
+        "p95_length": 515.0999999999999,
+        "score_rate_draw_half": 0.375,
+        "strict_win_rate": 0.375,
+        "strict_win_rate_wilson_95": [
+          0.22933887309454212,
+          0.5474559264692255
+        ],
+        "win_reasons": {
+          "1": 32
+        },
+        "wins": 12
+      },
+      "going_second_player_1": {
+        "completed": 32,
+        "decisive_win_rate": 0.71875,
+        "draws": 0,
+        "games": 32,
+        "incomplete": 0,
+        "losses": 9,
+        "mean_length": 313.0625,
+        "median_length": 307.5,
+        "p95_length": 484.35,
+        "score_rate_draw_half": 0.71875,
+        "strict_win_rate": 0.71875,
+        "strict_win_rate_wilson_95": [
+          0.5462549057408342,
+          0.8443541950225723
+        ],
+        "win_reasons": {
+          "1": 32
+        },
+        "wins": 23
+      },
+      "overall": {
+        "completed": 64,
+        "decisive_win_rate": 0.546875,
+        "draws": 0,
+        "games": 64,
+        "incomplete": 0,
+        "losses": 29,
+        "mean_length": 313.890625,
+        "median_length": 305.0,
+        "p95_length": 485.54999999999995,
+        "score_rate_draw_half": 0.546875,
+        "strict_win_rate": 0.546875,
+        "strict_win_rate_wilson_95": [
+          0.4257359722005412,
+          0.6627055221938833
+        ],
+        "win_reasons": {
+          "1": 64
+        },
+        "wins": 35
+      }
+    },
+    "timings": {
+      "structured_going_first": {
+        "environment_decisions_including_resets": 20704,
+        "environment_seconds": 15.185177564620972,
+        "initial_observation_sha256": "6b37ceede4187b5d1dce90a2c8b4e909988feb65f1b25925ba2ada89d951fc7e",
+        "model_seconds": 84.57188534736633,
+        "opponent_architecture": "decision-v1",
+        "recording_enabled": false,
+        "vector_steps": 647,
+        "wall_seconds": 99.8853006362915
+      },
+      "structured_going_second": {
+        "environment_decisions_including_resets": 18432,
+        "environment_seconds": 13.725486516952515,
+        "initial_observation_sha256": "6b37ceede4187b5d1dce90a2c8b4e909988feb65f1b25925ba2ada89d951fc7e",
+        "model_seconds": 7.0248613357543945,
+        "opponent_architecture": "decision-v1",
+        "recording_enabled": false,
+        "vector_steps": 576,
+        "wall_seconds": 20.862991094589233
+      }
+    }
+  },
+  "finite_logits_checked_each_step": true,
+  "original_documents_recipe_failures": [
+    "GPU extra missing in fresh GPU instructions",
+    "wheel misdeclared as native runtime dependency",
+    "unsupported PPO recipe arguments"
+  ],
+  "model_resource_verification": {
+    "initial-259m": {
+      "model": "initial-259m",
+      "step": 259000320,
+      "artifacts": [
+        {
+          "name": "checkpoint",
+          "path": "resources/models/initial-259000320.flax_model",
+          "sha256": "3b31b70460bf4c871322a901a290929b3a36da98e0fc30e0bbb05aaceba834c0"
+        },
+        {
+          "name": "sidecar",
+          "path": "resources/models/initial-259000320.flax_model.json",
+          "sha256": "fb419a4feef44607a4a7dc236ef19e498bd27dc0a5bf0138359df4acd64f7a10"
+        },
+        {
+          "name": "semantics",
+          "path": "resources/game/assets/structured/frozen_semantics_v1.npz",
+          "sha256": "646b164ddff4169e3379aca3d59fb36f41c4aa7b031c86068f46d00a68657aec"
+        },
+        {
+          "name": "code_list",
+          "path": "resources/game/scripts/code_list.txt",
+          "sha256": "04cb9134b5370b9841f8ee4d969dc519ecb11021f5df3655d0faf9d3c94695aa"
+        },
+        {
+          "name": "cards",
+          "path": "resources/game/assets/locale/en/cards.cdb",
+          "sha256": "2bfa5e1392c9dcbd64587c167823de522138d67e4eeb4c66e635c19a4e7f6841"
+        },
+        {
+          "name": "deck",
+          "path": "resources/decks/sky-striker.ydk",
+          "sha256": "7ecc5bf6a9eba9e04da316317d76bcc570c5613ef5b307b9a71df1e17d4207a3"
+        },
+        {
+          "name": "native_reference",
+          "path": "resources/runtime/linux-cpython311/training/ygopro_ygoenv.so",
+          "sha256": "65628475e6373f506fb59abc02627ab88ab8e5ee85ba959cc3503279eba4aee5"
+        }
+      ]
+    },
+    "base-463m": {
+      "model": "base-463m",
+      "step": 463001600,
+      "artifacts": [
+        {
+          "name": "checkpoint",
+          "path": "resources/models/base-463001600.flax_model",
+          "sha256": "20ddfd6cc92a6d960e617bce2a94ec8ccb50acd785445879b57e1bbe342f1558"
+        },
+        {
+          "name": "sidecar",
+          "path": "resources/models/base-463001600.flax_model.json",
+          "sha256": "92cfee5ca165afce7960e0f9e99554b4e60928a081aadcc4a7f8857bddcfe1b0"
+        },
+        {
+          "name": "semantics",
+          "path": "resources/game/assets/structured/frozen_semantics_v1.npz",
+          "sha256": "646b164ddff4169e3379aca3d59fb36f41c4aa7b031c86068f46d00a68657aec"
+        },
+        {
+          "name": "code_list",
+          "path": "resources/game/scripts/code_list.txt",
+          "sha256": "04cb9134b5370b9841f8ee4d969dc519ecb11021f5df3655d0faf9d3c94695aa"
+        },
+        {
+          "name": "cards",
+          "path": "resources/game/assets/locale/en/cards.cdb",
+          "sha256": "2bfa5e1392c9dcbd64587c167823de522138d67e4eeb4c66e635c19a4e7f6841"
+        },
+        {
+          "name": "deck",
+          "path": "resources/decks/sky-striker.ydk",
+          "sha256": "7ecc5bf6a9eba9e04da316317d76bcc570c5613ef5b307b9a71df1e17d4207a3"
+        },
+        {
+          "name": "native_reference",
+          "path": "resources/runtime/linux-cpython311/training/ygopro_ygoenv.so",
+          "sha256": "65628475e6373f506fb59abc02627ab88ab8e5ee85ba959cc3503279eba4aee5"
+        }
+      ]
+    },
+    "specialist-464m": {
+      "model": "specialist-464m",
+      "step": 464001024,
+      "artifacts": [
+        {
+          "name": "checkpoint",
+          "path": "resources/models/specialist-464001024.flax_model",
+          "sha256": "3b2c045054900730c8e6c2522d06e9c72a14bc840392f47a2b858979150a8b03"
+        },
+        {
+          "name": "sidecar",
+          "path": "resources/models/specialist-464001024.flax_model.json",
+          "sha256": "a669a587a00695ceac46a45e97456f82f1caab056d7133f3d237403c0b18b87b"
+        },
+        {
+          "name": "semantics",
+          "path": "resources/game/assets/structured/frozen_semantics_v1.npz",
+          "sha256": "646b164ddff4169e3379aca3d59fb36f41c4aa7b031c86068f46d00a68657aec"
+        },
+        {
+          "name": "code_list",
+          "path": "resources/game/scripts/code_list.txt",
+          "sha256": "04cb9134b5370b9841f8ee4d969dc519ecb11021f5df3655d0faf9d3c94695aa"
+        },
+        {
+          "name": "cards",
+          "path": "resources/game/assets/locale/en/cards.cdb",
+          "sha256": "2bfa5e1392c9dcbd64587c167823de522138d67e4eeb4c66e635c19a4e7f6841"
+        },
+        {
+          "name": "deck",
+          "path": "resources/decks/sky-striker.ydk",
+          "sha256": "7ecc5bf6a9eba9e04da316317d76bcc570c5613ef5b307b9a71df1e17d4207a3"
+        },
+        {
+          "name": "native_reference",
+          "path": "resources/runtime/linux-cpython311/training/ygopro_ygoenv.so",
+          "sha256": "65628475e6373f506fb59abc02627ab88ab8e5ee85ba959cc3503279eba4aee5"
+        }
+      ]
+    }
+  },
+  "pool_rollout_evidence": {
+    "ppo-continue": [
+      "rollout pool: members=2 this_thread_member=0 percent=20 active_envs=1/8",
+      "rollout pool: members=2 this_thread_member=1 percent=20 active_envs=3/8"
+    ],
+    "mirror-specialist": [
+      "rollout pool: members=7 member_index=4 member_step=463001600 role=anchor policy=sample base_probability=0.8000 active_envs=1/2",
+      "rollout pool: members=7 member_index=4 member_step=463001600 role=anchor policy=sample base_probability=0.8000 active_envs=1/2rollout pool: members=7 member_index=0 member_step=340000768 role=dynamic policy=sample base_probability=0.5333 active_envs=2/2",
+      "rollout pool: members=7 member_index=2 member_step=461524992 role=dynamic policy=sample base_probability=0.5333 active_envs=1/2",
+      "rollout pool: members=7 member_index=6 member_step=468000768 role=dynamic policy=sample base_probability=0.5333 active_envs=1/2",
+      "rollout pool: members=7 member_index=1 member_step=421001216 role=dynamic policy=sample base_probability=0.5333 active_envs=1/2rollout pool: members=7 member_index=5 member_step=465000448 role=dynamic policy=sample base_probability=0.5333 active_envs=2/2",
+      "rollout pool: members=7 member_index=3 member_step=462002176 role=dynamic policy=sample base_probability=0.5333 active_envs=0/2"
+    ]
+  },
+  "long_recipe_total_timesteps_executed": false
+}

@@ -15,12 +15,12 @@
     "base_sha256": "20ddfd6cc92a6d960e617bce2a94ec8ccb50acd785445879b57e1bbe342f1558",
     "checkpoint_sha256": "d38b05d36e64a06228daded7aea489dc153e35aee3c4d96619928aa35a2ce5e0",
     "global_step": 463001632,
-    "additional_learner_steps": 32,
     "registration": {
       "model": "smoke-463m",
       "step": 463001632,
       "sha256": "d38b05d36e64a06228daded7aea489dc153e35aee3c4d96619928aa35a2ce5e0"
-    }
+    },
+    "additional_environment_steps": 32
   },
   "training_exit": {
     "exit_code": 0
@@ -519,5 +519,11 @@
     "clean CUDA installation",
     "full online native dependency build",
     "isolated bridge network-input evaluation"
-  ]
+  ],
+  "record_scope": "Initial v0.1.0 acceptance snapshot; later clean GPU verification is recorded in 全新GPU复现数据.json",
+  "follow_up_clean_gpu": {
+    "passed": true,
+    "report": "全新GPU复现报告.md",
+    "data": "全新GPU复现数据.json"
+  }
 }

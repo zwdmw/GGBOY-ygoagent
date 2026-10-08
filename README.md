@@ -80,7 +80,8 @@ ygo-sky infer --device cpu --observation resources/example-observation.npz --leg
 | 路径 | 当前验收情况 |
 | --- | --- |
 | Linux x86_64 / Python 3.11 CPU 安装与推理 | 干净环境通过 |
-| GPU 推理与 32 步短训练 | 兼容的现有 JAX CUDA 环境通过；全新 CUDA 安装未验收 |
+| GPU 推理与 32 环境步短训练 | 全新虚拟环境安装 CUDA 依赖后通过，见[复现报告](docs/全新GPU复现报告.md) |
+| 五个训练配方与成对评估 | 五份配方短程训练通过；训练后模型完成 32 对、64 局评估 |
 | HTTP 直接运行 | 真实模型请求通过 |
 | 233：`s1.ygo233.com:233`，协议 `0x1362` | 兼容卡组完成一场对局、387 次模型决策 |
 | Windows、macOS、WSL2、Python 3.12 完整运行 | 未验收；参考原生二进制限定 Linux x86_64 / Python 3.11 |

@@ -49,9 +49,9 @@ Defaults: `s1.ygo233.com:233`, protocol `0x1362`, and `sky-striker-233.ydk` (40 
 
 ## Training and verification status
 
-Training needs `.[train]`, `ygo-sky install-native` and `python -m pip install --no-deps -e native/ygoenv`. The reference binary requires Linux x86_64 / CPython 3.11. For GPU dependencies use `.[cuda]`; see [training steps](docs/快速开始.md#路线三继续训练).
+GPU training uses `.[cuda]`, which includes the training dependencies, followed by `ygo-sky install-native` and `python -m pip install --no-deps -e native/ygoenv`. Check `python -m pip check` and `JAX_PLATFORMS=cuda python -c "import jax, ygoenv; print(jax.devices())"` before training. The reference binary targets Linux x86_64 / CPython 3.11; see [training steps](docs/快速开始.md#路线三继续训练).
 
-CPU inference and direct HTTP serving passed acceptance. GPU inference and a 32-step training run passed in an existing compatible JAX CUDA environment. A clean CUDA install, Docker, systemd, and full Windows/macOS/WSL2 runtime support remain unverified. The experimental native TCP bridge has not passed input parity checks. Small acceptance samples do not establish win rate or generalization.
+CPU inference and direct HTTP serving passed acceptance. A fresh isolated Python 3.11 environment passed CUDA dependency installation, GPU inference, short training runs for all five public recipes, and 32 paired evaluations (64 completed games); see the [reproduction report](docs/全新GPU复现报告.md) and [data](docs/全新GPU复现数据.json). Docker, systemd, and full Windows/macOS/WSL2 runtime support remain unverified. The experimental native TCP bridge has not passed input parity checks. Acceptance samples validate the execution pipeline; model strength requires a separate evaluation.
 
 ## Contribute
 
