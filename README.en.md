@@ -1,6 +1,6 @@
 # GGBOY-ygoagent
 
-[中文](README.md) · [Quick start (Chinese)](docs/快速开始.md) · [Contributing](CONTRIBUTING.md) · [Release v0.1.0](https://github.com/zwdmw/GGBOY-ygoagent/releases/tag/v0.1.0)
+[中文](README.md) · [Quick start (Chinese)](docs/快速开始.md) · [Training from scratch (Chinese)](docs/从零复现训练.md) · [Contributing](CONTRIBUTING.md) · [Release v0.1.0](https://github.com/zwdmw/GGBOY-ygoagent/releases/tag/v0.1.0)
 
 A Sky Striker expert policy project with training, evaluation, inference, an HTTP service, and a YGOPro TCP client. The CLI is `ygo-sky`. **463M means 463,001,600 accumulated training steps**, not the parameter count.
 

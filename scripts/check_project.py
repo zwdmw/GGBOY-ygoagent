@@ -86,6 +86,7 @@ def check_tests():
         "test_contracts.IdentityTests.test_corruption_is_rejected",
         "test_contracts.IdentityTests.test_path_escape_is_rejected",
         "test_contracts.IdentityTests.test_nested_boolean_flags",
+        "test_contracts.IdentityTests.test_specialist_recipe_reaches_published_step",
         "test_wire",
         "test_download_resources",
     ))

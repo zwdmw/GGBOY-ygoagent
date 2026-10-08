@@ -32,7 +32,7 @@
     "pool_deck_uniform": 1,
     "mirror_probability_percent": 80,
     "matched_probability_percent": 15,
-    "total_timesteps": 1001472,
+    "total_timesteps": 999424,
     "save_interval": 1,
     "local_eval_episodes": 4,
     "eval_interval": 0,

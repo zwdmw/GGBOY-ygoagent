@@ -43,6 +43,19 @@ class IdentityTests(unittest.TestCase):
     def test_nested_boolean_flags(self):
         self.assertEqual(flags({"m1.card_mask": False, "concurrency": False}), ["--m1.no-card-mask", "--no-concurrency"])
 
+    def test_specialist_recipe_reaches_published_step(self):
+        root = project_root()
+        config = read_json(root / "configs/train/mirror-specialist.json")
+        manifest = read_json(root / "configs/model/specialist-464m.json")
+        batch = (config["args"]["local_num_envs"] * config["args"]["num_actor_threads"]
+                 * config["args"]["num_steps"] * len(config["args"]["actor_device_ids"]))
+        self.assertEqual(config["args"]["total_timesteps"] % batch, 0)
+        self.assertEqual(
+            read_json(root / "configs/model/base-463m.json")["global_step"]
+            + config["args"]["total_timesteps"],
+            manifest["global_step"],
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
