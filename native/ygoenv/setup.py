@@ -3,8 +3,6 @@ from setuptools import setup, find_packages
 __version__ = "0.0.1"
 
 INSTALL_REQUIRES = [
-  "setuptools",
-  "wheel",
   "numpy",
   "dm-env",
   "gym>=0.26",

@@ -1,3 +1,4 @@
+import ast
 import shutil
 import tempfile
 import unittest
@@ -55,6 +56,18 @@ class IdentityTests(unittest.TestCase):
             + config["args"]["total_timesteps"],
             manifest["global_step"],
         )
+
+    def test_training_recipes_use_supported_arguments(self):
+        root = project_root()
+        for path in (root / "configs/train").glob("*.json"):
+            config = read_json(path)
+            module = root / "src/ygo_sky/training" / (config["trainer"] + ".py")
+            tree = ast.parse(module.read_text(encoding="utf-8"))
+            args = next(node for node in tree.body if isinstance(node, ast.ClassDef) and node.name == "Args")
+            supported = {node.target.id for node in args.body
+                         if isinstance(node, ast.AnnAssign) and isinstance(node.target, ast.Name)}
+            with self.subTest(recipe=path.name):
+                self.assertEqual(set(config["args"]) - supported, set())
 
 
 if __name__ == "__main__":

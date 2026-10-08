@@ -39,10 +39,6 @@
     "timeout": 120,
     "seed": 92020001,
     "opponent_pool_percent": 20,
-    "opponent_anchor_percent": 20,
-    "opponent_anchor_step": 463001600,
-    "opponent_anchor_threads": 1,
-    "opponent_pool_stride": 1,
-    "opponent_pool_policy": "argmax"
+    "opponent_pool_stride": 1
   }
 }
