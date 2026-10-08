@@ -6,6 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "sky-striker-expert"
 version = "0.1.0"
 description = "Versioned Sky Striker JAX policy, PPO training and YGOPro TCP client"
+readme = "README.md"
 requires-python = ">=3.11,<3.13"
 dependencies = [
   "numpy==1.26.4", "scipy==1.13.1", "jax==0.4.28", "jaxlib==0.4.28",
@@ -29,6 +30,12 @@ cuda = [
 
 [project.scripts]
 ygo-sky = "ygo_sky.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/zwdmw/GGBOY-ygoagent"
+Repository = "https://github.com/zwdmw/GGBOY-ygoagent"
+Issues = "https://github.com/zwdmw/GGBOY-ygoagent/issues"
+Documentation = "https://github.com/zwdmw/GGBOY-ygoagent/blob/main/docs/快速开始.md"
 
 [tool.setuptools]
 license-files = ["LICENSE", "NOTICE.md", "third_party/ygo-agent/YGO-AGENT-LICENSE.txt", "third_party/ygo-agent/APACHE-2.0.txt"]

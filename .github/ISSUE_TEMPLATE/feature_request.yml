@@ -1,0 +1,26 @@
+name: "使用体验与文档建议 / Usability or docs suggestion"
+description: "提出更容易使用或贡献的改进 / Suggest a clearer workflow or documentation"
+title: "[Suggestion] "
+body:
+  - type: markdown
+    attributes:
+      value: "欢迎中文或英文。请描述具体使用场景 / Chinese and English are welcome; describe a concrete user workflow."
+  - type: textarea
+    id: problem
+    attributes:
+      label: "使用场景与困难 / Workflow and difficulty"
+      description: "你想完成什么，在哪一步遇到阻碍？ / What are you trying to do, and where do you get stuck?"
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: "希望的改进 / Proposed improvement"
+      description: "可附命令或文档例子；不确定方案也可以 / Examples help, but a complete solution is unnecessary"
+    validations:
+      required: true
+  - type: textarea
+    id: contribution
+    attributes:
+      label: "补充信息 / Additional context"
+      description: "相关链接、已尝试的方法，或你愿意参与的部分 / Links, attempts, or whether you would like to contribute"

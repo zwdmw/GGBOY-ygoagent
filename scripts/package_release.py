@@ -10,8 +10,8 @@ import shutil
 import tarfile
 from pathlib import Path
 
-SOURCE_DIRS = ("src", "configs", "docs", "examples", "deploy", "tests", "third_party")
-SOURCE_FILES = ("README.md", "LICENSE", "NOTICE.md", "pyproject.toml", ".env.example", ".gitignore")
+SOURCE_DIRS = ("src", "configs", "docs", "examples", "deploy", "tests", "third_party", ".github")
+SOURCE_FILES = ("README.md", "README.en.md", "CONTRIBUTING.md", "CHANGELOG.md", "LICENSE", "NOTICE.md", "pyproject.toml", ".env.example", ".gitignore")
 SCRIPT_EXCLUDES = {"audit_snapshot.py", "prepare_configs.py"}
 EXCLUDED_PARTS = {"__pycache__", "nnx", ".git", ".venv", "build", "dist"}
 PRIVATE_PATH = re.compile(r"/ro[o]t/|[A-Za-z]:[\\/](?:Users|Cards)|auto[d]l-tmp|connect\.west[b-d]\.seetacloud")
@@ -156,7 +156,7 @@ def main():
     violations = []
     for folder in (source, resources):
         for path in folder.rglob("*"):
-            if path.is_file() and path.suffix in {".py", ".json", ".jsonl", ".md", ".txt", ".conf", ".yaml", ".lua", ".ydk", ".sh", ".toml", ".h", ".cpp"}:
+            if path.is_file() and path.suffix in {".py", ".json", ".jsonl", ".md", ".txt", ".conf", ".yaml", ".yml", ".lua", ".ydk", ".sh", ".toml", ".h", ".cpp"}:
                 if PRIVATE_PATH.search(path.read_text(encoding="utf-8", errors="replace")):
                     violations.append(path.relative_to(stage).as_posix())
     if violations:

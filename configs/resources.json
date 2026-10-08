@@ -1,0 +1,8 @@
+{
+  "schema": "ygo-sky-resource-download/v1",
+  "version": "0.1.0",
+  "filename": "sky-striker-resources.tar.gz",
+  "url": "https://github.com/zwdmw/GGBOY-ygoagent/releases/download/v0.1.0/sky-striker-resources.tar.gz",
+  "sha256": "a718650043db90e3a51e5f8cd94d81351daacdfec263466aa670de1a70611ffd",
+  "bytes": 293216446
+}

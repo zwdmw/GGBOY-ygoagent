@@ -1,0 +1,55 @@
+name: "问题反馈 / Bug report"
+description: "安装、资源、推理、训练或对战问题 / Report a reproducible problem"
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        欢迎中文或英文。请先查看 README 与 FAQ；移除密码、令牌、SSH 信息、房间口令和私人聊天，无需上传权重。
+        Chinese and English are welcome. Check the README/FAQ and remove credentials and private data from logs.
+  - type: input
+    id: version
+    attributes:
+      label: "版本 / Version or commit"
+      placeholder: "v0.1.0, or git rev-parse --short HEAD"
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: "问题位置 / Area"
+      options:
+        - "安装 / Installation"
+        - "资源下载与校验 / Resources"
+        - "CPU 或 HTTP 推理 / Inference"
+        - "233 或其他服务器 / Duel client"
+        - "CUDA、训练或原生评估 / Training"
+        - "文档或其他 / Documentation or other"
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: "环境 / Environment"
+      description: "系统、架构、Python；GPU 问题加 GPU/驱动/JAX/jaxlib 版本 / OS, architecture, Python; GPU and dependency versions if relevant"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: "命令与复现步骤 / Commands and reproduction steps"
+      description: "使用最短的步骤；说明卡组和配置名，但不要包含口令 / Minimal steps, config and deck names; no passwords"
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: "预期与实际结果 / Expected and actual behavior"
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: "相关日志 / Relevant logs"
+      description: "只需错误末尾或脱敏状态摘要；下载问题可填文件大小和 SHA256 / Error tail or redacted status; size and SHA256 for download problems"
+      render: text

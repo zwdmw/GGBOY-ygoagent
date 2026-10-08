@@ -33,3 +33,5 @@ native/runtime.json
 *.so
 *.egg-info/
 release/
+build/
+dist/

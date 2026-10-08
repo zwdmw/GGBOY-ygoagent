@@ -1,0 +1,37 @@
+name: Lightweight checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lightweight-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: Python ${{ matrix.python }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.11', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install check and build tools
+        run: python -m pip install 'setuptools>=75' wheel 'PyYAML>=6,<7'
+      - name: Check docs, configs, syntax and resource-free tests
+        run: python scripts/check_project.py
+      - name: Build wheel without runtime dependencies
+        run: python -m pip wheel --no-deps . --wheel-dir release/ci-wheel
+      - name: Check packaged notices
+        run: python scripts/check_project.py --wheel-dir release/ci-wheel --wheel-only

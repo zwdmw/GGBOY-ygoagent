@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: "快速开始 / Quick start"
+    url: https://github.com/zwdmw/GGBOY-ygoagent/blob/main/docs/快速开始.md
+    about: "推理、233 与训练的入口 / Inference, duels and training"
+  - name: "常见问题 / FAQ"
+    url: https://github.com/zwdmw/GGBOY-ygoagent/blob/main/docs/常见问题.md
+    about: "先检查下载、依赖与对战常见问题 / Common resource, dependency and duel problems"
