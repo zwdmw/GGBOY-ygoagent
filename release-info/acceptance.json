@@ -1,0 +1,143 @@
+{
+  "schema": "ygo-sky-release-acceptance/v1",
+  "status": "passed",
+  "source_sha256": "dc06e75237e957977ce1146e7de0fe2c6924f5e4f2916adb3505ecbc39b87548",
+  "resources_sha256": "a718650043db90e3a51e5f8cd94d81351daacdfec263466aa670de1a70611ffd",
+  "environment": "Previously clean CPU venv with verified dependencies; source package reinstalled from standalone archive",
+  "resource_installation": "fresh empty independent project",
+  "steps": [
+    {
+      "name": "build-tools",
+      "exit_code": 0,
+      "seconds": 1.2720547760000045,
+      "log_sha256": "d6f0ee44c8382766d68c1f8d45d46131804eb00eb1f8d03c7aaf037ea3f4215c"
+    },
+    {
+      "name": "editable-install",
+      "exit_code": 0,
+      "seconds": 1.6362711950005178,
+      "log_sha256": "0880f01b1881bac859ea7a10a7cb6e80165ca33ddc8b60d0cfb0fc154077d6da"
+    },
+    {
+      "name": "install-resources",
+      "exit_code": 0,
+      "seconds": 12.219354718999966,
+      "log_sha256": "874c91a1db2e0c1e3759469ddb3439679e9099cb6a9c82bba613c92db7e88418"
+    },
+    {
+      "name": "verify-base-463m",
+      "exit_code": 0,
+      "seconds": 0.20211451599971042,
+      "log_sha256": "f5a9913e3335b2c8d28ba627d9ab8139574cd5f28caf710d2b3e24e969f9b7f8"
+    },
+    {
+      "name": "verify-specialist-464m",
+      "exit_code": 0,
+      "seconds": 0.20569631500075047,
+      "log_sha256": "f7d14b0a302f56129c192fa580bbb94fbb9316560cfbf9048359bd2cdaee683e"
+    },
+    {
+      "name": "verify-initial-259m",
+      "exit_code": 0,
+      "seconds": 0.2203660969989869,
+      "log_sha256": "c57653320ef655649c4cb680f489f8c73efb1deea903790520f5c15f1c294c2c"
+    },
+    {
+      "name": "tests",
+      "exit_code": 0,
+      "seconds": 0.504860611001277,
+      "log_sha256": "d67926edbe81cd19e37f4611add0a31e22a96696f1e8384973124a2954b109fa"
+    },
+    {
+      "name": "deck-audit",
+      "exit_code": 0,
+      "seconds": 0.09352328999921156,
+      "log_sha256": "4e544824efe54e3ef1942a27d7719042158da4834ff01c28db5189f626b74dd7"
+    },
+    {
+      "name": "pool-mirror",
+      "exit_code": 0,
+      "seconds": 0.7172571609989973,
+      "log_sha256": "17228cfcca4e77ebc0c6ef9e7f8339b55c221aafa52909e4b794bac1a582c545"
+    },
+    {
+      "name": "pool-ppo",
+      "exit_code": 0,
+      "seconds": 0.28245822099961515,
+      "log_sha256": "844d3ebf33cf7ef822c37289d873713f69436deb2fdf273ca5e9d0a4a8008864"
+    },
+    {
+      "name": "install-native",
+      "exit_code": 0,
+      "seconds": 0.11800018900066789,
+      "log_sha256": "9743747f9fedc73428083943b800599f1a301ce4151e8427449826a4c091879e"
+    },
+    {
+      "name": "dry-mirror-specialist",
+      "exit_code": 0,
+      "seconds": 0.219687041000725,
+      "log_sha256": "5e6dc8681a887863d6545b3aee11cf5556de1269b075dbfbffbe725ee595167e"
+    },
+    {
+      "name": "dry-ppo-continue",
+      "exit_code": 0,
+      "seconds": 0.22133815699999104,
+      "log_sha256": "3d1c0c1c96a919055fb0f62399d6517e80e624d94bf226f69fa16baf3e56238a"
+    },
+    {
+      "name": "infer-editable",
+      "exit_code": 0,
+      "seconds": 58.934006299999965,
+      "log_sha256": "2ee800e8532d9bb9951b655f686b8106c931b109c73fbf5d33228e51dd608f06"
+    },
+    {
+      "name": "wheel-build",
+      "exit_code": 0,
+      "seconds": 1.4294117159988673,
+      "log_sha256": "242a789f7b6b2f83e6f18ba5ea90ec8f194113e242f47c6c5cdfa13738fb6e5e"
+    },
+    {
+      "name": "wheel-license-notices",
+      "exit_code": 0,
+      "seconds": 0.054355206000764156,
+      "log_sha256": "9276d0410ef9270757faaf22f3554407f88108be84500c229be0a1c463f130e2"
+    },
+    {
+      "name": "wheel-install",
+      "exit_code": 0,
+      "seconds": 1.0228169369984244,
+      "log_sha256": "79010c8769846666bfa04b686015418efe24f705d1f5f82d9228dc1e3708c8ca"
+    },
+    {
+      "name": "wheel-origin",
+      "exit_code": 0,
+      "seconds": 0.049661625000226195,
+      "log_sha256": "4497947ed0426140f9da0cb1e1d4bc9ee30e371dc89be3619c0e00bc95ad9935"
+    },
+    {
+      "name": "wheel-verify",
+      "exit_code": 0,
+      "seconds": 0.20517029099937645,
+      "log_sha256": "f5a9913e3335b2c8d28ba627d9ab8139574cd5f28caf710d2b3e24e969f9b7f8"
+    },
+    {
+      "name": "wheel-infer",
+      "exit_code": 0,
+      "seconds": 57.4973255219993,
+      "log_sha256": "bf83ee2f84c16a169fecef9589c1594b2f2662a381df3d68f73f3748250ffde1"
+    },
+    {
+      "name": "pip-check",
+      "exit_code": 0,
+      "seconds": 1.1217799879996164,
+      "log_sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09"
+    }
+  ],
+  "wheel": {
+    "name": "sky_striker_expert-0.1.0-py3-none-any.whl",
+    "sha256": "65d3c85840db372ff10ab0f51b480419a7a9e2b363d4feadd536356950e57567"
+  },
+  "original_project_pythonpath_used": false,
+  "original_project_resource_path_used": false,
+  "standalone_source_directory": "independent extracted source; machine path retained in internal evidence"
+}

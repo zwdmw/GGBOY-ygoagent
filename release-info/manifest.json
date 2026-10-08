@@ -1,0 +1,34 @@
+{
+  "schema": "ygo-sky-release/v1",
+  "version": "0.1.0",
+  "status": "public_release",
+  "publicly_published": true,
+  "source_archive": "sky-striker-source.tar.gz",
+  "source_sha256": "dc06e75237e957977ce1146e7de0fe2c6924f5e4f2916adb3505ecbc39b87548",
+  "source_bytes": 1330844,
+  "resources_archive": "sky-striker-resources.tar.gz",
+  "resources_sha256": "a718650043db90e3a51e5f8cd94d81351daacdfec263466aa670de1a70611ffd",
+  "resources_bytes": 293216446,
+  "source_file_count": 229,
+  "resource_file_count": 13856,
+  "sanitized_resource_files": 14,
+  "private_text_path_scan": "passed",
+  "acceptance": "acceptance.json",
+  "notes": [
+    "No SSH credentials, raw snapshots, logs, virtual environments or build caches are included.",
+    "Weights and frozen binary resources retain their original bytes.",
+    "Source sidecar hashes and sanitized sidecar hashes are both preserved in release-info/resource-files.json.",
+    "Original integration code is MIT licensed; third-party code retains its own terms. Resource and network licensing still has unresolved items; see NOTICE.md."
+  ],
+  "acceptance_status": "passed",
+  "acceptance_sha256": "f4e80c8ec25bc94b41308e0ca47c5016973c4b420c6a161aa87207cd217c9206",
+  "wheel": {
+    "name": "sky_striker_expert-0.1.0-py3-none-any.whl",
+    "sha256": "65d3c85840db372ff10ab0f51b480419a7a9e2b363d4feadd536356950e57567",
+    "bytes": 248878
+  },
+  "verified_steps": 21,
+  "repository": "https://github.com/zwdmw/GGBOY-ygoagent",
+  "release_url": "https://github.com/zwdmw/GGBOY-ygoagent/releases/tag/v0.1.0",
+  "integration_license": "MIT; scope and third-party terms in NOTICE.md"
+}
