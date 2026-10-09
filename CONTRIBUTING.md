@@ -37,7 +37,7 @@ python -m pip wheel --no-deps . --wheel-dir release/ci-wheel
 python scripts/check_project.py --wheel-dir release/ci-wheel
 ```
 
-CI 在 Linux 的 Python 3.11 / 3.12 上执行这些轻量检查。这个矩阵只说明源码检查通过，完整模型运行仍以 [验收状态](README.md#环境与功能状态) 为准。
+CI 在 Linux 的 Python 3.11 / 3.12 上执行这些轻量检查。这个矩阵只说明源码检查通过，完整模型运行仍以 [验收状态](README.md#已验收的功能) 为准。
 
 ## 涉及模型、训练或协议的修改
 

@@ -2,7 +2,7 @@
 
 [English](README.en.md) · [快速开始](docs/快速开始.md) · [常见问题](docs/常见问题.md) · [参与贡献](CONTRIBUTING.md) · [下载 v0.1.0](https://github.com/zwdmw/GGBOY-ygoagent/releases/tag/v0.1.0)
 
-闪刀姬专家模型的训练、验证、推理、HTTP 服务和 YGOPro TCP 对战项目。统一命令为 `ygo-sky`，支持接入 233 服，也可指定兼容服务器和端口。模型、语义表、卡片数据库和引擎通过 SHA256 绑定，源码与大资源分开发布。
+闪刀姬专家模型的训练、验证、推理、HTTP 服务和 YGOPro TCP 对战项目。统一命令为 `ygo-sky`，已完成 233 服对战接入验收。模型、语义表、卡片数据库和引擎通过 SHA256 绑定，源码与大资源分开发布。
 
 `463M` 指闪刀专家阶段累计训练步数 **463001600**，不是参数量。资源包另含 `464001024` 步的镜像专项模型，两者有独立身份和评估配置。
 
@@ -27,7 +27,7 @@
 | 想做什么 | 从哪里开始 | 需要什么 |
 | --- | --- | --- |
 | 运行模型或提供 HTTP 推理 | [路线一：运行模型](docs/快速开始.md#路线一运行模型) | CPU 即可，无需原生引擎 |
-| 与朋友在 233 服对战，或接入其他服务器 | [路线二：接入 233](docs/快速开始.md#路线二接入-233) | 模型资源、兼容卡组、同房间的对手 |
+| 与朋友在 233 服对战 | [路线二：接入 233](docs/快速开始.md#路线二接入-233) | GPU、模型资源、兼容卡组、同房间的对手 |
 | 继续训练或进行原生评估 | [路线三：继续训练](docs/快速开始.md#路线三继续训练) | 训练依赖、原生引擎；GPU 路径已做短训练验收 |
 | 修文档、改代码、报告问题 | [贡献指南](CONTRIBUTING.md) | 轻量检查无需权重、GPU 或对战服务器 |
 
@@ -75,11 +75,11 @@ ygo-sky infer --device cpu --observation resources/example-observation.npz --leg
 | `manifest.json`、`SHA256SUMS` | 小型文本 | 版本、文件大小与 SHA256 |
 | `acceptance.json`、`README.md` | 小型文本 | 该版本的验收结果与使用说明 |
 
-主分支包含后续文档与工具改进；[CHANGELOG](CHANGELOG.md) 记录尚未发布的变更。下载工具使用 [固定下载清单](configs/resources.json)，不会自动切换到未知的新权重。目前资源以整包发布，按用途拆包的工作列在 [路线图](docs/路线图.md)。
+主分支包含后续文档与工具改进；[CHANGELOG](CHANGELOG.md) 记录尚未发布的变更。下载工具使用 [固定下载清单](configs/resources.json)，不会自动切换到未知的新权重。目前资源以整包发布。
 
 历史训练材料见 [training-lineage-20261009 Release](https://github.com/zwdmw/GGBOY-ygoagent/releases/tag/training-lineage-20261009)：早期原生模块独立下载，历史源码与 14,339 副卡组随 Git 发布。259M 和 463M 是专家计数；上游通用模型在 861,929,472 步处分叉。
 
-## 环境与功能状态
+## 已验收的功能
 
 | 路径 | 当前验收情况 |
 | --- | --- |
@@ -88,9 +88,6 @@ ygo-sky infer --device cpu --observation resources/example-observation.npz --leg
 | 已验证的五个训练配方与成对评估 | 五份配方短程训练通过；训练后模型完成 32 对、64 局评估 |
 | HTTP 直接运行 | 真实模型请求通过 |
 | 233：`s1.ygo233.com:233`，协议 `0x1362` | 兼容卡组完成一场对局、387 次模型决策 |
-| Windows、macOS、WSL2、Python 3.12 完整运行 | 未验收；参考原生二进制限定 Linux x86_64 / Python 3.11 |
-| Docker / systemd | 提供模板，尚未验收 |
-| 实验原生 TCP 桥 | 未通过输入等价回归；当前 233 客户端使用独立网络编码路径 |
 
 通用预训练的训练、验证、测试和官方验证划分已随[历史归档](third_party/legacy-lineage/README.md)公开。闪刀目标卡组参与过训练；验收记录用于确认执行链路，对战强度与泛化表现通过独立评估协议衡量。
 
@@ -100,10 +97,9 @@ ygo-sky infer --device cpu --observation resources/example-observation.npz --leg
 src/ygo_sky/     CLI、模型加载、训练入口、评估、HTTP、TCP 客户端
 src/ygoai/       上游模型与 PPO 基础库
 configs/        模型契约、资源下载清单、训练配方、评估与 233 配置
-native/         训练引擎、实验 TCP 桥源码及构建工具
+native/         训练引擎源码及构建工具
 scripts/        资源准备、轻量检查、数据审计、引擎回归与接入验收
 examples/       HTTP 调用示例
-deploy/         Docker / systemd 模板
 docs/           使用、训练、资源、FAQ、路线图和验收说明
 third_party/    上游许可与来源记录
 resources/      从 Release 单独安装的模型与运行资源
@@ -111,10 +107,10 @@ resources/      从 Release 单独安装的模型与运行资源
 ```
 
 - [快速开始](docs/快速开始.md) / [常见问题](docs/常见问题.md)
-- [安装与部署](docs/安装与部署.md) / [对战与推理](docs/对战与推理.md)
-- [训练与验证](docs/训练与验证.md) / [从零复现训练](docs/从零复现训练.md) / [模型与资源契约](docs/模型与资源契约.md)
-- [随机初始化历史训练](docs/随机初始化历史训练.md) / [历史训练沿革](docs/历史训练沿革.md) / [历史源码与卡组](third_party/legacy-lineage/README.md)
+- [安装说明](docs/安装与部署.md) / [对战与推理](docs/对战与推理.md)
+- [训练与验证](docs/训练与验证.md) / [安装与续训](docs/从零复现训练.md) / [模型与资源契约](docs/模型与资源契约.md)
+- [历史训练沿革](docs/历史训练沿革.md) / [已校验的源码与卡组归档](third_party/legacy-lineage/README.md)
 - [验收报告](docs/验收报告.md) / [第三方资源说明](docs/第三方资源说明.md)
-- [贡献指南](CONTRIBUTING.md) / [路线图](docs/路线图.md) / [整理记录](docs/整理计划.md)
+- [贡献指南](CONTRIBUTING.md) / [整理记录](docs/整理计划.md)
 
 欢迎中文或英文 Issue 和 PR。修复文档、补充可复现的安装记录、核实资源来源，都能帮助其他人更顺利地使用项目。
