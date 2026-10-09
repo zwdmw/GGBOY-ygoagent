@@ -6,6 +6,8 @@ A Sky Striker expert policy project with training, evaluation, inference, an HTT
 
 Thanks to [ygo-agent](https://github.com/sbl1996/ygo-agent), its authors and contributors for the policy, reinforcement learning and environment implementations on which this project builds. Their notices are retained in [third_party/ygo-agent](third_party/ygo-agent).
 
+Special thanks to **海之中道**, the author of **MirrorForce**. I learned a great deal from our discussions.
+
 ## License scope
 
 The root [MIT license](LICENSE) covers original integration code and documentation. Upstream code retains its own terms, including the ygo-agent MIT and Apache-2.0 notices. Card scripts carry GPLv2 notices. Licensing/provenance for the network components, weights and some derived resources still has unresolved items. See [NOTICE](NOTICE.md), the [license table](README.md#许可范围) and [resource notes](docs/第三方资源说明.md) before redistribution.

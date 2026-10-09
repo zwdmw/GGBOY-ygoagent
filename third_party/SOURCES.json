@@ -34,10 +34,11 @@
       "note": "Copied license retained; precise upstream snapshot and modification provenance remain to be established."
     },
     {
-      "component": "Mirrorforce network protocol and replay utilities",
+      "component": "MirrorForce network protocol and replay utilities",
       "origin": "user-provided local source snapshot",
       "file_manifest": "src/ygo_sky/duel/network/vendor/sources.json",
-      "license_status": "unresolved"
+      "license_status": "unresolved",
+      "author": "海之中道"
     },
     {
       "component": "checkpoint, semantics, card data and deck data",

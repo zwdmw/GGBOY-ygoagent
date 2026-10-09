@@ -8,6 +8,8 @@
 
 感谢 [ygo-agent](https://github.com/sbl1996/ygo-agent) 的作者和贡献者开放模型、强化学习训练及环境实现。本项目的 `ygoai`、训练器和修改版 `ygoenv` 基于该项目整理与扩展，上游版权与 MIT / Apache-2.0 声明保留在 [third_party/ygo-agent](third_party/ygo-agent)。也感谢 YGOPro core、卡片脚本及相关依赖的维护者。
 
+特别感谢 **MirrorForce** 的作者 **海之中道**，与他的交流让我受益颇丰。
+
 ## 许可范围
 
 | 内容 | 许可或当前状态 | 说明 |
