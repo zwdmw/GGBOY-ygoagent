@@ -1,0 +1,17 @@
+{
+  "contract_sha256": "9fcb93b76b720bd87c2c0c7388acd66bb2313baf21c7493fe03025008f847d46",
+  "deck_root": "train",
+  "deck_schedule": "cluster_uniform",
+  "featured_deck": null,
+  "featured_deck_probability": 0.0,
+  "manifest_sha256": "fe05ad3b3f41cb819f5fc0f867c06fd0afac72b0fd18ee2f6c4f3980d5b67375",
+  "official_validation_root": "official_validation",
+  "pair_sampling": "independent_uniform_clusters",
+  "pinned_train_deck": "03_Sky_Striker_706646",
+  "same_deck_mirror_evaluation": true,
+  "sampling_unit": "content_cluster",
+  "schema": "ygo-uniform-training-contract/v2",
+  "test_root": "test",
+  "validation_root": "validation",
+  "variant_sampling": "uniform_within_cluster"
+}

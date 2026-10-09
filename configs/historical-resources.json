@@ -1,0 +1,24 @@
+{
+  "schema": "ygo-sky-historical-resources/v1",
+  "version": "training-lineage-20261009",
+  "filename": "historical-native-resources.tar.gz",
+  "url": "https://github.com/zwdmw/GGBOY-ygoagent/releases/download/training-lineage-20261009/historical-native-resources.tar.gz",
+  "bytes": 2967780,
+  "sha256": "8b1c9f60f4b72a06894aa02510954c7c6df2cee528bb482f3a49d510c8df77ab",
+  "artifacts": [
+    {
+      "path": "native/history/v11/ygopro_ygoenv.cpython-311-x86_64-linux-gnu.so",
+      "bytes": 2612592,
+      "sha256": "ac49b13b22c33c042bb25ae5d394b8f180ccdd0b8b41610f8be8b7e8efec5c15",
+      "variant": "v11"
+    },
+    {
+      "path": "native/history/tribute-fix/ygopro_ygoenv.cpython-311-x86_64-linux-gnu.so",
+      "bytes": 4004496,
+      "sha256": "fdeb852d53ea17da19d3a21335c27d411ebedf4b6cd1968393571f5004c4a7e6",
+      "variant": "tribute-fix"
+    }
+  ],
+  "platform": "Linux x86_64 / CPython 3.11",
+  "purpose": "Historical native environment snapshots; use with the archived source of the same stage."
+}

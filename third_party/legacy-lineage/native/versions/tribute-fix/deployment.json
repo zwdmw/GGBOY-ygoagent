@@ -1,0 +1,26 @@
+{
+  "source": "ygoenv-uniform-v3-20260825",
+  "original_header_sha256": "7ed2cb70d3f6ab593252d2c4f51dd23e2221730807b42a3e3fca23247e0bb482",
+  "original_module_sha256": "ac49b13b22c33c042bb25ae5d394b8f180ccdd0b8b41610f8be8b7e8efec5c15",
+  "patched_header_sha256": "9064922e41a7d3ec835003f3c6d96e22ee247429831d64670aa54818be6e6bcb",
+  "patched_module_sha256": "fdeb852d53ea17da19d3a21335c27d411ebedf4b6cd1968393571f5004c4a7e6",
+  "module": "ygopro_ygoenv.cpython-311-x86_64-linux-gnu.so",
+  "tests": "passed",
+  "source_unchanged": true,
+  "installed_at": 1789561268.700405,
+  "backup": "backup",
+  "deterministic_smoke": [
+    {
+      "seed": 37,
+      "decisions": 300,
+      "completed": 1,
+      "trace_sha256": "fed55aadcbf875af9f63dc8d469bcd75c085107af2cec60a9d1556540eafa974"
+    },
+    {
+      "seed": 20260916,
+      "decisions": 300,
+      "completed": 1,
+      "trace_sha256": "858e6cb320c942114aa2d24e94d84c6b6cc42f104133e832ed5a19eda3cd0eb2"
+    }
+  ]
+}

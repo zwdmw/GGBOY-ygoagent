@@ -57,6 +57,15 @@
         "../LICENSE"
       ],
       "copyright": "2026 zwdmw"
+    },
+    {
+      "component": "historical training source, largepool-v3 decks and native stages",
+      "origin": "user-provided historical experiments audited on 2026-10-09",
+      "archive": "third_party/legacy-lineage",
+      "file_manifest": "third_party/legacy-lineage/docs/hash-manifest.json",
+      "lineage_manifest": "docs/training-lineage.json",
+      "native_download_manifest": "configs/historical-resources.json",
+      "note": "Historical code retains existing ygo-agent notices; deck data and native dependencies retain their separately recorded provenance."
     }
   ],
   "supplemental_apache_text": {

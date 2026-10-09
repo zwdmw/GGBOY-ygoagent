@@ -68,6 +68,8 @@ def check_formats():
     if released and pin["version"] == released["version"]:
         if pin["sha256"] != released["resources_sha256"] or pin["bytes"] != released["resources_bytes"]:
             raise ValueError("Download pin differs from the recorded release resource identity")
+    from download_historical_resources import read_pin as read_historical_pin
+    read_historical_pin(ROOT)
     print(f"Formats checked: {len(configs)} JSON, {len(yaml_files)} YAML, pyproject.toml and resource download pin")
 
 
@@ -87,9 +89,12 @@ def check_tests():
         "test_contracts.IdentityTests.test_path_escape_is_rejected",
         "test_contracts.IdentityTests.test_nested_boolean_flags",
         "test_contracts.IdentityTests.test_specialist_recipe_reaches_published_step",
+        "test_contracts.IdentityTests.test_295m_recipe_reaches_batch_aligned_target",
+        "test_contracts.IdentityTests.test_legacy_lineage_archive_matches_its_manifest",
         "test_contracts.IdentityTests.test_training_recipes_use_supported_arguments",
         "test_wire",
         "test_download_resources",
+        "test_historical_resources",
     ))
     if not unittest.TextTestRunner(verbosity=2).run(suite).wasSuccessful():
         raise ValueError("Resource-free tests failed")

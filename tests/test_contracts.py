@@ -1,4 +1,5 @@
 import ast
+import hashlib
 import shutil
 import tempfile
 import unittest
@@ -56,6 +57,38 @@ class IdentityTests(unittest.TestCase):
             + config["args"]["total_timesteps"],
             manifest["global_step"],
         )
+
+    def test_295m_recipe_reaches_batch_aligned_target(self):
+        root = project_root()
+        config = read_json(root / "configs/train/to-295m.json")
+        initial = read_json(root / "configs/model/initial-259m.json")
+        batch = (config["args"]["local_num_envs"] * config["args"]["num_actor_threads"]
+                 * config["args"]["num_steps"] * len(config["args"]["actor_device_ids"]))
+        self.assertEqual(config["args"]["total_timesteps"] % batch, 0)
+        self.assertEqual(initial["global_step"] + config["args"]["total_timesteps"], 295004160)
+
+    def test_legacy_lineage_archive_matches_its_manifest(self):
+        root = project_root()
+        archive = root / "third_party/legacy-lineage"
+        manifest = read_json(archive / "docs/hash-manifest.json")
+        rows = manifest["archived_files"]
+        self.assertTrue(rows)
+        self.assertEqual(manifest["schema"], "ygo-sky-legacy-lineage/v1")
+        for row in rows:
+            with self.subTest(path=row["path"]):
+                path = contained(archive.resolve(), row["path"])
+                self.assertTrue(path.is_file(), f"missing archived file: {row['path']}")
+                data = path.read_bytes()
+                self.assertEqual(len(data), row["bytes"])
+                self.assertEqual(hashlib.sha256(data).hexdigest(), row["sha256"])
+        # Every file under the archive except the manifest itself must be listed.
+        listed = {row["path"] for row in rows}
+        present = {path.relative_to(archive).as_posix() for path in archive.rglob("*")
+                   if path.is_file() and path.name != "hash-manifest.json"}
+        self.assertEqual(present - listed, set())
+        # The two expert snapshots are byte-identical copies, recorded as such.
+        expert = {row["file"]: row["sha256"] for row in manifest["trainer_shas"]}
+        self.assertEqual(expert["cleanba.expert0919.py"], expert["cleanba.corrected0920.py"])
 
     def test_training_recipes_use_supported_arguments(self):
         root = project_root()

@@ -1,0 +1,89 @@
+{
+  "base_cluster_count": 3551,
+  "cluster_neighbor_risk": {
+    "maximum_main_recall": 0.8936170212765957,
+    "maximum_similarity": 0.7993515115486705
+  },
+  "clusters_manifest": {
+    "path": "manifests/clusters.jsonl",
+    "sha256": "d4db606435b819b1bd41e196a212e7159390d34baea12606e10bffdfe441959c"
+  },
+  "contract_sha256": "9fcb93b76b720bd87c2c0c7388acd66bb2313baf21c7493fe03025008f847d46",
+  "cross_split_cluster_violations": [],
+  "fractions": {
+    "test": 0.09997207483943032,
+    "train": 0.7999860374197152,
+    "validation": 0.10004188774085451
+  },
+  "manifest": {
+    "path": "manifests/decks.jsonl",
+    "sha256": "fe05ad3b3f41cb819f5fc0f867c06fd0afac72b0fd18ee2f6c4f3980d5b67375"
+  },
+  "official_model": {
+    "code_list": "project-structured-uniform-v3-20260825/scripts/official_code_list_864.txt",
+    "code_list_sha256": "f3795910ac7a2eac06db0badb2db1288a93f5c237c6f92883a2d922aa2d3f339",
+    "compatible_source_decks": 14,
+    "evaluation_decks": 15,
+    "heldout_clusters": 4,
+    "manifest": {
+      "path": "manifests/official_validation.jsonl",
+      "sha256": "bdea517f010f4146d77b1f416887c628c0ffcc312722f53f9780e6cba5026ee4"
+    }
+  },
+  "pinned_train_clusters": [
+    1264
+  ],
+  "pinned_train_deck": "03_Sky_Striker_706646",
+  "schema": "ygo-uniform-cluster-split/v2",
+  "seed": 20260825,
+  "separation_components": {
+    "count": 697,
+    "eligible_count": 694,
+    "eligible_decks": 7423,
+    "maximum_decks": 6512
+  },
+  "similarity_metric": {
+    "idf_formula": "log((document_count + 1) / (document_frequency + 1)) + 1",
+    "name": "idf_weighted_multiset_jaccard",
+    "section_weights": {
+      "extra": 0.25,
+      "main": 0.75
+    },
+    "side_deck_included": false
+  },
+  "source_contract_sha256": "dad0da657919e3d8bcc1cf777129d6c025ef2aa069af6efe39c3277c31b564a3",
+  "source_dataset": "project-structured-uniform-v3-20260825/assets/deck/largepool-v2",
+  "source_manifest": {
+    "path": "project-structured-uniform-v3-20260825/assets/deck/largepool-v2/manifests/decks.jsonl",
+    "sha256": "d146f8e8083b57dd9ab25a1b88d11ff4365b74c72d9b27642c5efa8ca93ed2f2"
+  },
+  "source_summary_sha256": "11eceddf5fee12739084509aaf5cf9a087eaecb2731256330f173e287191862f",
+  "split_counts": {
+    "test": 1432,
+    "train": 11459,
+    "validation": 1433
+  },
+  "split_manifests": {
+    "test": {
+      "path": "manifests/test.jsonl",
+      "sha256": "9271721fc315669c87e7c2b9ceb54f4d714fccc0fd86accbe1df76fd7097b7ae"
+    },
+    "train": {
+      "path": "manifests/train.jsonl",
+      "sha256": "d742f28346e99053ca0a2e328448830fbfbf4420bbbd463028740824576e0fb6"
+    },
+    "validation": {
+      "path": "manifests/validation.jsonl",
+      "sha256": "4d61fed87a41b71996260c2a3fb32090a55c3615d5045f786304f751ef9f581e"
+    }
+  },
+  "test_separation_violations": [],
+  "thresholds": {
+    "candidate_topk": 384,
+    "cluster_main_recall": 0.9,
+    "cluster_similarity": 0.8,
+    "test_separation_main_recall": 0.75,
+    "test_separation_similarity": 0.65
+  },
+  "unique_canonical_decks": 14324
+}

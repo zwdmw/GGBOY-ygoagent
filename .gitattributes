@@ -1,0 +1,2 @@
+# Preserve historical source bytes, including their original whitespace.
+third_party/legacy-lineage/** -text -whitespace

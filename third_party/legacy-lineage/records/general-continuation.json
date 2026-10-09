@@ -1,0 +1,47 @@
+{
+  "schema": "ygo-r0-weight-continuation/v1",
+  "created_at": "2026-08-26T00:00:00+08:00",
+  "experiment": "r0-structured-uniform-resume-50m-to1000m-20260826",
+  "source_checkpoint": {
+    "path": "source/20260826_50M.flax_model",
+    "sha256": "c06eb6ae416f8f99fa88680f51557ce1c1dc2ff47973b22d782feffe0a381a42",
+    "exact_global_step": 53137408,
+    "checkpoint_label_unit": 1048576
+  },
+  "target": {
+    "additional_timesteps": 946864128,
+    "final_global_step": 1000001536,
+    "batch_size": 2048,
+    "updates": 462336
+  },
+  "continuation": {
+    "model_variables_loaded": true,
+    "optimizer_state_loaded": false,
+    "optimizer_note": "The flax_model contains model variables only. Adam moments restart from zero.",
+    "seed": 3
+  },
+  "training": {
+    "project": "project-structured-uniform-v3-20260825",
+    "deck_root": "assets/deck/largepool-v3/train",
+    "deck_schedule": "cluster_uniform",
+    "anchor_probability_percent": 0,
+    "semantic_file": "assets/structured/frozen_semantics_v1.npz",
+    "local_num_envs": 32,
+    "local_env_threads": 6,
+    "num_actor_threads": 2,
+    "num_steps": 32,
+    "num_minibatches": 4,
+    "update_epochs": 1,
+    "learning_rate": 0.0001,
+    "gamma": 1.0,
+    "gae_lambda": 0.95,
+    "save_interval_updates": 512
+  },
+  "integrity": {
+    "cleanba_py_sha256": "cef71dbda048bdc8014f52f769be401047524a46f966cea934b7e1f79fa81285",
+    "agent_py_sha256": "616074c72d8084d123cc27700bb2ac794900381660ec288ae49f8c8271946738",
+    "semantics_sha256": "646b164ddff4169e3379aca3d59fb36f41c4aa7b031c86068f46d00a68657aec",
+    "code_list_sha256": "04cb9134b5370b9841f8ee4d969dc519ecb11021f5df3655d0faf9d3c94695aa",
+    "training_contract_sha256": "ec84e53731a450738e141f7c8fca5cb5b7c60f2fb832f12e548787e47d69319b"
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "schema": "sky-corrected-selfplay/v1",
+  "created_at": "2026-09-20T04:07:05.899559+00:00",
+  "initial_checkpoint": "experiments/expert-sky-striker-corrected-20260920/snapshots/sky100m.flax_model",
+  "initial_checkpoint_sha256": "8700afa56648adc91f9488d9c022fc6de76f7ad62ef85be13ec11e5b375fe18f",
+  "base_step": 99999744,
+  "additional_steps": 219998208,
+  "target_step": 319997952,
+  "observation_revision": "sky-selfplay-own-deck-candidates-v2",
+  "training": {
+    "route": "original_self_play",
+    "mirror_percent": 50,
+    "matched_percent": 30,
+    "random_pool_percent": 20,
+    "learning_rate": 3e-05,
+    "decision_aux_coef": 0.05,
+    "lp_shaping_coef": 0.01,
+    "gamma": 1,
+    "actors": 2,
+    "environments_per_actor": 32,
+    "rollout_steps": 32,
+    "native_threads_per_actor": 16,
+    "gpu_memory_fraction": 0.22,
+    "optimizer_restored": false,
+    "seed": 92020001,
+    "num_minibatches": 8,
+    "memory_adjustment": "4 minibatches required 16.1GB temporary; split into 8 with the same 2048-step rollout."
+  },
+  "evaluation": {
+    "interval_additional_steps": 3000000,
+    "games": 64,
+    "final_games": 400,
+    "development_seed": 2026092094,
+    "final_sealed_seed": 2026092101,
+    "corrected_inputs_both_players": true,
+    "device": "cpu",
+    "max_checkpoint_overshoot_steps": 2047,
+    "monitor_panel_not_an_independent_selection_test": true,
+    "interim_milestones": [
+      19998720,
+      119998464
+    ]
+  },
+  "serving_auto_promotion": false,
+  "other_training_unchanged": true,
+  "protected_original_files": {
+    "experiments/expert-sky-striker-20260919/run-expert-anchor.sh": "455c203d607eb57b127d59718bb5eff676be2f6a6ff4d3793045842c5913302d",
+    "experiments/expert-sky-striker-20260919/run-expert-supervisor.sh": "5846439e3e1f5ac31584700b82ecca78b62a1e8050a3b3f41a6c7a934a5d50bf",
+    "experiments/expert-sky-striker-20260919/launch_plan.py": "bdb072445630c9b0582186eba134937e2bea3cc0237dca6de1ffaabb5fd909e8",
+    "experiments/expert-sky-striker-20260919/continuation-100m.json": "43a9e1284a519e37a920e324f5b0eae8e4b0c8a908ba257c953b5260586a7009",
+    "checkpoints/0546_22750M.flax_model": "48e4d3bde222839685696fa087f808c5549d23fd3c99df8222b5aeaee43edfd6",
+    "experiments/expert-sky-striker-20260919/evaluations/official-3m/expert_target.ydk": "7ecc5bf6a9eba9e04da316317d76bcc570c5613ef5b307b9a71df1e17d4207a3",
+    "experiments/expert-sky-striker-20260919/project/scripts/code_list.txt": "04cb9134b5370b9841f8ee4d969dc519ecb11021f5df3655d0faf9d3c94695aa",
+    "project-blueeyes-safe-recovery-20260830/scripts/official_code_list_864.txt": "f3795910ac7a2eac06db0badb2db1288a93f5c237c6f92883a2d922aa2d3f339",
+    "experiments/expert-sky-striker-20260919/project/assets/structured/frozen_semantics_v1.npz": "646b164ddff4169e3379aca3d59fb36f41c4aa7b031c86068f46d00a68657aec",
+    "experiments/expert-sky-striker-20260919/project/assets/locale/en/cards.cdb": "2bfa5e1392c9dcbd64587c167823de522138d67e4eeb4c66e635c19a4e7f6841",
+    "experiments/expert-sky-striker-20260919/official-evaluator/evaluate.py": "06f2b3681e07bf538e9905b0eb24a5c7b87f202e972581db17b64ddb0da2f405",
+    "experiments/expert-sky-striker-20260919/official-evaluator/official_protocol.py": "3c0e13ee300cf3fbbc7843c1cb716682d1230a19afd386859723bdab44218600",
+    "experiments/expert-sky-striker-20260919/official-evaluator/run_official.py": "1d5cd2e05ea39e738c1a048e5f2148361a119bd4ca5b96703db911e1934d77be",
+    "experiments/expert-sky-striker-20260919/official-evaluator/official_watcher.py": "2414c43b140780b7b33831511a82edd205680120f98970f89f3c1bb73500e399",
+    "experiments/expert-sky-striker-20260919/ygoenv-native/ygoenv/ygoenv/ygopro/ygopro_ygoenv.cpython-311-x86_64-linux-gnu.so": "9772f0748ed859fa61e60c2818f70471aed97a5bca2df640e282f6ace3e9010f",
+    "experiments/expert-sky-striker-20260919/ygoenv-native/ygoenv/ygoenv/ygopro/ygopro.h": "4e5a95cb30fcca8e38df643b7bef6307ae806b0ba84827297a879e02919c4199"
+  },
+  "extension": {
+    "schema": "sky-selfplay-extension/v1",
+    "status": "queued",
+    "request_id": "sky-append-100m-20260921",
+    "requested_at": "2026-09-20T16:28:03.289812+00:00",
+    "original_target_step": 219998208,
+    "extra_steps": 99999744,
+    "target_step": 319997952,
+    "base_step": 99999744,
+    "initial_trainer_pid": 883111,
+    "initial_trainer_start_ticks": "1666967316",
+    "initial_controller_pid": 883047,
+    "initial_controller_start_ticks": "1666967303",
+    "handoff": "Preserve the active terminal checkpoint, then resume model weights.",
+    "optimizer_restored_at_handoff": false,
+    "trainer_restart_during_install": false,
+    "evaluation_interval_steps": 3000000,
+    "interim_test": {
+      "step": 219998208,
+      "games": 400,
+      "seed": 2026092096
+    },
+    "final_test": {
+      "step": 319997952,
+      "games": 400,
+      "seed": 2026092101
+    },
+    "audit_directory": "experiments/expert-sky-striker-corrected-20260920/extension-100m-20260921",
+    "previous_extension_backup": "experiments/expert-sky-striker-corrected-20260920/extension-100m-20260921/before/training-extension.json",
+    "watcher_pid": 836278,
+    "heartbeat": 1789939670.370889,
+    "services": {
+      "eval-worker": [
+        959242
+      ],
+      "metrics": [
+        319176
+      ],
+      "feed": [
+        947039
+      ]
+    }
+  }
+}

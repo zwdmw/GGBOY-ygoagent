@@ -1,0 +1,12 @@
+{
+  "cross_split_cluster_violations": [],
+  "schema": "ygo-deck-overlap-audit/v1",
+  "test_separation_violations": [],
+  "thresholds": {
+    "candidate_topk": 384,
+    "cluster_main_recall": 0.9,
+    "cluster_similarity": 0.8,
+    "test_separation_main_recall": 0.75,
+    "test_separation_similarity": 0.65
+  }
+}

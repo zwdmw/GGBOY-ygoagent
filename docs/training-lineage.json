@@ -1,0 +1,389 @@
+{
+  "schema": "ygo-sky-training-lineage/v1",
+  "audited_on": "2026-10-09",
+  "checkpoints": [
+    {
+      "name": "20260825_47M",
+      "counter": "general",
+      "step": 49991680,
+      "sha256": "5bef8446dd62c2528b85abebad2920e566bb4458f5d43b6fce10c9b8131a6e492"
+    },
+    {
+      "name": "20260826_50M",
+      "counter": "general",
+      "step": 53137408,
+      "sha256": "c06eb6ae416f8f99fa88680f51557ce1c1dc2ff47973b22d782feffe0a381a42"
+    },
+    {
+      "name": "20260826_104M",
+      "counter": "general",
+      "step": 109051904,
+      "sha256": "0891ce38acddecbd95d620e1ef4b297db4b5c4c22a06dc91b670f0e594c47ef6"
+    },
+    {
+      "name": "20260914_822M",
+      "counter": "general",
+      "step": 861929472,
+      "sha256": "612e36d45e9a6ace59bed87ba62710ff25255cb392357e71ac805c649853b8d6"
+    },
+    {
+      "name": "20260919_99999744_steps",
+      "counter": "expert",
+      "step": 99999744,
+      "sha256": "8700afa56648adc91f9488d9c022fc6de76f7ad62ef85be13ec11e5b375fe18f"
+    },
+    {
+      "name": "initial-259m",
+      "counter": "expert",
+      "step": 259000320,
+      "sha256": "3b31b70460bf4c871322a901a290929b3a36da98e0fc30e0bbb05aaceba834c0"
+    }
+  ],
+  "architecture_migration": {
+    "general_step": 732954624,
+    "from": "structured-v1",
+    "to": "decision-v1",
+    "optimizer": "fresh Adam"
+  },
+  "expert_fork": {
+    "general_checkpoint": "20260914_822M",
+    "general_step": 861929472,
+    "expert_tb_offset": 0,
+    "evidence": "identity, launchers, and two smoke logs",
+    "first_formal_launch_log": "overwritten by later runs"
+  },
+  "counter_units": {
+    "early_general_filename_M": 1048576,
+    "expert_precise_filename": "environment steps",
+    "259M_and_463M": "expert stage steps"
+  },
+  "verification": {
+    "new_downloads": 53,
+    "new_download_bytes": 42202371,
+    "existing_export_files_verified": 14499,
+    "existing_export_bytes": 54176699,
+    "existing_export_sums_sha256": "f72263f7fb5915c7b4366a8bf231d8bd786615cf6f72dd3d1175bc2b187eb7b3",
+    "historical_stage_training_replay": "pending",
+    "native_stage_coverage": "v11 and tribute-fix binaries archived; corrected reference published in v0.1.0; remaining intermediate revisions tracked for collection and stage replay."
+  },
+  "evidence": [
+    {
+      "source_path": "run-structured-uniform-r0.sh",
+      "bytes": 1705,
+      "sha256": "b18dab5ec6c94c84f91279cad9f5b1967b0f31e545ebef8fda96b38b83b1e363",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "start-structured-uniform-r0.sh",
+      "bytes": 937,
+      "sha256": "88d3d3bfc415fc4a4a927350e5fb8cda15be7fb9cc1696bf23f9931ba35cda1b",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "run-structured-uniform-cont-r1.sh",
+      "bytes": 1846,
+      "sha256": "4accc9c3ca2c994317f1738e5ed416173994df276649440d1d54293f40d33198",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "run-structured-uniform-to1000m-r2.sh",
+      "bytes": 1846,
+      "sha256": "4accc9c3ca2c994317f1738e5ed416173994df276649440d1d54293f40d33198",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "logs-structured-uniform-v3-20260825/train-structured-uniform-r0-20260825.log",
+      "bytes": 1439216,
+      "sha256": "918cb0cf427141500fc64b4f15cc1c6867ab425e4ec3f3ea03255727c05f934e",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "logs-structured-uniform-v3-cont-20260826/train-structured-uniform-cont-r1-retry1-20260826.log",
+      "bytes": 146068,
+      "sha256": "0258b756e0f9b9fc32e25913b3e48e43f68177ad5298c6ef746a29d7b42b2344",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "logs-structured-uniform-v3-cont-20260826/train-structured-uniform-to1000m-r2-20260826.log",
+      "bytes": 103206,
+      "sha256": "d2b90438709b66483072400656cdf4f9aa9ea0d52cb10c81dc8591b534b3f348",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "experiments/r0-structured-uniform-resume-50m-to1000m-20260826/manifest.json",
+      "bytes": 1811,
+      "sha256": "6db5591b01c6152d5a6e5b906e9bc977552e0a672e7e0f002dcb13fe21e1cff3",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "experiments/r0-structured-uniform-resume-50m-to1000m-20260826/run-r0-resume-to1000m.sh",
+      "bytes": 3114,
+      "sha256": "1484170ceac4af4c4295837de2bb767d6a53a3f567d19f595e561606cc17ef91",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "experiments/r0-structured-uniform-resume-50m-to1000m-20260826/train.current.log",
+      "bytes": 1564546,
+      "sha256": "76397006be13e34f5517204181d2b96f053d5013a55865da41cdcc59fd4aef71",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "experiments/structured-104m-to1000m-largepool-20260914/train.log",
+      "bytes": 22729907,
+      "sha256": "d4d9db28dd01bb9a79ffb781d794fbf6a55dadcb1ab73fd3d88883507981c7d8",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "experiments/structured-104m-to1000m-largepool-20260914/run-104m-to-1000m.sh",
+      "bytes": 2990,
+      "sha256": "8ed186a74cd9da152991db6d5cebabb4ef8091a1d86e8f34e1b0a1e93a28a3ab",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "experiments/structured-104m-to1000m-largepool-20260914/decision-migration.json",
+      "bytes": 4637,
+      "sha256": "19521f7a6be27ef69bd9bdd47f1d8812792e84d2244c1cc73c2308b3c0a4c019",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "experiments/expert-sky-striker-20260919/kpi/shards/base_fork_822M/identity.json",
+      "bytes": 470,
+      "sha256": "4c6a942154ba063be3b817447eeea205d251b340f98d6869c03b1f6d34481a7d",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "experiments/expert-sky-striker-20260919/continuation-100m.json",
+      "bytes": 4211,
+      "sha256": "43a9e1284a519e37a920e324f5b0eae8e4b0c8a908ba257c953b5260586a7009",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "experiments/expert-sky-striker-20260919/logs/smoke.log",
+      "bytes": 14471,
+      "sha256": "7a2f000efcbe56bcef1c077ea70bfa20047e81aff34940ee223e8c5289e4ba83",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "experiments/expert-sky-striker-20260919/logs/smoke2.log",
+      "bytes": 17965,
+      "sha256": "38961520279c0d9e516ebe92f0616bd5ef72c470c891289e8af5583020b23bcc",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "experiments/expert-sky-striker-20260919/logs/train.log",
+      "bytes": 3196281,
+      "sha256": "dcd2734d6d457b82ce62c674c027cbd7d503942b523b2ac30f78c2af8247b89a",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "experiments/expert-sky-striker-20260919/logs/supervisor.log",
+      "bytes": 311,
+      "sha256": "30870305736f28e29a2b851edc9ea09064976603c968941968f21cf61a18c754",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "experiments/expert-sky-striker-20260919/run-expert.sh",
+      "bytes": 2541,
+      "sha256": "eb951513c9c59787bad669eb1ae742d8c0b67dfd299c3a42e23526659fd80a70",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "experiments/expert-sky-striker-20260919/run-expert-main.sh",
+      "bytes": 1779,
+      "sha256": "0e1e314f1f5484bed387e523ea42914679b7a90ac10472c7d6c76d31c6c928ca",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "experiments/expert-sky-striker-20260919/run-expert-full.sh",
+      "bytes": 1779,
+      "sha256": "d1837a1ca3d95be8102d3dbfbab06ce0baaaaaf11fc2f07ce1c98079552b960b",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "experiments/expert-sky-striker-corrected-20260920/selfplay_ops.py",
+      "bytes": 26847,
+      "sha256": "83f8f270d11aa48c5320018cf1092e7f62c76b664ca2230ad08b113167ddc17a",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "experiments/expert-sky-striker-corrected-20260920/protocol.json",
+      "bytes": 6153,
+      "sha256": "a8b9eb51e94e4ae977a7910dcf2a7036ddba5d015f4bad9def44e4c7fcc224bc",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "experiments/expert-sky-striker-corrected-20260920/checkpoints/20260920_259000320_steps.flax_model.json",
+      "bytes": 1423,
+      "sha256": "582c978e411ceef3527ce1de2c7947a299761dacef057fdc17bb3f297c37e93c",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "experiments/expert-sky-striker-corrected-20260920/logs/train.log",
+      "bytes": 5509291,
+      "sha256": "737ba8b03a43fb7d5963e9e2bd7cfa0c43559cecb2c1dd6b947e4a7c9ff6b522",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "experiments/expert-sky-striker-corrected-20260920/logs/train-command-0.json",
+      "bytes": 1987,
+      "sha256": "eef61927baa99a52f2825e6786873df8672b392be3a2ebecb5c4b9ecc8269f03",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "experiments/expert-sky-striker-corrected-20260920/logs/train-command-resume-119998464-0.json",
+      "bytes": 2007,
+      "sha256": "42df08155f18127f72c80de15ff515173a71cfae034a2b48c8e9ae5130803bae",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "experiments/expert-sky-striker-corrected-20260920/logs/train-command-resume-219998208-0.json",
+      "bytes": 2007,
+      "sha256": "405c988d957e979d05857358f8740a3f81c4c3b2a67e63d9687158a1e81ad701",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "experiments/expert-sky-striker-corrected-20260920/project/scripts/cleanba.py",
+      "bytes": 69730,
+      "sha256": "71b590fe640efd73a2b895746f5221b8fababe0c3b023d979d591d96433f19f2",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "experiments/expert-sky-striker-corrected-20260920/project/scripts/cluster_stats.py",
+      "bytes": 11524,
+      "sha256": "b102d19501999ec56ce84a329c69346da38246807b5a6091d9c3e63a239f1f51",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "experiments/expert-sky-striker-corrected-20260920/project/scripts/checkpoint_metadata.py",
+      "bytes": 1722,
+      "sha256": "b7b97b436439f7d6daf9bf20a985d29e53afd79259f832d0d63ea251baa1ed1d",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "experiments/expert-sky-striker-corrected-20260920/project/scripts/code_list.txt",
+      "bytes": 162738,
+      "sha256": "04cb9134b5370b9841f8ee4d969dc519ecb11021f5df3655d0faf9d3c94695aa",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "experiments/expert-sky-striker-corrected-20260920/project/ygoai/rl/jax/agent.py",
+      "bytes": 33142,
+      "sha256": "8dd69a6456f137cd3af33e6381e537f348fb73e6c9758a0ca4c1218d45d68205",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "experiments/expert-sky-striker-corrected-20260920/project/ygoai/rl/jax/structured_agent.py",
+      "bytes": 23475,
+      "sha256": "d1ed1eedd1d2d253c9aba75dedee43bef4a7b6006956f138bd5cec16e62ad66a",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "experiments/expert-sky-striker-corrected-20260920/project/ygoai/rl/jax/decision.py",
+      "bytes": 6859,
+      "sha256": "f22df926c12a2bc44fb6e1a5043c986f15de51286b553123b73bfdc17dbf0050",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "experiments/expert-sky-striker-corrected-20260920/project/ygoai/rl/jax/decision_checkpoint.py",
+      "bytes": 2445,
+      "sha256": "5c654c99f802da89223b79867b1a2cdddb889efa5e5cd9378c552a642ecad733",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "experiments/structured-104m-to1000m-largepool-20260914/migration-decision-v1-20260918/originals/project-structured-uniform-v3-20260825/scripts/cleanba.py",
+      "bytes": 63366,
+      "sha256": "aa1fe2ef3ff7eca592312ccdb483989c8661b6569ca7d1056f30744e26927dfc",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "experiments/structured-104m-to1000m-largepool-20260914/migration-decision-v1-20260918/originals/project-structured-uniform-v3-20260825/ygoai/rl/jax/agent.py",
+      "bytes": 31741,
+      "sha256": "8b6420eb45e17a54433d988e8df36628badaf3884ccf4a6b85e5b33ef1897daf",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "experiments/structured-104m-to1000m-largepool-20260914/migration-decision-v1-20260918/originals/project-structured-uniform-v3-20260825/ygoai/rl/jax/structured_agent.py",
+      "bytes": 20679,
+      "sha256": "8a72ec0a1278222de5e705670ab7f2531c942df5e206298fc6a23ec65ad8ed32",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "project-structured-uniform-v3-20260825/assets/deck/largepool-v3/manifests/clusters.jsonl",
+      "bytes": 1464482,
+      "sha256": "d4db606435b819b1bd41e196a212e7159390d34baea12606e10bffdfe441959c",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "project-structured-uniform-v3-20260825/assets/deck/largepool-v3/manifests/official_validation.jsonl",
+      "bytes": 5259,
+      "sha256": "bdea517f010f4146d77b1f416887c628c0ffcc312722f53f9780e6cba5026ee4",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "project-structured-uniform-v3-20260825/assets/deck/largepool-v3/manifests/overlap_audit.json",
+      "bytes": 313,
+      "sha256": "20baf5bea3d5deed33e9b386a2f899c0491e39eb7a61842ad11b4245bbe90242",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "project-structured-uniform-v3-20260825/assets/deck/largepool-v3/manifests/split_summary.json",
+      "bytes": 3153,
+      "sha256": "15b1ed4c86e611d9948b0c15df6b752d0a1611611854a8bd965a458b34ac8021",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "project-structured-uniform-v3-20260825/assets/deck/largepool-v3/manifests/test.jsonl",
+      "bytes": 1560741,
+      "sha256": "9271721fc315669c87e7c2b9ceb54f4d714fccc0fd86accbe1df76fd7097b7ae",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "project-structured-uniform-v3-20260825/assets/deck/largepool-v3/manifests/training_contract.json",
+      "bytes": 687,
+      "sha256": "ec84e53731a450738e141f7c8fca5cb5b7c60f2fb832f12e548787e47d69319b",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "project-structured-uniform-v3-20260825/assets/deck/largepool-v3/manifests/validation.jsonl",
+      "bytes": 1616028,
+      "sha256": "4d61fed87a41b71996260c2a3fb32090a55c3615d5045f786304f751ef9f581e",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "historical-export/code/versions/cleanba.cef71dbd.py",
+      "bytes": 61279,
+      "sha256": "cef71dbda048bdc8014f52f769be401047524a46f966cea934b7e1f79fa81285",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "historical-export/code/versions/cleanba.aa1fe2ef.py",
+      "bytes": 63366,
+      "sha256": "aa1fe2ef3ff7eca592312ccdb483989c8661b6569ca7d1056f30744e26927dfc",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "historical-export/code/versions/cleanba.1026a147.py",
+      "bytes": 67316,
+      "sha256": "1026a147e6b752139cb4d8a141c5a393bc7e61c2813cd85e1ebd06bb45146003",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "historical-export/code/versions/cleanba.expert0919.py",
+      "bytes": 69730,
+      "sha256": "71b590fe640efd73a2b895746f5221b8fababe0c3b023d979d591d96433f19f2",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "historical-export/code/versions/cleanba.corrected0920.py",
+      "bytes": 69730,
+      "sha256": "71b590fe640efd73a2b895746f5221b8fababe0c3b023d979d591d96433f19f2",
+      "verification": "remote hash equals downloaded hash"
+    },
+    {
+      "source_path": "historical-export/SHA256SUMS",
+      "bytes": 2001514,
+      "sha256": "f72263f7fb5915c7b4366a8bf231d8bd786615cf6f72dd3d1175bc2b187eb7b3",
+      "verification": "remote hash equals downloaded hash"
+    }
+  ]
+}

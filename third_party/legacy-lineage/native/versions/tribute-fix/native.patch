@@ -1,0 +1,13 @@
+--- original/ygopro.h
++++ patched/ygopro.h
+@@ -5353,10 +5353,6 @@
+       auto max = read_u8();
+       auto size = read_u8();
+ 
+-      if (min == 0) {
+-        throw std::runtime_error("Min == 0 not implemented for select tribute");
+-      }
+-
+       std::vector<int> release_params;
+       release_params.reserve(size);
+       std::vector<std::string> specs;
