@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="875" viewBox="0 0 1200 875" role="img" aria-labelledby="title desc" xml:lang="en">
+<title id="title">Training workflow · resources to duels</title><desc id="desc">Pin inputs → parallel rollouts ↔ PPO updates → save → evaluate → inference &amp; duels</desc>
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/></marker>
+  <marker id="teal-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#0f766e"/></marker>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', 'Noto Sans SC', sans-serif; fill: #172b43; }
+    .title { font-size: 32px; font-weight: 700; letter-spacing: -.5px; }
+    .subtitle { font-size: 18px; fill: #54657a; }
+    .heading { font-size: 22px; font-weight: 650; }
+    .body { font-size: 18px; }
+    .small { font-size: 16px; fill: #54657a; }
+    .label { font-size: 15px; font-weight: 700; fill: #54657a; letter-spacing: 1px; }
+    .mono { font-family: 'Cascadia Code', Consolas, monospace; font-size: 16px; fill: #34516a; }
+    .step { font-size: 18px; font-weight: 700; fill: #0f766e; }
+  </style>
+</defs>
+<rect width="1200" height="875" rx="24" fill="#f6f8fc"/>
+<rect x="36" y="35" width="5" height="32" rx="2" fill="#0f766e"/>
+
+<text x="56" y="61" class="title">Training workflow · resources to duels</text>
+<text x="56" y="96" class="subtitle">Pin inputs → parallel rollouts ↔ PPO updates → save → evaluate → inference &amp; duels</text>
+<g>
+<rect x="36" y="140" width="1128" height="114" rx="16" fill="#edf3fe" stroke="#b9cbee" stroke-width="1.5"/>
+<text x="56" y="175" class="heading">01  Prepare the experiment</text>
+<text x="56" y="209" class="small">Config + seed  ·  published checkpoint  ·  semantics + code list  ·  engine  ·  decks + frozen opponents</text>
+<text x="56" y="238" class="small">Record expanded arguments, resource SHA256 identities and run metadata</text>
+</g>
+<g>
+<rect x="36" y="334" width="294" height="239" rx="16" fill="#e9f7f4" stroke="#a3d8ce" stroke-width="1.5"/>
+<text x="56" y="369" class="heading">02  Duel environments</text>
+<text x="56" y="403" class="small">YGOPro core + ygoenv</text>
+<text x="56" y="432" class="small">Recipe selects decks / opponents</text>
+<text x="56" y="461" class="small">Self-play with current policy</text>
+<text x="56" y="490" class="small">Or face frozen historical policies</text>
+<text x="56" y="519" class="small">Return observations / rewards</text>
+<text x="56" y="548" class="small">Count environment steps</text>
+</g>
+<g>
+<rect x="399" y="334" width="330" height="239" rx="16" fill="#ffffff" stroke="#dbe3ed" stroke-width="1.5"/>
+<text x="419" y="369" class="heading">03  Actor rollout threads</text>
+<text x="419" y="403" class="small">Current weights + per-seat LSTM</text>
+<text x="419" y="432" class="small">Sample from the legal policy</text>
+<text x="419" y="461" class="small">Collect num_steps-long rollouts</text>
+<text x="419" y="490" class="small">Observations / actions / log-probs</text>
+<text x="419" y="519" class="small">Values / rewards / done / deltas</text>
+<text x="419" y="548" class="small">Win/loss reward + LP shaping</text>
+</g>
+<g>
+<rect x="798" y="334" width="366" height="239" rx="16" fill="#f1edfc" stroke="#cbbdeb" stroke-width="1.5"/>
+<text x="818" y="369" class="heading">04  Learner updates</text>
+<text x="818" y="403" class="small">GAE advantages + value targets</text>
+<text x="818" y="432" class="small">PPO policy loss + value loss</text>
+<text x="818" y="461" class="small">Entropy + public-outcome auxiliary</text>
+<text x="818" y="490" class="small">Sequence minibatches + Adam</text>
+<text x="818" y="519" class="small">Send refreshed weights to actors</text>
+<text x="818" y="548" class="small">Recipes reinitialize Adam on restart</text>
+</g>
+<path d="M 180 254 L 180 334" fill="none" stroke="#f6f8fc" stroke-width="7" stroke-linejoin="round"/>
+<path d="M 180 254 L 180 334" fill="none" stroke="#64748b" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M 1050 254 L 1050 334" fill="none" stroke="#f6f8fc" stroke-width="7" stroke-linejoin="round"/>
+<path d="M 1050 254 L 1050 334" fill="none" stroke="#64748b" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M 982 334 L 982 294 L 564 294 L 564 334" fill="none" stroke="#f6f8fc" stroke-width="7" stroke-linejoin="round"/>
+<path d="M 982 334 L 982 294 L 564 294 L 564 334" fill="none" stroke="#0f766e" stroke-width="2" stroke-linejoin="round" marker-end="url(#teal-arrow)"/>
+<text x="599" y="283" class="small">Updated policy weights</text>
+<path d="M 330 426 L 399 426" fill="none" stroke="#f6f8fc" stroke-width="7" stroke-linejoin="round"/>
+<path d="M 330 426 L 399 426" fill="none" stroke="#64748b" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="342" y="413" class="small">Obs</text>
+<path d="M 399 518 L 330 518" fill="none" stroke="#f6f8fc" stroke-width="7" stroke-linejoin="round"/>
+<path d="M 399 518 L 330 518" fill="none" stroke="#0f766e" stroke-width="2" stroke-linejoin="round" marker-end="url(#teal-arrow)"/>
+<text x="342" y="505" class="small">Act</text>
+<path d="M 729 454 L 798 454" fill="none" stroke="#f6f8fc" stroke-width="7" stroke-linejoin="round"/>
+<path d="M 729 454 L 798 454" fill="none" stroke="#64748b" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="741" y="441" class="small">Batch</text>
+<path d="M 982 573 L 982 610 L 208 610 L 208 648" fill="none" stroke="#f6f8fc" stroke-width="7" stroke-linejoin="round"/>
+<path d="M 982 573 L 982 610 L 208 610 L 208 648" fill="none" stroke="#64748b" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<g>
+<rect x="36" y="648" width="344" height="147" rx="16" fill="#ffffff" stroke="#dbe3ed" stroke-width="1.5"/>
+<text x="56" y="683" class="heading">05  Save artifacts</text>
+<text x="56" y="717" class="small">checkpoint + JSON sidecar</text>
+<text x="56" y="746" class="small">Exact steps / args / identities</text>
+<text x="56" y="775" class="small">TensorBoard / run.json</text>
+</g>
+<g>
+<rect x="428" y="648" width="344" height="147" rx="16" fill="#edf3fe" stroke="#b9cbee" stroke-width="1.5"/>
+<text x="448" y="683" class="heading">06  Paired evaluation</text>
+<text x="448" y="717" class="small">Fixed seeds; swap player seats</text>
+<text x="448" y="746" class="small">Independent recurrent states</text>
+<text x="448" y="775" class="small">Log results / timeouts / model hash</text>
+</g>
+<g>
+<rect x="820" y="648" width="344" height="147" rx="16" fill="#e9f7f4" stroke="#a3d8ce" stroke-width="1.5"/>
+<text x="840" y="683" class="heading">07  Register &amp; deploy</text>
+<text x="840" y="717" class="small">register-model → verify → infer</text>
+<text x="840" y="746" class="small">HTTP inference / YGOPro TCP</text>
+<text x="840" y="775" class="small">Accepted example: GPU duel on 233</text>
+</g>
+<path d="M 380 720 L 428 720" fill="none" stroke="#f6f8fc" stroke-width="7" stroke-linejoin="round"/>
+<path d="M 380 720 L 428 720" fill="none" stroke="#64748b" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M 772 720 L 820 720" fill="none" stroke="#f6f8fc" stroke-width="7" stroke-linejoin="round"/>
+<path d="M 772 720 L 820 720" fill="none" stroke="#0f766e" stroke-width="2" stroke-linejoin="round" marker-end="url(#teal-arrow)"/>
+<text x="36" y="835" class="small">See the lineage diagram for historical stages. Each experiment keeps its own weights, config and results.</text>
+</svg>

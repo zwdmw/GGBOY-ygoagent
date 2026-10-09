@@ -4,11 +4,27 @@
 
 闪刀姬专家模型的训练、验证、推理、HTTP 服务和 YGOPro TCP 对战项目。统一命令为 `ygo-sky`，已完成 233 服对战接入验收。模型、语义表、卡片数据库和引擎通过 SHA256 绑定，源码与大资源分开发布。
 
-`463M` 指闪刀专家阶段累计训练步数 **463001600**，不是参数量。资源包另含 `464001024` 步的镜像专项模型，两者有独立身份和评估配置。
+项目提供经过约 **4.63 亿步闪刀姬专项训练**的专家模型，以及进一步训练的镜像专项版本。模型信息与精确步数见[资源契约](docs/模型与资源契约.md)。
 
 感谢 [ygo-agent](https://github.com/sbl1996/ygo-agent) 的作者和贡献者开放模型、强化学习训练及环境实现。本项目的 `ygoai`、训练器和修改版 `ygoenv` 基于该项目整理与扩展，上游版权与 MIT / Apache-2.0 声明保留在 [third_party/ygo-agent](third_party/ygo-agent)。也感谢 YGOPro core、卡片脚本及相关依赖的维护者。
 
 特别感谢 **MirrorForce** 的作者 **海之中道**，与他的交流让我受益颇丰。
+
+## 看懂模型与训练
+
+### 模型如何选择动作
+
+![模型结构：卡片、局面、事件与候选动作经结构化编码，结合 LSTM 记忆，由 FiLMActor 和 DecisionActor 共同生成合法动作分数。](docs/images/model-architecture.zh.svg)
+
+模型用 **128 维结构化特征**理解当前局面，用 **512 维 LSTM**保留对局记忆。FiLMActor 给出基础动作分数，DecisionActor 结合局面和动作角色补充分数；价值头和公开变化辅助头为训练提供监督。
+
+### 一次训练如何跑通
+
+![训练流程：准备固定资源，Actor 与对战环境交互采样，Learner 通过 PPO 更新并回传权重，保存 checkpoint 后进行成对评估，再注册模型用于推理和对战。](docs/images/training-workflow.zh.svg)
+
+从公开权重开始，采样与学习持续交替，新 checkpoint 连同配置和资源身份一起保存，再按固定协议评估。当前入口已完成五份配方的 GPU 短训练和 64 局成对评估，记录见[复现报告](docs/全新GPU复现报告.md)。
+
+想了解张量形状、训练损失，以及随机初始化到闪刀专家的阶段关系，继续读[模型结构与训练流程](docs/模型结构与训练流程.md)。
 
 ## 许可范围
 
@@ -77,7 +93,7 @@ ygo-sky infer --device cpu --observation resources/example-observation.npz --leg
 
 主分支包含后续文档与工具改进；[CHANGELOG](CHANGELOG.md) 记录尚未发布的变更。下载工具使用 [固定下载清单](configs/resources.json)，不会自动切换到未知的新权重。目前资源以整包发布。
 
-历史训练材料见 [training-lineage-20261009 Release](https://github.com/zwdmw/GGBOY-ygoagent/releases/tag/training-lineage-20261009)：早期原生模块独立下载，历史源码与 14,339 副卡组随 Git 发布。259M 和 463M 是专家计数；上游通用模型在 861,929,472 步处分叉。
+历史训练材料见 [training-lineage-20261009 Release](https://github.com/zwdmw/GGBOY-ygoagent/releases/tag/training-lineage-20261009)：早期原生模块独立下载，历史源码与 14,339 副卡组随 Git 发布。闪刀专家继承通用模型权重，随后开展专项训练；各阶段的关系见[训练沿革](docs/历史训练沿革.md)。
 
 ## 已验收的功能
 

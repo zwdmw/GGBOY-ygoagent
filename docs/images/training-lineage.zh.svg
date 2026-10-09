@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="748" viewBox="0 0 1200 748" role="img" aria-labelledby="title desc" xml:lang="zh">
+<title id="title">训练沿革 · 通用策略到闪刀专家</title><desc id="desc">两条训练计数：通用阶段积累对战经验，专家阶段继承权重并重新计步</desc>
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/></marker>
+  <marker id="teal-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#0f766e"/></marker>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', 'Noto Sans SC', sans-serif; fill: #172b43; }
+    .title { font-size: 32px; font-weight: 700; letter-spacing: -.5px; }
+    .subtitle { font-size: 18px; fill: #54657a; }
+    .heading { font-size: 22px; font-weight: 650; }
+    .body { font-size: 18px; }
+    .small { font-size: 16px; fill: #54657a; }
+    .label { font-size: 15px; font-weight: 700; fill: #54657a; letter-spacing: 1px; }
+    .mono { font-family: 'Cascadia Code', Consolas, monospace; font-size: 16px; fill: #34516a; }
+    .step { font-size: 18px; font-weight: 700; fill: #0f766e; }
+  </style>
+</defs>
+<rect width="1200" height="748" rx="24" fill="#f6f8fc"/>
+<rect x="36" y="35" width="5" height="32" rx="2" fill="#0f766e"/>
+
+<text x="56" y="61" class="title">训练沿革 · 通用策略到闪刀专家</text>
+<text x="56" y="96" class="subtitle">两条训练计数：通用阶段积累对战经验，专家阶段继承权重并重新计步</text>
+<rect x="36" y="140" width="1128" height="222" rx="16" fill="#edf3fe" stroke="#b9cbee" stroke-width="1.5"/>
+<text x="60" y="175" class="label">通用训练</text>
+<g>
+<rect x="60" y="203" width="246" height="125" rx="16" fill="#ffffff" stroke="#dbe3ed" stroke-width="1.5"/>
+<text x="80" y="238" class="heading">随机初始化</text>
+<text x="80" y="272" class="small">环境步 0</text>
+<text x="80" y="301" class="small">seed 0 · checkpoint=None</text>
+</g>
+<g>
+<rect x="338" y="203" width="246" height="125" rx="16" fill="#ffffff" stroke="#dbe3ed" stroke-width="1.5"/>
+<text x="358" y="238" class="heading">通用自博弈</text>
+<text x="358" y="272" class="small">通用计数逐步推进</text>
+<text x="358" y="301" class="small">→ 732,954,624</text>
+</g>
+<g>
+<rect x="616" y="203" width="246" height="125" rx="16" fill="#ffffff" stroke="#dbe3ed" stroke-width="1.5"/>
+<text x="636" y="238" class="heading">decision-v1 迁移</text>
+<text x="636" y="272" class="small">732,954,624</text>
+<text x="636" y="301" class="small">加入决策残差与辅助头</text>
+</g>
+<g>
+<rect x="894" y="203" width="246" height="125" rx="16" fill="#ffffff" stroke="#dbe3ed" stroke-width="1.5"/>
+<text x="914" y="238" class="heading">专家分叉起点</text>
+<text x="914" y="272" class="small">861,929,472</text>
+<text x="914" y="301" class="small">保存通用模型权重</text>
+</g>
+<path d="M 306 268 L 338 268" fill="none" stroke="#f6f8fc" stroke-width="7" stroke-linejoin="round"/>
+<path d="M 306 268 L 338 268" fill="none" stroke="#64748b" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M 584 268 L 616 268" fill="none" stroke="#f6f8fc" stroke-width="7" stroke-linejoin="round"/>
+<path d="M 584 268 L 616 268" fill="none" stroke="#64748b" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M 862 268 L 894 268" fill="none" stroke="#f6f8fc" stroke-width="7" stroke-linejoin="round"/>
+<path d="M 862 268 L 894 268" fill="none" stroke="#64748b" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="36" y="425" width="1128" height="231" rx="16" fill="#e9f7f4" stroke="#a3d8ce" stroke-width="1.5"/>
+<text x="60" y="460" class="label">闪刀姬专家训练</text>
+<g>
+<rect x="60" y="492" width="246" height="125" rx="16" fill="#ffffff" stroke="#dbe3ed" stroke-width="1.5"/>
+<text x="80" y="527" class="heading">继承通用权重</text>
+<text x="80" y="561" class="small">专家计数从 0 开始</text>
+<text x="80" y="590" class="small">闪刀姬专项自博弈</text>
+</g>
+<g>
+<rect x="338" y="492" width="246" height="125" rx="16" fill="#ffffff" stroke="#dbe3ed" stroke-width="1.5"/>
+<text x="358" y="527" class="heading">259M 续训起点</text>
+<text x="358" y="561" class="small">259,000,320</text>
+<text x="358" y="590" class="small">initial-259m</text>
+</g>
+<g>
+<rect x="616" y="492" width="246" height="125" rx="16" fill="#e9f7f4" stroke="#a3d8ce" stroke-width="1.5"/>
+<text x="636" y="527" class="heading">463M 基线</text>
+<text x="636" y="561" class="small">463,001,600</text>
+<text x="636" y="590" class="small">base-463m</text>
+</g>
+<g>
+<rect x="894" y="492" width="246" height="125" rx="16" fill="#e9f7f4" stroke="#a3d8ce" stroke-width="1.5"/>
+<text x="914" y="527" class="heading">镜像专项模型</text>
+<text x="914" y="561" class="small">464,001,024</text>
+<text x="914" y="590" class="small">specialist-464m</text>
+</g>
+<path d="M 306 555 L 338 555" fill="none" stroke="#f6f8fc" stroke-width="7" stroke-linejoin="round"/>
+<path d="M 306 555 L 338 555" fill="none" stroke="#0f766e" stroke-width="2" stroke-linejoin="round" marker-end="url(#teal-arrow)"/>
+<path d="M 584 555 L 616 555" fill="none" stroke="#f6f8fc" stroke-width="7" stroke-linejoin="round"/>
+<path d="M 584 555 L 616 555" fill="none" stroke="#0f766e" stroke-width="2" stroke-linejoin="round" marker-end="url(#teal-arrow)"/>
+<path d="M 862 555 L 894 555" fill="none" stroke="#f6f8fc" stroke-width="7" stroke-linejoin="round"/>
+<path d="M 862 555 L 894 555" fill="none" stroke="#0f766e" stroke-width="2" stroke-linejoin="round" marker-end="url(#teal-arrow)"/>
+<path d="M 1017 328 L 1017 393 L 20 393 L 20 555 L 60 555" fill="none" stroke="#f6f8fc" stroke-width="7" stroke-linejoin="round"/>
+<path d="M 1017 328 L 1017 393 L 20 393 L 20 555 L 60 555" fill="none" stroke="#0f766e" stroke-width="2" stroke-linejoin="round" marker-end="url(#teal-arrow)"/>
+<text x="338" y="386" class="step">继承权重 · 专家训练重新计步</text>
+<text x="36" y="693" class="small">镜像专项在 463M 基线上追加 999,424 环境步；每个节点的完整权重身份见资源契约与沿革记录。</text>
+<text x="36" y="723" class="small">历史关系已核对记录与 SHA256；当前入口的短训练验收见 GPU 复现报告。</text>
+</svg>

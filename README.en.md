@@ -2,11 +2,27 @@
 
 [中文](README.md) · [Quick start (Chinese)](docs/快速开始.md) · [Installation and continued training (Chinese)](docs/从零复现训练.md) · [Contributing](CONTRIBUTING.md) · [Release v0.1.0](https://github.com/zwdmw/GGBOY-ygoagent/releases/tag/v0.1.0)
 
-A Sky Striker expert policy project with training, evaluation, inference, an HTTP service, and a YGOPro TCP client. The CLI is `ygo-sky`. **463M means 463,001,600 accumulated expert-stage training steps**, not the parameter count.
+A Sky Striker expert policy project with training, evaluation, inference, an HTTP service, and a YGOPro TCP client. The CLI is `ygo-sky`. It includes an expert policy trained for roughly **463 million Sky Striker environment steps** and a further-trained mirror specialist.
 
 Thanks to [ygo-agent](https://github.com/sbl1996/ygo-agent), its authors and contributors for the policy, reinforcement learning and environment implementations on which this project builds. Their notices are retained in [third_party/ygo-agent](third_party/ygo-agent).
 
 Special thanks to **海之中道**, the author of **MirrorForce**. I learned a great deal from our discussions.
+
+## Model and training at a glance
+
+### How the policy chooses an action
+
+![Model architecture: structured card, scene, event and candidate features feed an LSTM, FiLMActor and a residual DecisionActor to produce legal action scores.](docs/images/model-architecture.en.svg)
+
+The policy combines **128-dimensional structured features** with **512-dimensional LSTM memory**. FiLMActor produces base action logits; DecisionActor adds a scene- and role-aware correction. A value head and a public-outcome head provide training supervision.
+
+### How a training run works
+
+![Training workflow: pin resources, collect actor rollouts in duel environments, update the learner with PPO, send weights back, save checkpoints, evaluate paired games, then register and deploy the policy.](docs/images/training-workflow.en.svg)
+
+Runs start from published checkpoints and alternate rollouts with learning. Checkpoints retain their configuration and resource identities for paired evaluation. Five GPU recipe smoke runs and 64 paired-evaluation games passed acceptance; see the [report](docs/全新GPU复现报告.md).
+
+See [Model architecture and training workflow](docs/model-and-training.md) for tensor shapes, losses, source references and the historical path from random initialization to the expert policies.
 
 ## License scope
 
